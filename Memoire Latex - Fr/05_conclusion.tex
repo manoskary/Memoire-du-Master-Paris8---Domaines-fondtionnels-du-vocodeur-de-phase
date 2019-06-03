@@ -1,0 +1,34 @@
+\label{ch:conclusions}
+
+\section{Résumé de la recherche}
+
+Cette recherche sert à des fins documentaires, le but est d'informer les musiciens et les compositeurs des notions complexes. Ce travail me sera aussi enrichissant au niveau personnel, il me permettra d'approfondir mes connaissances dans ce domaine. Le spectre est une terminologie difficile à comprendre pour les musiciens et un point de vue plus musical va faciliter sa compréhension. En approfondissant sur le terrain du morphing, on découvrira de nouvelles manières pour manipuler cet effet. Cette problématique, constituera le but final de la recherche. 
+
+\section{Applications}
+
+Les applications des vocodeurs de phase sont quasiment infinies, comme quelq’un peut envisager par le chapitre sur la mise en œuvre. Quelques propositions suivront pour afficher les capacités d'analyse spectrale et de vocodeur de phase.
+
+Le vocodeur de phase peut être utilisé pour analyser la voix et la transformer en texte. Les sélections et les fréquences peuvent être déduites de certaines voyelles et consonnes, ce qui permet de prédire les lettres exactes utilisées et de produire la forme écrite du son.
+
+Le vocodeur de phase humain doté de la voix peut également transformer un certain type de voix, par exemple une voix d'homme en une voix féminine ou tout autre type de voix, en se transformant entre les caractéristiques qui déterminent une voix en tant qu'homme, femme ou autre.
+
+Les outils spectraux et spécialement ceux d'analyse-synthèse sont fréquemment utilisés par les compositeurs vis-à-vis des programmes DAW. Une bibliothèque célèbre serait TRAX par les outils Ircam.
+
+
+\section{Discussion}
+
+Le vocodeur de phase est aujourd'hui plus qu'un simple outil d'analyse spectrale. Des méthodes conçues pour prévoir de manière stochastique la resynthèse des vagues la mieux adaptée.
+
+Ces formules considèrent des méthodes probabilistes pour reconstruire les signaux, pour de meilleures techniques de prédiction de fréquence. Pour plus d'informations à ce sujet, le livre de Roads and al. \footnote{Curtis Roads, Stephen Travis Pope, Aldo Piccialli, Giovanni De Poli, \textit{Musical Signal Processing}, 1997 \nocite{Roads97}} était plutôt éclairant.
+
+\section{Recherche pour l'avenir}
+
+En outre, je propose une suite de ma recherche sur les processus spectraux en utilisant les principes tels que Deep Learning. Spécifiquement un approche sur le Morphing spectrale en temps réel connecte aux networks neurals \footnote{Jesse Engel. Making a neural synthesizer instrument, 2008.}. 
+
+Je suis particulièrement intéressé par le fait qu’un vocoder de phase puisse détecter les fréquences dominantes d'un son. Ce fait pourrait essentiellement servir à une méthode intelligente de préciser les différentes notes contenue dans une information sonore. L'extraction des fréquences en forme de notes pourrait assister à l'analyse automatique de la musique à partir des fichiers sonores et, par suite, transformer le son à une forme symbolique. Dans une recherche de futur, je souhaiterais m'orienter dans le domaine de l'analyse Topologique de la musique. Une interprétation de la musique symbolique comme des structures topologiques bidimensionnelles, c'est-à-dire des graphes orientés, peut assister à extracter informations du style musical ou de la structure. La théorie de graphes contient plusieurs méthodes spectrales telles que la transformation Fourier des graphes et toute une infrastructure mathématiques basée sur les concepts investigués dans cet recherche.
+
+Une piste alternative très intrigante serait pour moi l’utilisation de VAE (Variational Autoencoders) pour identifier la distribution de probabilité d’un ensemble de pièces musicales. Les VAE sont des auto-encodeurs qui paramètrent la distribution de probabilité des variables latentes à l'aide d'un réseau neuronal et maximisent la probabilité que la distribution de données soit soumise à des contraintes de la distribution de variables latentes. Des expériences numériques montrent qu’il est capable d’identifier cette distribution de données dans la mesure où l’échantillonnage à partir de la distribution de variables latentes génère des points de données réalistes. J'aspire à utiliser cette représentation pour produire une nouvelle musique en combinant d'autres pièces musicales dans l'intégration VAE.
+
+Je crois que le processus d'analyse musicale sur l'harmonie et la mélodie, associé à un apprentissage non supervisé, permet de passer à de meilleurs modèles de prédiction musicale, de variation et de créativité. Pour atteindre cet objectif, je visualise la première formalisation de modélisation algébrique sur des données verticales (accords) et linéaires (mélodies) telles que les approches de la théorie de la musique transformationnelle. Avant de construire une base de données de styles et d’appliquer un algorithme de prédiction, j’estime que, grâce à VAE, cela peut être avancé et produire des résultats révolutionnaires.
+Jusqu'à présent, VAE présentait une application limitée aux données séquentielles et les modèles existants de VAE récurrents rencontraient des difficultés pour modéliser des séquences avec une structure à long terme. Pour résoudre ce problème, je propose l’utilisation d’un décodeur hiérarchique, qui génère d’abord des intégrations pour les sous-séquences de l’entrée, puis utilise ces intégrations pour générer chaque sous-séquence de manière indépendante. Il est également possible de modéliser de la musique polyphonique multipiste en tant que vecteurs dans un espace latent via le conditionnement d'accords. En effet celui-ci permet une compréhension plus profonde de la mélodie tout en maintenant une harmonie fixe, et permet en outre de modifier les accords tout en maintenant le style musical. Cette approche a été présentée pour la première fois dans le projet Magenta de Google AI et présente, à mon avis, un potentiel important et pourrait progresser dans la génération simultanée d'accords et de mélodies.
+

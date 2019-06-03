@@ -1,0 +1,3613 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.7.21)  3 JUN 2019 11:05
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**06_appendix.tex
+(./06_appendix.tex
+LaTeX2e <2018-04-01> patch level 5
+! Undefined control sequence.
+l.4 	\section
+             {FFT Cooley - Tukey algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 	\section{F
+               FT Cooley - Tukey algorithm}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no F in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no m in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 4--6
+[]
+ []
+
+
+! LaTeX Error: Environment lstlisting undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 	\begin{lstlisting}
+                       [language=C, caption= Cooley-Tukey with Butterfly Dia...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 	\begin{lstlisting}[
+                        language=C, caption= Cooley-Tukey with Butterfly Dia...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no W in font nullfont!
+! You can't use `macro parameter character #' in horizontal mode.
+l.9 		#
+       simple DFT function
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no ) in font nullfont!
+! You can't use `macro parameter character #' in horizontal mode.
+l.12 		    #
+             We want two vectors here for real space (n) and frequency space...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no W in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ' in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no m in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.15 		    transform_
+                     matrix = exp.(-2im*pi*n*k/N)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 15.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 15.
+! You can't use `macro parameter character #' in math mode.
+l.18 		#
+         Implementing the Cooley-Tukey Algorithm
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.35 		    #
+             First, we need to find the necessary number of bits
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.37 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 7--37
+[]
+ []
+
+
+Overfull \hbox (40.9984pt too wide) in paragraph at lines 7--37
+[]\OML/cmm/m/it/10 atrix \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (52.07257pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 exp:\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 2\OML
+/cmm/m/it/10 im \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (13.4764pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 pi \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (11.00237pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (136.76033pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 k=N\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 returntransform[]atrix \O
+MS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (138.49547pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 xendImplementingtheCooley \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (199.99147pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 TukeyAlgorithmfunctioncooley[]ukey\OT1/cmr/m/n/10 (\OML/cmm/m/
+it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 N \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (74.82019pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 length\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML
+/cmm/m/it/10 if\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 N >
+ []
+
+
+Overfull \hbox (40.01665pt too wide) in paragraph at lines 7--37
+\OT1/cmr/m/n/10 2)\OML/cmm/m/it/10 x[]dd \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (74.38327pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 cooley[]ukey\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10
+ [1 :
+ []
+
+
+Overfull \hbox (10.55551pt too wide) in paragraph at lines 7--37
+\OT1/cmr/m/n/10 2 :
+ []
+
+
+Overfull \hbox (52.22118pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 N\OT1/cmr/m/n/10 ])\OML/cmm/m/it/10 x[]ven \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (74.38327pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 cooley[]ukey\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10
+ [2 :
+ []
+
+
+Overfull \hbox (10.55551pt too wide) in paragraph at lines 7--37
+\OT1/cmr/m/n/10 2 :
+ []
+
+
+Overfull \hbox (64.09999pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 N\OT1/cmr/m/n/10 ])\OML/cmm/m/it/10 elsex[]dd \OT1/cmr/m/n/10 
+=
+ []
+
+
+Overfull \hbox (52.70038pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 [1]\OML/cmm/m/it/10 x[]ven \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (48.6922pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 [2]\OML/cmm/m/it/10 endn \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (10.55551pt too wide) in paragraph at lines 7--37
+\OT1/cmr/m/n/10 0 :
+ []
+
+
+Overfull \hbox (16.90277pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 N \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (35.75583pt too wide) in paragraph at lines 7--37
+\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 half \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (79.03658pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 div\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 N; \OT1/cmr/m/n/10 2)\OML
+/cmm/m/it/10 factor \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (52.07257pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 exp:\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 2\OML
+/cmm/m/it/10 im \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (13.4764pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 pi \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (106.481pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 n=N\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 returnvcat\OT1/cmr/m/n/10
+ (\OML/cmm/m/it/10 x[]dd: \OT1/cmr/m/n/10 +
+ []
+
+
+Overfull \hbox (33.65181pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 x[]ven: \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (42.16672pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 factor\OT1/cmr/m/n/10 [1 :
+ []
+
+
+Overfull \hbox (58.55031pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 half\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; x[]dd: \OMS/cmsy/m/n/1
+0 ^^@
+ []
+
+
+Overfull \hbox (33.65181pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 x[]ven: \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (42.16672pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 factor\OT1/cmr/m/n/10 [1 :
+ []
+
+
+Overfull \hbox (143.29338pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 half\OT1/cmr/m/n/10 ])\OML/cmm/m/it/10 endfunctionbitreverse\O
+T1/cmr/m/n/10 (\OML/cmm/m/it/10 a \OT1/cmr/m/n/10 ::
+ []
+
+
+Overfull \hbox (277.55954pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 Array\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 First; weneedtofindthen
+ecessarynumberofbitsdigits \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (151.18156pt too wide) in paragraph at lines 7--37
+\OML/cmm/m/it/10 convert\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Int; ceil\OT1/cmr/m/n
+/10 (\OML/cmm/m/it/10 log\OT1/cmr/m/n/10 2(\OML/cmm/m/it/10 length\OT1/cmr/m/n/
+10 (\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 ))))$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 		    i
+            ndices = [i for i = 0:length(a)-1]
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ] in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 38--39
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 		    b
+            it_indices = []
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no b in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.40 		    bit_
+               indices = []
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! You can't use `macro parameter character #' in math mode.
+l.44 		    #
+             Now stripping the unnecessary numbers
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.48 		    #
+             Flipping the bits
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.52 		    #
+             Replacing indices
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.92 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (62.20847pt too wide) in paragraph at lines 40--92
+[]$[]\OML/cmm/m/it/10 ndices \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (35.16507pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 []\OML/cmm/m/it/10 fori \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (10.55551pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 1 :
+ []
+
+
+Overfull \hbox (451.73886pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 length\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 indices\OT1/cmr/m/n/10
+ )\OML/cmm/m/it/10 push\OT1/cmr/m/n/10 !(\OML/cmm/m/it/10 bit[]ndices; bitstrin
+g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 indices\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 i\O
+T1/cmr/m/n/10 ]))\OML/cmm/m/it/10 endNowstrippingtheunnecessarynumbersfori \OT1
+/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (10.55551pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 1 :
+ []
+
+
+Overfull \hbox (141.67607pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 length\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 bit[]ndices\OT1/cmr/m/
+n/10 )\OML/cmm/m/it/10 bit[]ndices\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 i\OT1/cmr/m
+/n/10 ] =
+ []
+
+
+Overfull \hbox (78.42062pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 bit[]ndices\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 
+][\OML/cmm/m/it/10 end \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (31.0777pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 digits \OT1/cmr/m/n/10 :
+ []
+
+
+Overfull \hbox (133.2622pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 end\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 endFlippingthebitsfori \O
+T1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (10.55551pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 1 :
+ []
+
+
+Overfull \hbox (141.67607pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 length\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 bit[]ndices\OT1/cmr/m/
+n/10 )\OML/cmm/m/it/10 bit[]ndices\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 i\OT1/cmr/m
+/n/10 ] =
+ []
+
+
+Overfull \hbox (215.1898pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 reverse\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 bit[]ndices\OT1/cmr/m
+/n/10 [\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 ])\OML/cmm/m/it/10 endReplacingindices
+fori \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (10.55551pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 1 :
+ []
+
+
+Overfull \hbox (119.21196pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 length\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 indices\OT1/cmr/m/n/10
+ )\OML/cmm/m/it/10 indices\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 ] 
+=
+ []
+
+
+Overfull \hbox (35.85487pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 forj \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (10.55551pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 1 :
+ []
+
+
+Overfull \hbox (84.62502pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 digitsindices\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 i\OT1/cmr/m/n/1
+0 ]+ =
+ []
+
+
+Overfull \hbox (21.09332pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 2[]\OML/cmm/m/it/10 j \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (13.88893pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 1) \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (157.55104pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 parse\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Int; string\OT1/cmr/m/n
+/10 (\OML/cmm/m/it/10 bit[]ndices\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 i\OT1/cmr/m/
+n/10 ][\OML/cmm/m/it/10 end \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (90.21237pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 j\OT1/cmr/m/n/10 ]))\OML/cmm/m/it/10 endindices\OT1/cmr/m/n/10
+ [\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 ]+ =
+ []
+
+
+Overfull \hbox (35.71066pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 endb \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (66.50728pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 float\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 i\OT1/
+cmr/m/n/10 )\OML/cmm/m/it/10 fori \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (10.55551pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 1 :
+ []
+
+
+Overfull \hbox (73.79132pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 length\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 )]\OM
+L/cmm/m/it/10 fori \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (10.55551pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 1 :
+ []
+
+
+Overfull \hbox (91.73482pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 length\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 indices\OT1/cmr/m/n/10
+ )\OML/cmm/m/it/10 b\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 ] =
+ []
+
+
+Overfull \hbox (278.54034pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 indices\OT1/cmr/m/n/10 [\OM
+L/cmm/m/it/10 i\OT1/cmr/m/n/10 ]]\OML/cmm/m/it/10 endreturnbendfunctioniterativ
+e[]ooley[]ukey\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it
+/10 N \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (74.67017pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 length\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML
+/cmm/m/it/10 logN \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (186.96518pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 convert\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Int; ceil\OT1/cmr/m/n
+/10 (\OML/cmm/m/it/10 log\OT1/cmr/m/n/10 2(\OML/cmm/m/it/10 length\OT1/cmr/m/n/
+10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ))))\OML/cmm/m/it/10 bnum \OT1/cmr/m/n/10
+ =
+ []
+
+
+Overfull \hbox (76.5974pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 div\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 N; \OT1/cmr/m/n/10 2)\OML
+/cmm/m/it/10 stride \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (25.71521pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 0; \OML/cmm/m/it/10 x \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (73.92783pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 bitreverse\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )
+\OML/cmm/m/it/10 z \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (94.95427pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Complex\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT
+1/cmr/m/n/10 [\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 ])\OML/cmm/m/it/10 fori \OT1/cm
+r/m/n/10 =
+ []
+
+
+Overfull \hbox (10.55551pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 1 :
+ []
+
+
+Overfull \hbox (74.2207pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 length\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )]\OM
+L/cmm/m/it/10 fori \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (10.55551pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 1 :
+ []
+
+
+Overfull \hbox (59.23099pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 logNstride \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (90.30121pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 div\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 N; bnum\OT1/cmr/m/n/10 )\
+OML/cmm/m/it/10 forj \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (10.55551pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 0 :
+ []
+
+
+Overfull \hbox (32.57652pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 bnum \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (62.44855pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 start[]ndex \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (9.6905pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 j \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (34.17204pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 stride \OT1/cmr/m/n/10 +
+ []
+
+
+Overfull \hbox (20.81712pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 y \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (105.30403pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 butterfly\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 z\OT1/cmr/m/n/10 [\
+OML/cmm/m/it/10 start[]ndex \OT1/cmr/m/n/10 :
+ []
+
+
+Overfull \hbox (54.67082pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 start[]ndex \OT1/cmr/m/n/10 +
+ []
+
+
+Overfull \hbox (34.17204pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 stride \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (43.35191pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 1])\OML/cmm/m/it/10 fork \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (10.55551pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 1 :
+ []
+
+
+Overfull \hbox (103.91866pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 length\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 )\OML
+/cmm/m/it/10 z\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 start[]ndex \OT1/cmr/m/n/10 +
+ []
+
+
+Overfull \hbox (13.29865pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 k \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (18.33331pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 1] =
+ []
+
+
+Overfull \hbox (83.4192pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 ]\OML/cmm/
+m/it/10 endendbnum \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (234.80524pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 div\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 bnum; \OT1/cmr/m/n/10 2)\
+OML/cmm/m/it/10 endreturnzendfunctionbutterfly\OT1/cmr/m/n/10 (\OML/cmm/m/it/10
+ x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 N \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (72.58923pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 length\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML
+/cmm/m/it/10 half \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (56.2055pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 div\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 N; \OT1/cmr/m/n/10 2)\OML
+/cmm/m/it/10 n \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (35.83241pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 ifori \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (10.55551pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 0 :
+ []
+
+
+Overfull \hbox (16.90277pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 N \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (38.53362pt too wide) in paragraph at lines 40--92
+\OT1/cmr/m/n/10 1]\OML/cmm/m/it/10 half \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (79.03658pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 div\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 N; \OT1/cmr/m/n/10 2)\OML
+/cmm/m/it/10 factor \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (52.07257pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 exp:\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 2\OML
+/cmm/m/it/10 im \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (13.4764pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 pi \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (23.46068pt too wide) in paragraph at lines 40--92
+\OML/cmm/m/it/10 n=N\OT1/cmr/m/n/10 )$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.93 		    y
+             = [0 + 0.0im for i = 1:length(x)]
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no y in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 93--94
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.95 		    f
+            or i = 1:half
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no y in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.112 		    y = cooley_
+                       tukey(x)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: \begin{document} ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.119 	\end{lstlisting}
+                       \footnote{Le code est recuperé sur le lien \href{htt...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.119 	\end{lstlisting}
+                       \footnote{Le code est recuperé sur le lien \href{htt...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Undefined control sequence.
+\@footnotetext ...tins {\reset@font \footnotesize 
+                                                  \interlinepenalty \interfo...
+l.119 ... distribué sous la licence \textit{MIT}}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\@footnotetext ...}\color@begingroup \@makefntext 
+                                                  {\rule \z@ \footnotesep \i...
+l.119 ... distribué sous la licence \textit{MIT}}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ode est recuperé sur le lien \href 
+                                                  {https://www.algorithm-arc...
+l.119 ... distribué sous la licence \textit{MIT}}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.119 ... distribué sous la licence \textit{MIT}}
+                                                  .
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<argument> ...ents/cooley_tukey/cooley_tukey.html}
+                                                  {www.algorithm-archive.org...
+l.119 ... distribué sous la licence \textit{MIT}}
+                                                  .
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 119.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.119 ... distribué sous la licence \textit{MIT}}
+                                                  .
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.119 ... distribué sous la licence \textit{MIT}}
+                                                  .
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.119 ... distribué sous la licence \textit{MIT}}
+                                                  .
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\@footnotetext ...rut \strutbox }\color@endgroup }
+                                                  
+l.119 ... distribué sous la licence \textit{MIT}}
+                                                  .
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.120 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no � in font cmex10!
+
+Overfull \hbox (10.69446pt too wide) in paragraph at lines 119--120
+[][]\OT1/cmr/m/n/10 Le
+ []
+
+
+Overfull \hbox (19.72226pt too wide) in paragraph at lines 119--120
+\OT1/cmr/m/n/10 code
+ []
+
+
+Overfull \hbox (12.27779pt too wide) in paragraph at lines 119--120
+\OT1/cmr/m/n/10 est
+ []
+
+
+Overfull \hbox (11.69444pt too wide) in paragraph at lines 119--120
+\OT1/cmr/m/n/10 re-
+ []
+
+
+Overfull \hbox (13.33334pt too wide) in paragraph at lines 119--120
+\OT1/cmr/m/n/10 cu-
+ []
+
+
+Overfull \hbox (18.63892pt too wide) in paragraph at lines 119--120
+\OT1/cmr/m/n/10 per^^Se
+ []
+
+
+Overfull \hbox (13.41669pt too wide) in paragraph at lines 119--120
+\OT1/cmr/m/n/10 sur
+ []
+
+
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 119--120
+\OT1/cmr/m/n/10 le
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 119--120
+\OT1/cmr/m/n/10 lien
+ []
+
+
+Overfull \hbox (105.36134pt too wide) in paragraph at lines 119--120
+\OT1/cmr/m/n/10 https://www.algorithm-
+ []
+
+
+Overfull \hbox (480.93465pt too wide) in paragraph at lines 119--120
+\OT1/cmr/m/n/10 archive.org/contents/cooley$[]\OML/cmm/m/it/10 ukey=cooley[]uke
+y:html[]distribu[]souslalicence[]|:$ 
+ []
+
+! Undefined control sequence.
+l.122 	\section
+               {Espace $L^p$ et STFT}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (30.19449pt too wide) in paragraph at lines 122--123
+[]\OT1/cmr/m/n/10 Espace
+ []
+
+
+Overfull \hbox (11.42792pt too wide) in paragraph at lines 122--123
+\OML/cmm/m/it/10 L[]$
+ []
+
+
+Overfull \hbox (8.33334pt too wide) in paragraph at lines 122--123
+\OT1/cmr/m/n/10 et
+ []
+
+
+Overfull \hbox (26.52783pt too wide) in paragraph at lines 122--123
+\OT1/cmr/m/n/10 STFT 
+ []
+
+! Undefined control sequence.
+l.124 ...ient à l'espace Lebesque $L^{2} (\mathbb
+                                                  {R}^k)$ soit à $L^{1} (\m...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.124 ...} (\mathbb{R}^k)$ soit à $L^{1} (\mathbb
+                                                  {R}^k)$ et on obtient une ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.124 ...artient respectivement à $L^{2} (\mathbb
+                                                  {R}^k)$ ou à $C_{0}(\math...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.124 ...^{2} (\mathbb{R}^k)$ ou à $C_{0}(\mathbb
+                                                  {R}^{k})$\footnote{L'espac...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\@footnotetext ...tins {\reset@font \footnotesize 
+                                                  \interlinepenalty \interfo...
+l.124 ...ntinues qui tendent vers $0$ à l'infini}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\@footnotetext ...}\color@begingroup \@makefntext 
+                                                  {\rule \z@ \footnotesep \i...
+l.124 ...ntinues qui tendent vers $0$ à l'infini}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (36.86116pt too wide) in paragraph at lines 124--124
+[][]\OT1/cmr/m/n/10 L'espace
+ []
+
+
+Overfull \hbox (13.94446pt too wide) in paragraph at lines 124--124
+\OT1/cmr/m/n/10 des
+ []
+
+
+Overfull \hbox (21.38893pt too wide) in paragraph at lines 124--124
+\OT1/cmr/m/n/10 fonc-
+ []
+
+
+Overfull \hbox (21.16672pt too wide) in paragraph at lines 124--124
+\OT1/cmr/m/n/10 tions
+ []
+
+
+Overfull \hbox (18.33336pt too wide) in paragraph at lines 124--124
+\OT1/cmr/m/n/10 con-
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 124--124
+\OT1/cmr/m/n/10 tin-
+ []
+
+
+Overfull \hbox (13.94446pt too wide) in paragraph at lines 124--124
+\OT1/cmr/m/n/10 ues
+ []
+
+
+Overfull \hbox (13.61115pt too wide) in paragraph at lines 124--124
+\OT1/cmr/m/n/10 qui
+ []
+
+
+Overfull \hbox (17.22224pt too wide) in paragraph at lines 124--124
+\OT1/cmr/m/n/10 ten-
+ []
+
+
+Overfull \hbox (19.1667pt too wide) in paragraph at lines 124--124
+\OT1/cmr/m/n/10 dent
+ []
+
+
+Overfull \hbox (17.30557pt too wide) in paragraph at lines 124--124
+\OT1/cmr/m/n/10 vers
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 124--124
+\OT1/cmr/m/n/10 0$
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 124--124
+\OT1/cmr/m/n/10 ^^Ra
+ []
+
+
+Overfull \hbox (27.77786pt too wide) in paragraph at lines 124--124
+\OT1/cmr/m/n/10 l'infini| 
+ []
+
+
+Overfull \hbox (11.25003pt too wide) in paragraph at lines 124--125
+[]\OT1/cmr/m/n/10 La
+ []
+
+
+Overfull \hbox (26.52783pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 STFT
+ []
+
+
+Overfull \hbox (12.27779pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 est
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 une
+ []
+
+
+Overfull \hbox (16.69446pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 ver-
+ []
+
+
+Overfull \hbox (17.27782pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 sion
+ []
+
+
+Overfull \hbox (11.11113pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 lo-
+ []
+
+
+Overfull \hbox (16.66669pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 cale
+ []
+
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 de
+ []
+
+
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 la
+ []
+
+
+Overfull \hbox (25.63893pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 trans-
+ []
+
+
+Overfull \hbox (29.1945pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 form^^See
+ []
+
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 de
+ []
+
+
+Overfull \hbox (34.0834pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 Fourier.
+ []
+
+
+Overfull \hbox (19.75003pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 Nor-
+ []
+
+
+Overfull \hbox (23.88893pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 male-
+ []
+
+
+Overfull \hbox (24.72227pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 ment,
+ []
+
+
+Overfull \hbox (20.30562pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 pour
+ []
+
+
+Overfull \hbox (10.83334pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 ef-
+ []
+
+
+Overfull \hbox (29.75005pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 fectuer
+ []
+
+
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 la
+ []
+
+
+Overfull \hbox (25.63893pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 trans-
+ []
+
+
+Overfull \hbox (15.30559pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 for-
+ []
+
+
+Overfull \hbox (16.6667pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 ma-
+ []
+
+
+Overfull \hbox (17.22227pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 tion
+ []
+
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 de
+ []
+
+
+Overfull \hbox (34.0834pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 Fourier,
+ []
+
+
+Overfull \hbox (10.55559pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 on
+ []
+
+
+Overfull \hbox (18.36116pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 part
+ []
+
+
+Overfull \hbox (23.88895pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 d'une
+ []
+
+
+Overfull \hbox (21.38893pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 fonc-
+ []
+
+
+Overfull \hbox (17.22227pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 tion
+ []
+
+
+Overfull \hbox (19.46533pt too wide) in paragraph at lines 124--125
+\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (13.61115pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 qui
+ []
+
+
+Overfull \hbox (13.88892pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 ap-
+ []
+
+
+Overfull \hbox (17.80559pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 par-
+ []
+
+
+Overfull \hbox (20.27782pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 tient
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 ^^Ra
+ []
+
+
+Overfull \hbox (33.38893pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 l'espace
+ []
+
+
+Overfull \hbox (40.1945pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 Lebesque
+ []
+
+
+Overfull \hbox (31.65982pt too wide) in paragraph at lines 124--125
+\OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (15.61115pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 soit
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 ^^Ra
+ []
+
+
+Overfull \hbox (31.65982pt too wide) in paragraph at lines 124--125
+\OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (8.33334pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 et
+ []
+
+
+Overfull \hbox (10.55559pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 on
+ []
+
+
+Overfull \hbox (13.88892pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 ob-
+ []
+
+
+Overfull \hbox (20.27782pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 tient
+ []
+
+
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 une
+ []
+
+
+Overfull \hbox (21.38893pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 fonc-
+ []
+
+
+Overfull \hbox (17.22227pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 tion
+ []
+
+
+Overfull \hbox (20.33337pt too wide) in paragraph at lines 124--125
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 !\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (13.61115pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 qui
+ []
+
+
+Overfull \hbox (13.88892pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 ap-
+ []
+
+
+Overfull \hbox (17.80559pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 par-
+ []
+
+
+Overfull \hbox (20.27782pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 tient
+ []
+
+
+Overfull \hbox (11.69444pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 re-
+ []
+
+
+Overfull \hbox (22.00002pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 spec-
+ []
+
+
+Overfull \hbox (19.44447pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 tive-
+ []
+
+
+Overfull \hbox (21.94449pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 ment
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 ^^Ra
+ []
+
+
+Overfull \hbox (31.65982pt too wide) in paragraph at lines 124--125
+\OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (10.55559pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 ou
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 124--125
+\OT1/cmr/m/n/10 ^^Ra
+ []
+
+
+Overfull \hbox (39.26538pt too wide) in paragraph at lines 124--125
+\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 )$[]. 
+
+ []
+
+! Undefined control sequence.
+l.126 	Soit $f:\mathbb
+                      {R}^k\rightarrow \mathbb{C}, \;f\in L(\mathbb{R}^k)$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.126 	Soit $f:\mathbb{R}^k\rightarrow \mathbb
+                                              {C}, \;f\in L(\mathbb{R}^k)$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.126 ...k\rightarrow \mathbb{C}, \;f\in L(\mathbb
+                                                  {R}^k)$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (17.22227pt too wide) in paragraph at lines 126--127
+[]\OT1/cmr/m/n/10 Soit
+ []
+
+
+Overfull \hbox (11.52776pt too wide) in paragraph at lines 126--127
+\OML/cmm/m/it/10 f \OT1/cmr/m/n/10 :
+ []
+
+
+Overfull \hbox (25.36804pt too wide) in paragraph at lines 126--127
+\OML/cmm/m/it/10 R[] \OMS/cmsy/m/n/10 !
+ []
+
+
+Overfull \hbox (29.94571pt too wide) in paragraph at lines 126--127
+\OML/cmm/m/it/10 C;  f \OMS/cmsy/m/n/10 2
+ []
+
+
+Overfull \hbox (29.95148pt too wide) in paragraph at lines 126--127
+\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 )$. 
+ []
+
+
+Overfull \hbox (13.33337pt too wide) in paragraph at lines 128--129
+[]\OT1/cmr/m/n/10 On
+ []
+
+
+Overfull \hbox (27.77785pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 d^^Sefinit
+ []
+
+
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 la
+ []
+
+
+Overfull \hbox (25.63893pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 trans-
+ []
+
+
+Overfull \hbox (29.1945pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 form^^See
+ []
+
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 de
+ []
+
+
+Overfull \hbox (31.30562pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 Fourier
+ []
+
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 de
+ []
+
+
+Overfull \hbox (5.97226pt too wide) in paragraph at lines 128--129
+\OML/cmm/m/it/10 f$
+ []
+
+
+Overfull \hbox (8.33334pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 et
+ []
+
+
+Overfull \hbox (10.55559pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 on
+ []
+
+
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 la
+ []
+
+
+Overfull \hbox (18.88893pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 note
+ []
+
+
+Overfull \hbox (14.15279pt too wide) in paragraph at lines 128--129
+\OMS/cmsy/m/n/10 F\OML/cmm/m/it/10 f$
+ []
+
+
+Overfull \hbox (10.55559pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 ou
+ []
+
+
+Overfull \hbox (19.70836pt too wide) in paragraph at lines 128--129
+\OMS/cmsy/m/n/10 F\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ]$
+ []
+
+
+Overfull \hbox (10.55559pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 ou
+ []
+
+
+Overfull \hbox (13.33334pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 en-
+ []
+
+
+Overfull \hbox (17.80557pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 core
+ []
+
+
+Overfull \hbox (5.97226pt too wide) in paragraph at lines 128--129
+[]$
+ []
+
+
+Overfull \hbox (14.47226pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 par 
+ []
+
+! Missing { inserted.
+<to be read again> 
+                   $
+l.131 	\hat
+           {f} & : & \mathbb{R}^k & \rightarrow & \mathbb{C}			 &    & \\
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.131 	\hat
+           {f} & : & \mathbb{R}^k & \rightarrow & \mathbb{C}			 &    & \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Misplaced alignment tab character &.
+l.131 	\hat{f} &
+                 : & \mathbb{R}^k & \rightarrow & \mathbb{C}			 &    & \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.131 	\hat{f} & : &
+                     \mathbb{R}^k & \rightarrow & \mathbb{C}			 &    & \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.131 	\hat{f} & : & \mathbb
+                            {R}^k & \rightarrow & \mathbb{C}			 &    & \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+l.131 	\hat{f} & : & \mathbb{R}^k &
+                                    \rightarrow & \mathbb{C}			 &    & \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.131 	\hat{f} & : & \mathbb{R}^k & \rightarrow &
+                                                  \mathbb{C}			 &    & \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.131 ... : & \mathbb{R}^k & \rightarrow & \mathbb
+                                                  {C}			 &    & \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+l.131 ...thbb{R}^k & \rightarrow & \mathbb{C}			 &
+                                                      & \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.131 ...R}^k & \rightarrow & \mathbb{C}			 &    &
+                                                   \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.132 			&
+             & \omega & \mapsto     & \hat{f}(\omega) & := & \int_{\mathbb{R...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.132 			&   &
+               \omega & \mapsto     & \hat{f}(\omega) & := & \int_{\mathbb{R...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.132 			&   & \omega &
+                        \mapsto     & \hat{f}(\omega) & := & \int_{\mathbb{R...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.132 			&   & \omega & \mapsto     &
+                                      \hat{f}(\omega) & := & \int_{\mathbb{R...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.132 ... \omega & \mapsto     & \hat{f}(\omega) &
+                                                   := & \int_{\mathbb{R}^k}f...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.132 ...ga & \mapsto     & \hat{f}(\omega) & := &
+                                                   \int_{\mathbb{R}^k}f(x)e^...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.132 ...   & \hat{f}(\omega) & := & \int_{\mathbb
+                                                  {R}^k}f(x)e^{-2 \pi i x \c...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (196.11723pt too wide) detected at line 134
+[] [] \OML/cmm/m/it/10 f \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 R[] \OMS/cmsy/m/n/1
+0 ! \OML/cmm/m/it/10 C[] ! \OMS/cmsy/m/n/10 7! []\OT1/cmr/m/n/10 (\OML/cmm/m/it
+/10 !\OT1/cmr/m/n/10 ) := [][] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it
+/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 e[]dx
+ []
+
+! Undefined control sequence.
+l.136 ...définie pour des fonctions de $L(\mathbb
+                                                  {R}^k)$ et par le théorè...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (12.36115pt too wide) in paragraph at lines 136--137
+[]\OT1/cmr/m/n/10 En
+ []
+
+
+Overfull \hbox (10.83334pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 ef-
+ []
+
+
+Overfull \hbox (14.1667pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 fet,
+ []
+
+
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 la
+ []
+
+
+Overfull \hbox (25.63893pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 trans-
+ []
+
+
+Overfull \hbox (29.1945pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 form^^See
+ []
+
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 de
+ []
+
+
+Overfull \hbox (31.30562pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 Fourier
+ []
+
+
+Overfull \hbox (19.72227pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 peut
+ []
+
+
+Overfull \hbox (16.69446pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 ^etre
+ []
+
+
+Overfull \hbox (28.33339pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 d^^Sefinie
+ []
+
+
+Overfull \hbox (20.30562pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 pour
+ []
+
+
+Overfull \hbox (13.94446pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 des
+ []
+
+
+Overfull \hbox (21.38893pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 fonc-
+ []
+
+
+Overfull \hbox (21.16672pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 tions
+ []
+
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 de
+ []
+
+
+Overfull \hbox (27.17369pt too wide) in paragraph at lines 136--137
+\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (8.33334pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 et
+ []
+
+
+Overfull \hbox (14.47226pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 par
+ []
+
+
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 le
+ []
+
+
+Overfull \hbox (40.02785pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 th^^Seor^^Reme
+ []
+
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 de
+ []
+
+
+Overfull \hbox (45.44452pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 Plancherel
+ []
+
+
+Overfull \hbox (2.77779pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 : 
+ []
+
+! Undefined control sequence.
+l.138 	Si $f \in L(\mathbb
+                          {R}^k) \cap L(\mathbb{R}^k)$ alors
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.138 	Si $f \in L(\mathbb{R}^k) \cap L(\mathbb
+                                               {R}^k)$ alors
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (8.33336pt too wide) in paragraph at lines 138--139
+[]\OT1/cmr/m/n/10 Si
+ []
+
+
+Overfull \hbox (15.41666pt too wide) in paragraph at lines 138--139
+\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 2
+ []
+
+
+Overfull \hbox (33.84038pt too wide) in paragraph at lines 138--139
+\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 ) \OMS/c
+msy/m/n/10 \
+ []
+
+
+Overfull \hbox (27.17369pt too wide) in paragraph at lines 138--139
+\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (20.63893pt too wide) in paragraph at lines 138--139
+\OT1/cmr/m/n/10 alors 
+ []
+
+
+Overfull \hbox (53.17366pt too wide) detected at line 139
+\OMS/cmsy/m/n/10 k\OML/cmm/m/it/10 f[]\OMS/cmsy/m/n/10 k \OT1/cmr/m/n/10 = \OMS
+/cmsy/m/n/10 k[]k[]
+ []
+
+! Undefined control sequence.
+l.140 ...hcal{F}$ peut être étendu à $L(\mathbb
+                                                  {R}^k)$. De plus, on a ce ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (8.33334pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 et
+ []
+
+
+Overfull \hbox (20.5556pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 donc
+ []
+
+
+Overfull \hbox (47.27788pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 l'op^^Serateur
+ []
+
+
+Overfull \hbox (8.18053pt too wide) in paragraph at lines 139--141
+\OMS/cmsy/m/n/10 F$
+ []
+
+
+Overfull \hbox (19.72227pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 peut
+ []
+
+
+Overfull \hbox (16.69446pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 ^etre
+ []
+
+
+Overfull \hbox (29.4445pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 ^^Setendu
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 ^^Ra
+ []
+
+
+Overfull \hbox (29.95148pt too wide) in paragraph at lines 139--141
+\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 )$.
+ []
+
+
+Overfull \hbox (12.08334pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 De
+ []
+
+
+Overfull \hbox (20.61116pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 plus,
+ []
+
+
+Overfull \hbox (10.55559pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 on
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 a
+ []
+
+
+Overfull \hbox (8.88889pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 ce
+ []
+
+
+Overfull \hbox (24.16673pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 qu'on
+ []
+
+
+Overfull \hbox (13.88892pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 ap-
+ []
+
+
+Overfull \hbox (20.27782pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 pelle
+ []
+
+
+Overfull \hbox (38.61119pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 l'identit^^Se
+ []
+
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 de
+ []
+
+
+Overfull \hbox (18.7778pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 Par-
+ []
+
+
+Overfull \hbox (11.72221pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 se-
+ []
+
+
+Overfull \hbox (12.50005pt too wide) in paragraph at lines 139--141
+\OT1/cmr/m/n/10 val 
+ []
+
+! Undefined control sequence.
+l.141 ...ngle \, , \quad \forall f,g \in L(\mathbb
+                                                  {R}^k) $$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (135.47554pt too wide) detected at line 141
+\OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 f; g\OMS/cmsy/m/n/10 i \OT1/cmr/m/n/10 = \OM
+S/cmsy/m/n/10 h[]\OML/cmm/m/it/10 ; []\OMS/cmsy/m/n/10 i \OML/cmm/m/it/10 ;  \O
+MS/cmsy/m/n/10 8\OML/cmm/m/it/10 f; g \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 L\OT1
+/cmr/m/n/10 (\OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 )
+ []
+
+! Undefined control sequence.
+l.143 ...n isomorphisme isométrique de $L(\mathbb
+                                                  {R}^k)$ en $L(\mathbb{R}^k...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.143 ...trique de $L(\mathbb{R}^k)$ en $L(\mathbb
+                                                  {R}^k)$, ce qui de manièr...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (12.36115pt too wide) in paragraph at lines 143--144
+[]\OT1/cmr/m/n/10 En
+ []
+
+
+Overfull \hbox (32.8334pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 somme,
+ []
+
+
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 la
+ []
+
+
+Overfull \hbox (25.63893pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 trans-
+ []
+
+
+Overfull \hbox (29.1945pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 form^^See
+ []
+
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 de
+ []
+
+
+Overfull \hbox (31.30562pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 Fourier
+ []
+
+
+Overfull \hbox (12.27779pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 est
+ []
+
+
+Overfull \hbox (11.11115pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 un
+ []
+
+
+Overfull \hbox (15.05557pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 iso-
+ []
+
+
+Overfull \hbox (20.58337pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 mor-
+ []
+
+
+Overfull \hbox (30.61118pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 phisme
+ []
+
+
+Overfull \hbox (50.3612pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 isom^^Setrique
+ []
+
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 de
+ []
+
+
+Overfull \hbox (27.17369pt too wide) in paragraph at lines 143--144
+\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 en
+ []
+
+
+Overfull \hbox (29.95148pt too wide) in paragraph at lines 143--144
+\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 )$,
+ []
+
+
+Overfull \hbox (8.88889pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 ce
+ []
+
+
+Overfull \hbox (13.61115pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 qui
+ []
+
+
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 de
+ []
+
+
+Overfull \hbox (34.47229pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 mani^^Rere
+ []
+
+
+Overfull \hbox (20.88893pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 sym-
+ []
+
+
+Overfull \hbox (16.94449pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 bol-
+ []
+
+
+Overfull \hbox (18.05559pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 ique
+ []
+
+
+Overfull \hbox (12.27779pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 est
+ []
+
+
+Overfull \hbox (30.58342pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 traduit
+ []
+
+
+Overfull \hbox (14.47226pt too wide) in paragraph at lines 143--144
+\OT1/cmr/m/n/10 par 
+ []
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.146 	\mathcal
+               {F} : & L(\mathbb{R}^k) & \rightarrow & L(\mathbb{R}^k) \\
+(That makes 100 errors; please try again.) 
+Here is how much of TeX's memory you used:
+ 17 strings out of 492646
+ 261 string characters out of 6133325
+ 70795 words of memory out of 5000000
+ 4002 multiletter control sequences out of 15000+600000
+ 3986 words of font info for 15 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 18i,11n,13p,481b,167s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+!  ==> Fatal error occurred, no output PDF file produced!

@@ -1,0 +1,105 @@
+\chapter{Introduction}
+		
+\label{ch:Introduction}
+
+
+%Write all the means used to write this paper
+
+%ex. Latex, MaxMSP, and everything related
+
+%dans cette recherche il faut préciser la cadre de recherche, la problématique et tous moyens utilisés a l'écrit
+
+\section{About}
+
+Nowadays music has become a vast subject of research science. With the branches of music growing throughout various domains such as, musical analysis with mathematical modeling, history with ethnomusicology, acoustics with physics, composition with programming, etc. Following this interdisciplinary path we are called to bind our core, music, with the other sciences in order to advance towards a fresh point of view and present some new results.
+
+In composition branch of music, the study on the nature of sound was especially developed producing various techniques guided by physical phenomena. A series of sound processing tools based on physical phenomena are labeled under a branch called sound analysis-synthesis \footnote{\citealp{freitascaetano:hal-00604390}}. In this field an ensemble of scientific disciplines come together for a single purpose, understanding music and sound. Thought analysis we proceed to Synthesis. From science we lead to art. The name of analysis-synthesis expresses exactly this principle, from observation (analysis) one can proceed to sound processing and result to a new sound-product (Synthesis). The name is literally applied on spectral processing where the analysis stage transfers a sound from the time to the frequency domain. The analysis presents the spectral information of a sound at a certain time period. The synthesis tool inverses the process transferring sound from the frequency domain to the time domains, thus ending with the conventional wave signal form.
+
+Analysis-synthesis tools are initially created to aid composers or artists in general in contemporary composition. Some typical historic examples are : the use of computer generated series in the works of Stockhousen; computer assisted spectral analysis for the need of spectral composers, for example Gerald Grisey. However the results or techniques are not necessarily bound to artistic use but are also applied in other fields such as communications.
+
+In this dissertation we emphasize in the field of spectral analysis $\to$ transformation $\to$ synthesis. In particular we will investigate the functionality of Fourier analysis in discrete time with variating envelope windows for the construction of a double phase vocoder for sound morphing. We define sound morphing as the process of combining the spectra of two sounds in a certain percentage that results to an hybrid sound containing characteristic elements of the original ones. The term morphing is also known as \textit{Cross Synthesis}. The exact mechanism of each term, such as Fourier transform, phase vocoder, etc, will be analyzed in section 2. 
+
+
+\subsection{Implementation Tools}
+
+Some comments on the tools used in this research are necessary before discussing structure details. As said, an interdisciplinary research like this one demands a collaboration of fields and terms coming from mathematics, computer science and music. Thus the cadre needs to be adapted to this dissertation's needs.
+
+For the text in place of a traditional \textit{Word} editor, a \LaTeX{} text editor is used. Thus this dissertation is written entirely in \LaTeX{} code. The need for \LaTeX{} comes from the quantity of mathematical formuli presented, as well as the code attached in some sections. Also \LaTeX{} source code is easier to share and readable from any text editor. The use of \LaTeX{} though renders some what different for the French standards the formulation of references and bibliography. 
+
+The programming part of this dissertation is almost entirely coded in MaxMSP and Jitter, with some small code parts in Javascript. Max is a robust tool by Cycling74 allowing real-time analysis and signal processing as well some visual processing. Max Version 7.3.2 x64 for Windows is used with no external libraries. Audio settings are set to SR of 48000, vector size of 442 and signal vector size of 64. More information on MaxMSP can be found on \href{https://cycling74.com/products/max/}{"https://cycling74.com"}.
+
+Last but not least, Reaper was used for sound editing and exporting the final .wav format. Reaper is Digital Audio Workstation (DAW) with multichannel controls and recording options. More information information on Reaper can be found on \href{https://www.reaper.fm/}{"www.reaper.fm"}.
+
+The archiving of this research is available publicly on \href{https://github.com/}{"Github.com"} where it can be viewed for educational or research purposes. The link for the Github repository can be found on \href{https://github.com/melkisedeath/Un-Guide-sur-l-analyse-Spectrale}{https://github.com/melkisedeath/Un-Guide-sur-l-analyse-Spectrale}. In this repository one can find the code, the sound files the text and some artistic examples.
+
+
+\section{Structure}
+
+The structure is organized in three main sections. The first section presents all the technical information needed to understand the functionality of a Phase Vocoder. In the second section, we build step by step Phase Vocoder and specialize into Spectral Morphing. In the last section we propose various artistic implementations of the research's results.
+
+More in detail, the first part concerns the basis of spectral processing, Fourier Analysis. One can revise all the mathematic context hidden behind these complicated terms and hopefully clear out this misted field. Moving up from Fourier Transformation one must understand how digitizing sound works. Therefore, windowed Fourier analysis will be thoroughly discussed. These information are crucial for the comprehension of the Phase Vocoder. The math of this concept are slightly more complicated and through a step by step ramification of the math formula one can get to conceive how it really works. Getting into such detail may not be necessary, but the knowledge is offered for other musicians with passion to mathematics towards a grasp of the nature of sound.
+
+After all the mathematical stuff, the work of the programmer begins. MaxMSP is the key tool for real-time sound processing. Presented in Max a step by step guide to building a Phase Vocoder and breaking down the math of a Fourier analysis we are going to penetrate the field of Spectral Morphing. The magic of seeing how a math formula comes to life is the very essence of programming and it's even more evident when working with sound. One can hear the result over and over while doing modifications leading to a deeper understanding of its functionality. Spectral morphing in this study is consisted by two simultaneous Phase Vocoders working on different inputs.
+
+It is reasonable at this point to ask the obvious question : is it necessary for someone to be a musician to do all that. The answer is pretty straightforward: "No!". But, this is why this is the key section of this dissertation. Combining programming skills, mathematical understanding and musical creativity is what describes many of contemporary composers. And in this chapter one can seek a few model examples of creative implementations of the Phase vocoder.
+  
+
+%--------------------Nouvelle Section-----------------------------
+
+\section{MaxMSP et Jitter}
+
+MaxMSp is a software, originally created by Michael Puckette in IRCAM and thereafter purchased by the American company, Cycling74. The core of this software is build upon C++ and Javascript, translated into a graphical user environment such as box connecting.
+
+The MaxMSP is essentially a programming language with every command being a codebox that recalls a certain function. The commands are separated into three categories: logical expression commands, sound processing commands and multidimensional matrix processing commands, each one corresponding to Max, MSP and Jitter respectively. The user can connect various commands from all three categories to create a complex patch. The most recent version of MaxMSP and Jitter is Max8, released in September 2018 \footnote{cycling74.com, \textit{Max8 release date}, \href{https://cycling74.com}{https://cycling74.com} \nocite{cycling74}}.
+
+In the category of sound processing a special library called spectral processing offers the user all the tools one needs to perform spectral analysis. The method MaxMSP uses is called Fast Fourier Transform (FFT). One can imagine the signal as a continuous curved line consisted by a series of points. The idea is to convert a signal which is a one dimension shape to a two-dimensional form that contains essentially more information. One can cut a fragment of this signal line and assign a value to each of its points to a vector on the Cartesian plane. From this interpretation it is possible to extract information about frequency and amplitude.
+
+Apart from the efficiency of spectral processing and visual perceptivity of the software. MaxMSP is quite popular in the artistic community, used in plethora of projects and research groups, such as IRCAM. The vast community of Max makes it accessible even to amateur users. Last but not least, a series of technical libraries on Phase vocoders and spectral processing for Max is developed by the community projecting the leading role of this software. Some of these libraries are SuperVP, Max SoundBox, etc. 
+
+
+
+\section{Spectral Analysis}
+	
+Spectral analysis is the process of measuring the spectrum of a certain signal. The spectrum consists of information about phase and magnitude from which one can extract a diagram called frequency-magnitude diagram. In such a diagram one can visualize the frequencies and their respected magnitudes of a signal for a certain time period.
+
+
+
+
+	\subsection{History}
+
+	The term spectral was first introduced by Isaak Newton in the late 18th century. The Fourier transform theory was formulated in 1822 by Jean Joseph Fourier. Fourier was a physicist who reasoned on the thermodynamic properties of materials. In 1843, Georg Ohm (1789-1854) innovated in the signal processing field applying fourier transform on signals. Thereafter, H. L. F. Helmholtz (1821-1894) stated that instrumental timbre is characterized vastly by the harmonic Fourier series in 1863. In his book \textit{The Sensation of Tone} describes mechanical tools to reproduce artificially the sinusoidal spectra of various sounds\footnote{Curtis Roads, \textit{The Computer Music Tutorial}, 1996, pp. 545 \nocite{Roads:1996:CMT:525484}}. 
+
+	The first digital spectrum analyzers appear in the 1960s as a consequence to the FFT, discovered in 1965.  In Fourier's theory every complex spectrum can be dissolved into a series of single frequencies \footnote{Jean Joseph Baptiste Fourier. \textit{De la Chaleur.} Paris, 1822.}. Respectively every complex harmonic sound is consisted by a sum of simple sinusoids with variating amplitudes.
+
+	The Fourier transformation, meaning the passage from a continuous signal to its static frequency-magnitude graph, is a concept appreciated in most scientific fields. One must bare in mind though that the transformation is static. In sound signal the information is continuous and variating. That is the main issue of the Fourier transform. Therefore one should consider the least longest time period possible to describe a signal. The exact meaning of the previous phrase is going to be thoroughly discussed in the next chapter.
+
+	The functionality of Fourier analysis on sound does not rest only on visualization of frequencies but is used for various effects such as pitch shift with non varying frequency, time change with non varying pitch, timbre processing and more. These effects led to the Phase Vocoder, a concept based on Fourier analysis of a windowed signal (FFT). The goal is to arrive to the zenith of the Phase Vocoder, which is sound Morphing. 
+
+	\subsection{The Phase Vocoder}	
+
+		A phase vocoder, as the name states, is a type of vocoder which uses phase phase information to process audio signals. The core of the phase vocoder works on Short-Time Fourier Transform (STFT) such as FFT. It the typical transformation of a time domain representation of a signal to  the frequency-magnitude domain.
+
+		The phase vocoder was discovered in 1966 by Flanagan \footnote{J. L. Flanagan et R. M. Golden. \textit{Phase Vocoder}. 1966. \nocite{flanagan}}. However, the standard structure of the modern phase vocoder was established by by Griffin and Lim in 1984 \footnote{Daniel W. Griffin et Jae S. Lim. \textit{Signal Estimation from Modified Short-Time Fourier Transform}. 1984. \nocite{GrL84}}. An example of software implementation of phase vocoder based signal transformation using means similar to those described to achieve high quality signal transformation is Ircam's SuperVP \footnote{\href{http://anasynth.ircam.fr/home/english/software/supervp}{anasynth.ircam.fr}}. Modern phase vocoders, such as SuperVP, use a statistical approach for signal prediction, thus eliminating any produced artifacts by unorthodox sound processing. 
+
+\section{Morphing}
+
+Morphing is the process of interpolation between two or more objects, while the hybrid result contains recognizing elements for each of its sources. By this statement one can immediately state two concepts, sound (one dimensional) and visual morphing (multidimensional). In sound the result is achieved by combining the spectra of each source by a certain factor. In images the result is achieved by adding the pixel values of every source by a certain factor. If morphing is assumed over two objects the one is called source object and the other is called target object. Object is a term assigned to the nature of morphing, which is sound or image.
+
+    \subsection{Sound Morphing}
+
+Sound morphing combines spectra of sounds that means the two factors, frequency and magnitude. Remember that in the phase vocoder frequency is approached via phase. The process of sound morphing can be described as a spectral interpolation between two (or more) sources resulting into a hybrid morphed sound containing elements of each source. For example, a morphing between a piano and a violin A note at 440Hz would have an percussive attack from the piano and a rich an stable tail from the violin's spectra. 
+
+In the field of sound morphing to gain a satisfactory sound manipulation it is proposed to use the concept of the Phase vocoder. The phase vocoder can be used in real-time without quality loss and with a minimum of information loss. Still, the process is quite calculative expensive as it requires a phase vocoder per source. 
+
+With a phase vocoder approach to sound morphing a minimum of two phase vocoders is required. Thusly, one can manipulate phase and frequency of the sources to match them better. In this paper we follow the guidelines of the SuperVP vocoder but in much simpler version. Our approach idealizes the object $SuperVP.morph\thicksim$ and tries to get a richer parametrization through the process. 
+       
+
+    \subsection{Visual Morphing}
+    
+On the other hand visual morphing has a variety of approaches. First, one should separate 2-dimensional from 3-dimensional morphing techniques, where 2 dimensional is morphing between images and 3-dimensional is interpolation between shapes. Of course morphing can be considered for higher dimensional shapes but the result is difficult to apprehend.
+
+Starting from 3-dimensional morphing is defined as the interpolation of the vertices' position. To visualize the effect, one should imagine two 3D shapes, for example a sphere and a cube. The shape is consisted either from a sum of points either from a sum of two dimensional simplices. Additionally, there are some other methods that are not that common thus they are omitted. The two shapes should have the same number of points/ simplices. Morphing between shapes would be the change of the position for each point/ simplex of the source shape towards the position for each point/ simplex of the target shape.  Of course 2-dimensional morphing can be considered on shapes but is just a perception of orientation on 3D shapes thus the method is exactly the same.
+
+Image morphing is more complex. Of course the simple way of just adding the values of pixels with a percentage factor is a valid method with no interesting results. The intelligent way to go considers Variational Auto-Encoders (VAE). It is a method based on machine learning using the famous Generative adversarial networks (GANs). GANs are deep neural net architectures comprised of two nets, pitting one against the other \footnote{Goodfellow, Pouget-Abadie, Mirza, Xu, Warde-Farley, Ozeir, Courvill, Bengio. \textit{Generative Adversarial Networks.} 2004. \nocite{GANs}}. This dissertation focuses on sound thus image morphing is not going to be covered.
+
+

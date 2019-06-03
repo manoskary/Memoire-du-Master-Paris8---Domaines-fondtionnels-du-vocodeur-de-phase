@@ -1,0 +1,129 @@
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{latexsym}
+\usepackage{mathchars}
+\usepackage{setspace}
+\usepackage[french]{babel}
+\selectlanguage{french}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{comment}
+\usepackage{pgfplots}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{csquotes}
+\usepackage{mathrsfs}
+
+\input{blocked.sty}
+\input{uhead.sty}
+\input{boxit.sty}
+\input{icthesis.sty}
+
+\newcommand{\ipc}{{\sf ipc}}
+
+
+
+
+\newcommand{\op}[1]{\mathrm{#1}}
+\newcommand{\s}[1]{\ensuremath{\mathcal #1}}
+
+%Personalization for code display
+ 
+\definecolor{codeblue}{rgb}{0,0.1,0.9}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.91,0.9,0.89}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codeblue},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+
+% Properly styled differentiation and integration operators
+\newcommand{\diff}[1]{\mathrm{\frac{d}{d\mathit{#1}}}}
+\newcommand{\diffII}[1]{\mathrm{\frac{d^2}{d\mathit{#1}^2}}}
+\newcommand{\intg}[4]{\int_{#3}^{#4} #1 \, \mathrm{d}#2}
+\newcommand{\intgd}[4]{\int\!\!\!\!\int_{#4} #1 \, \mathrm{d}#2 \, \mathrm{d}#3}
+
+% Large () brackets on different lines of an eqnarray environment
+\newcommand{\Leftbrace}[1]{\left(\raisebox{0mm}[#1][#1]{}\right.}
+\newcommand{\Rightbrace}[1]{\left.\raisebox{0mm}[#1][#1]{}\right)}
+
+% Funky symobols for footnotes
+\newcommand{\symbolfootnote}{\renewcommand{\thefootnote}{\fnsymbol{footnote}}}
+% now add \symbolfootnote to the beginning of the document...
+
+\newcommand{\normallinespacing}{\renewcommand{\baselinestretch}{1.5} \normalsize}
+\newcommand{\mediumlinespacing}{\renewcommand{\baselinestretch}{1.2} \normalsize}
+\newcommand{\narrowlinespacing}{\renewcommand{\baselinestretch}{1.0} \normalsize}
+\newcommand{\bump}{\noalign{\vspace*{\doublerulesep}}}
+\newcommand{\cell}{\multicolumn{1}{}{}}
+\newcommand{\spann}{\mbox{span}}
+\newcommand{\diagg}{\mbox{diag}}
+\newcommand{\modd}{\mbox{mod}}
+\newcommand{\minn}{\mbox{min}}
+\newcommand{\andd}{\mbox{and}}
+\newcommand{\forr}{\mbox{for}}
+\newcommand{\EE}{\mbox{E}}
+
+\newcommand{\deff}{\stackrel{\mathrm{def}}{=}}
+\newcommand{\syncc}{~\stackrel{\textstyle \rhd\kern-0.57em\lhd}{\scriptstyle L}~}
+
+\def\coop{\mbox{\large $\rhd\!\!\!\lhd$}}
+\newcommand{\sync}[1]{\raisebox{-1.0ex}{$\;\stackrel{\coop}{\scriptscriptstyle
+#1}\,$}}
+
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+
+\newcommand{\Figref}[1]{Figure~\ref{#1}}
+\newcommand{\fig}[3]{
+ \begin{figure}[!ht]
+ \begin{center}
+ \scalebox{#3}{\includegraphics{figs/#1.ps}}
+ \vspace{-0.1in}
+ \caption[ ]{\label{#1} #2}
+ \end{center}
+ \end{figure}
+}
+
+\newcommand{\figtwo}[8]{
+ \begin{figure}
+ \parbox[b]{#4 \textwidth}{
+ \begin{center}
+ \scalebox{#3}{\includegraphics{figs/#1.ps}}
+ \vspace{-0.1in}
+ \caption{\label{#1}#2}
+ \end{center}
+ }
+ \hfill
+ \parbox[b]{#8 \textwidth}{
+ \begin{center}
+ \scalebox{#7}{\includegraphics{figs/#5.ps}}
+ \vspace{-0.1in}
+ \caption{\label{#5}#6}
+ \end{center}
+ }
+ \end{figure}
+}

@@ -1,0 +1,28 @@
+\babel@toc {french}{}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Complex DFT\relax }}{12}{figure.caption.3}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Circle de la transformation Fourier\relax }}{13}{figure.caption.4}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Magnitude et phase\relax }}{14}{figure.caption.5}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Butterfly Diagrams for an 8 point FFT\relax }}{17}{figure.caption.7}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Overlapping\relax }}{18}{figure.caption.8}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Interpolation du facteur $\alpha $\relax }}{26}{figure.caption.18}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Pitch Tracking\relax }}{32}{figure.caption.28}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Pitch Tracker\relax }}{35}{figure.caption.29}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Gen multiple\relax }}{36}{figure.caption.30}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Multiple Pitch tracking\relax }}{37}{figure.caption.31}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Le vocodeur de phase\relax }}{41}{figure.caption.32}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Fenetrage gaussien\relax }}{42}{figure.caption.34}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Morphing en temps r\IeC {\'e}el\relax }}{47}{figure.caption.37}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Super Phase Vocoder\relax }}{50}{figure.caption.38}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces modulation des coordon\IeC {\'e}es polaires\relax }}{51}{figure.caption.39}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Selection du bruit\relax }}{51}{figure.caption.40}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Filtre aletoire\relax }}{52}{figure.caption.41}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Visual Morphing\relax }}{53}{figure.caption.42}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Visual Morphing $2^{\IeC {\`e}me}$ version\relax }}{54}{figure.caption.43}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Stades du morphing visuel\relax }}{55}{figure.caption.44}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Harmoniques dans l'espace\relax }}{57}{figure.caption.45}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Le patch qui control les objets jitter\relax }}{57}{figure.caption.46}
+\addvspace {10\p@ }

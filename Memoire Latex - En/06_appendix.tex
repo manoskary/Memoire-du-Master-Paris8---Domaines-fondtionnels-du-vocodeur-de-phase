@@ -1,0 +1,152 @@
+\appendix
+
+\chapter{Appendix}
+
+\label{ch:Appendix}
+
+	\section{FFT Cooley - Tukey algorithm}
+	\label{Cooley-Tukey_Code} 
+
+	\begin{lstlisting}[language=C, caption= Cooley-Tukey with Butterfly Diagrams ]
+		using FFTW
+		#simple DFT function
+		function DFT(x)s
+		    N = length(x)
+		    # We want two vectors here for real space (n) and frequency space (k)
+		    n = 0:N-1
+		    k = n'
+		    transform_matrix = exp.(-2im*pi*n*k/N)
+		    return transform_matrix*x
+		end
+		# Implementing the Cooley-Tukey Algorithm
+		function cooley_tukey(x)
+		    N = length(x)
+		    if (N > 2)
+		        x_odd = cooley_tukey(x[1:2:N])
+		        x_even = cooley_tukey(x[2:2:N])
+		    else
+		        x_odd = x[1]
+		        x_even = x[2]
+		    end
+		    n = 0:N-1
+		    half = div(N,2)
+		    factor = exp.(-2im*pi*n/N)
+		    return vcat(x_odd .+ x_even .* factor[1:half],
+		                x_odd .- x_even .* factor[1:half])
+		end
+		function bitreverse(a::Array)
+		    # First, we need to find the necessary number of bits
+		    digits = convert(Int,ceil(log2(length(a))))
+
+		    indices = [i for i = 0:length(a)-1]
+
+		    bit_indices = []
+		    for i = 1:length(indices)
+		        push!(bit_indices, bitstring(indices[i]))
+		    end
+		    # Now stripping the unnecessary numbers
+		    for i = 1:length(bit_indices)
+		        bit_indices[i] = bit_indices[i][end-digits:end]
+		    end
+		    # Flipping the bits
+		    for i =1:length(bit_indices)
+		        bit_indices[i] = reverse(bit_indices[i])
+		    end
+		    # Replacing indices
+		    for i = 1:length(indices)
+		        indices[i] = 0
+		        for j = 1:digits
+		            indices[i] += 2^(j-1) * parse(Int, string(bit_indices[i][end-j]))
+		        end
+		       indices[i] += 1
+		    end
+		    b = [float(i) for i = 1:length(a)]
+		    for i = 1:length(indices)
+		        b[i] = a[indices[i]]
+		    end
+		    return b
+		end
+		function iterative_cooley_tukey(x)
+		    N = length(x)
+		    logN = convert(Int,ceil(log2(length(x))))
+		    bnum = div(N,2)
+		    stride = 0;
+		    x = bitreverse(x)
+		    z = [Complex(x[i]) for i = 1:length(x)]
+		    for i = 1:logN
+		       stride = div(N, bnum)
+		       for j = 0:bnum-1
+		           start_index = j*stride + 1
+		           y = butterfly(z[start_index:start_index + stride - 1])
+		           for k = 1:length(y)
+		               z[start_index+k-1] = y[k]
+		           end
+		       end
+		       bnum = div(bnum,2)
+		    end
+		    return z
+		end
+		function butterfly(x)
+		    N = length(x)
+		    half = div(N,2)
+		    n = [i for i = 0:N-1]
+		    half = div(N,2)
+		    factor = exp.(-2im*pi*n/N)
+
+		    y = [0 + 0.0im for i = 1:length(x)]
+
+		    for i = 1:half
+		        y[i] = x[i] + x[half+i]*factor[i]
+		        y[half+i] = x[i] - x[half+i]*factor[i]
+		    end
+		    return y
+		end
+		function approx(x, y)
+		    val = true
+		    for i = 1:length(x)
+		        if (abs(x[i]) - abs(y[i]) > 1e-5)
+		            val = false
+		        end
+		    end
+		    println(val)
+		end
+		function main()
+		    x = rand(128)
+		    y = cooley_tukey(x)
+		    z = iterative_cooley_tukey(x)
+		    w = fft(x)
+		    approx(y, w)
+		    approx(z, w)
+		end
+		main()
+	\end{lstlisting}\footnote{Le code est recuperé sur le lien \href{https://www.algorithm-archive.org/contents/cooley_tukey/cooley_tukey.html}{www.algorithm-archive.org} distribué sous la licence \textit{MIT}}.
+
+
+	\section{Espaces $L^p$ et STFT}
+
+	La STFT est une version locale de la transformée de Fourier. Normalement, pour effectuer la transformation de Fourier, on part d'une fonction $f(x)$ qui appartient à $L^{2} (\mathbb{R}^k)$ soit à $L^{1} (\mathbb{R}^k)$ et on obtient une fonction $\hat{f}(\omega)$ qui appartient respectivement à $L^{2} (\mathbb{R}^k)$ ou à $C_{0}(\mathbb{R}^{k})$\footnote{L'espace des fonctions continues qui tendent vers $0$ à l'infini}.
+
+	Pour effectuer la STFT on doit d'abord fixer une fonction qui nous servira de fenêtre. Dans une approche plus practique, on utilisera généralement des fonctions avec une formte décroissance à l'infini (par exemple une fonction gaussienne). De cette manière on pourra appliquer la STFT à des fonctions qui n'ont peut-être pas de transformée de Fourier ordinaire. On laissera les détails de quelles fonctions sont celles qui admettent une STFT (en fonction de la fenêtre fixée) pour plus tard et on se contentera d'abord de voir que si $g\in L^{p}(\mathbb{R}^{k})$ alors toute $f\in L^{p'} (\mathbb{R}^k)$ admet une STFT.
+
+	Pour appliquer la STFT à une fonction il faut être sur que le résultat sera bien défini; cela nous rapporte au problème de choisir un domaine de définition pour la STFT.
+	Dans la définition de la STFT on a choisit comme domaines pour $f$ et pour $g$ respectivement $L^{p'} (\mathbb{R}^k) $ et $L^p (\mathbb{R}^k)$. Ce choix a été fait pour la première approche mais le fait est que la STFT peut être étendue à bien d'autres espaces, notament des espaces de distributions.
+
+	Dans cette section on va proposer quelques uns (ceux qui sont présentés en \cite{Grochenig}); loin d'être une exposition exhaustive, on ne présentera que les espaces les plus importants dans le cadre de l'analyse de Fourier. L'étude détaillé du cas des espaces de modulation sera laissé pour quand ceux-là seront présentés.
+
+	On rappelle qu'on utilise $\mathscr{D} (\mathbb{R}^k)$ pour noter l'espace des distributions ordinaires et $\mathscr{T} (\mathbb{R}^k)$ pour noter l'espace des distributions tempérées.
+
+	\begin{definition}
+	Soit $E$ indifféremment $C^{\infty}_{c} (\mathbb{R}^{k})$ (l'espaces des fonctions lisses à support compact) ou $\mathscr{T} (\mathbb{R}^k)$ et soit $\langle \cdot , \cdot \rangle$ son crochet de dualité.
+
+	$$
+	\begin{matrix}
+	V_{g}\sigma : & \mathbb{R}^d \times \mathbb{R}^k & \rightarrow & \mathbb{C} \\
+	& (t,\omega) & \mapsto & V_{g}\sigma (t, \omega) &=& \sigma(M_{\omega}T_{t}g) := \langle \sigma, M_{\omega}T_{t}g \rangle 
+	\end{matrix}
+	$$
+	et on obtient une extension de la STFT.
+	\end{definition}
+
+	Cette définition n'a pas besoin de justification; en effet, l'évaluation de la distribution dans un élément de son domaine est bien évidemment définie. On pourrait se demander si les opérateurs $M_{\omega}$ et $T_{t}$ laissent invariant les espaces $C^{\infty}_{c}(\mathbb{R}^{d})$ et $\mathscr{T} (\mathbb{R}^k)$. De plus, la justification de que ce soit une extension est faite par l'interpretation de toute fonction de $E$ comme élément de $E'$ par le crochet de dualité.
+
+	Cela nous dit de plus que si $B$ est un espace de Banach contenu dans $\mathscr{T} (\mathbb{R}^k)$ qui est invariant par des traslations et modulations alors la STFT est bien définie pour $f\in B'$ et $g\in B$.

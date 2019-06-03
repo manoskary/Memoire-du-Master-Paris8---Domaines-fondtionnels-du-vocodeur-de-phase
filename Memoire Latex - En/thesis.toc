@@ -1,0 +1,40 @@
+\babel@toc {french}{}
+\contentsline {chapter}{Abstract}{i}{Doc-Start}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}\IeC {\`A} propos}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Structure}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}MaxMSP et Jitter}{3}{section.1.3}
+\contentsline {section}{\numberline {1.4}Analyse spectrale}{4}{section.1.4}
+\contentsline {section}{\numberline {1.5}Morphing}{4}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Morphing sonore}{5}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Morphing visuel}{5}{subsection.1.5.2}
+\contentsline {chapter}{\numberline {2}Context th\IeC {\'e}oritique}{6}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{6}{section.2.1}
+\contentsline {section}{\numberline {2.2}Le d\IeC {\'e}codage math\IeC {\'e}matique}{7}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}La transformation Fourier}{7}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Fen\IeC {\^e}trage et filtres Gabor}{11}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Le vocodeur de phase}{13}{subsection.2.2.3}
+\contentsline {subsubsection}{D\IeC {\'e}finition}{13}{section*.3}
+\contentsline {subsubsection}{Histoire}{13}{section*.4}
+\contentsline {subsection}{\numberline {2.2.4}Applications du vocodeur de phase}{16}{subsection.2.2.4}
+\contentsline {subsubsection}{Time Streching}{16}{section*.5}
+\contentsline {subsubsection}{Transposition de la hauteur}{17}{section*.6}
+\contentsline {subsubsection}{Freeze}{17}{section*.7}
+\contentsline {subsubsection}{Robotisation}{17}{section*.8}
+\contentsline {subsubsection}{Harmonisation - chuchotement}{18}{section*.9}
+\contentsline {subsubsection}{Morphing}{18}{section*.10}
+\contentsline {chapter}{\numberline {3}Design}{20}{chapter.3}
+\contentsline {section}{\numberline {3.1}MaxMSP}{20}{section.3.1}
+\contentsline {subsubsection}{D\IeC {\'e}finition de MaxMSP et introduction sur le logiciel}{20}{section*.11}
+\contentsline {section}{\numberline {3.2}Pitch tracking}{20}{section.3.2}
+\contentsline {section}{\numberline {3.3}Analyse spectrale}{23}{section.3.3}
+\contentsline {section}{\numberline {3.4}Le vocodeur de phase}{25}{section.3.4}
+\contentsline {section}{\numberline {3.5}Morphing spectrale}{27}{section.3.5}
+\contentsline {section}{\numberline {3.6}Morphing visuel}{30}{section.3.6}
+\contentsline {chapter}{\numberline {4}Impl\IeC {\'e}mentations artistiques}{32}{chapter.4}
+\contentsline {section}{\numberline {4.1}\textit {Introduction}}{32}{section.4.1}
+\contentsline {section}{\numberline {4.2}Le vocodeur de phase - \textit {Une capacit\IeC {\'e} sans fin}}{32}{section.4.2}
+\contentsline {chapter}{\numberline {5}Conclusion}{35}{chapter.5}
+\contentsline {section}{\numberline {5.1}R\IeC {\'e}sum\IeC {\'e} de la recherche}{35}{section.5.1}
+\contentsline {section}{\numberline {5.2}Applications}{35}{section.5.2}
+\contentsline {section}{\numberline {5.3}Recherche pour l'avenir}{36}{section.5.3}

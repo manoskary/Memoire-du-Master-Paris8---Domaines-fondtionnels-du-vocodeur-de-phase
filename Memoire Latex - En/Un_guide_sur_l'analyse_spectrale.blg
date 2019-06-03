@@ -1,0 +1,125 @@
+This is BibTeX, Version 0.99d (TeX Live 2018/W32TeX)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Un_guide_sur_l'analyse_spectrale.aux
+The style file: unsrtnat.bst
+Database file #1: biblio.bib
+I was expecting a `,' or a `}'---line 33 of file biblio.bib
+ : 
+ : % -----------------Proceedings--------------------------
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 76 of file biblio.bib
+ :     
+ :     isbn = "9781134379705",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 127 of file biblio.bib
+ :   
+ :   editor = "Coralie {Diatkine}"
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 156 of file biblio.bib
+ :     
+ :     Year = 2015,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--entry type for "GR10" isn't style-file defined
+--line 196 of file biblio.bib
+Too many commas in name 1 of "Ian {Goodfellow}, Jean {Pouget-Abadie}, Bing {Xu}, David {Warde-Farley}, Sherjil {Ozair}, Aaron {Courville}, Yoshua {Bengio}" for entry GANs
+while executing---line 1233 of file unsrtnat.bst
+Too many commas in name 1 of "Ian {Goodfellow}, Jean {Pouget-Abadie}, Bing {Xu}, David {Warde-Farley}, Sherjil {Ozair}, Aaron {Courville}, Yoshua {Bengio}" for entry GANs
+while executing---line 1233 of file unsrtnat.bst
+Too many commas in name 1 of "Ian {Goodfellow}, Jean {Pouget-Abadie}, Bing {Xu}, David {Warde-Farley}, Sherjil {Ozair}, Aaron {Courville}, Yoshua {Bengio}" for entry GANs
+while executing---line 1233 of file unsrtnat.bst
+Too many commas in name 1 of "Ian {Goodfellow}, Jean {Pouget-Abadie}, Bing {Xu}, David {Warde-Farley}, Sherjil {Ozair}, Aaron {Courville}, Yoshua {Bengio}" for entry GANs
+while executing---line 1233 of file unsrtnat.bst
+Too many commas in name 1 of "Curtis {Roads}, Stephen Travis {Pope}, Aldo {Piccialli}, Giovanni {De Poli}" for entry Roads97
+while executing---line 1233 of file unsrtnat.bst
+Too many commas in name 1 of "Joachim {Heinz}, Andes {Cabrerra}, Alex {Hofmann}, Iain {McCurdy} et Alexandre {Abrioux}" for entry HCHMA15
+while executing---line 1233 of file unsrtnat.bst
+Warning--empty booktitle in freitascaetano:hal-00604390
+Too many commas in name 1 of "Ian {Goodfellow}, Jean {Pouget-Abadie}, Bing {Xu}, David {Warde-Farley}, Sherjil {Ozair}, Aaron {Courville}, Yoshua {Bengio}" for entry GANs
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "Ian {Goodfellow}, Jean {Pouget-Abadie}, Bing {Xu}, David {Warde-Farley}, Sherjil {Ozair}, Aaron {Courville}, Yoshua {Bengio}" for entry GANs
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "Ian {Goodfellow}, Jean {Pouget-Abadie}, Bing {Xu}, David {Warde-Farley}, Sherjil {Ozair}, Aaron {Courville}, Yoshua {Bengio}" for entry GANs
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "Ian {Goodfellow}, Jean {Pouget-Abadie}, Bing {Xu}, David {Warde-Farley}, Sherjil {Ozair}, Aaron {Courville}, Yoshua {Bengio}" for entry GANs
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "Ian {Goodfellow}, Jean {Pouget-Abadie}, Bing {Xu}, David {Warde-Farley}, Sherjil {Ozair}, Aaron {Courville}, Yoshua {Bengio}" for entry GANs
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "Ian {Goodfellow}, Jean {Pouget-Abadie}, Bing {Xu}, David {Warde-Farley}, Sherjil {Ozair}, Aaron {Courville}, Yoshua {Bengio}" for entry GANs
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "Ian {Goodfellow}, Jean {Pouget-Abadie}, Bing {Xu}, David {Warde-Farley}, Sherjil {Ozair}, Aaron {Courville}, Yoshua {Bengio}" for entry GANs
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "Ian {Goodfellow}, Jean {Pouget-Abadie}, Bing {Xu}, David {Warde-Farley}, Sherjil {Ozair}, Aaron {Courville}, Yoshua {Bengio}" for entry GANs
+while executing---line 1315 of file unsrtnat.bst
+Warning--empty booktitle in GANs
+Warning--empty author in Fourier_complex
+Too many commas in name 1 of "Curtis {Roads}, Stephen Travis {Pope}, Aldo {Piccialli}, Giovanni {De Poli}" for entry Roads97
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "Curtis {Roads}, Stephen Travis {Pope}, Aldo {Piccialli}, Giovanni {De Poli}" for entry Roads97
+while executing---line 1315 of file unsrtnat.bst
+Warning--empty publisher in Roads97
+Warning--empty year in Audiosculpt
+Warning--empty publisher in Grochenig
+Warning--there's a number but no series in Ful83
+Warning--empty booktitle in roebel:hal-01161334
+Warning--empty year in roebel:hal-01161334
+Warning--empty year in roebel:hal-01161334
+Warning--empty publisher in Herm1895
+Warning--empty publisher in Kli09
+Warning--empty publisher in Dr11
+Warning--empty booktitle in Gr08
+Too many commas in name 1 of "Joachim {Heinz}, Andes {Cabrerra}, Alex {Hofmann}, Iain {McCurdy} et Alexandre {Abrioux}" for entry HCHMA15
+while executing---line 1315 of file unsrtnat.bst
+Too many commas in name 1 of "Joachim {Heinz}, Andes {Cabrerra}, Alex {Hofmann}, Iain {McCurdy} et Alexandre {Abrioux}" for entry HCHMA15
+while executing---line 1315 of file unsrtnat.bst
+Warning--empty year in HCHMA15
+Warning--empty school in Kar17
+Warning--empty booktitle in olivero:hal-00682959
+Warning--empty booktitle in roebel:hal-01161124
+Warning--empty booktitle in roebel:hal-01161125
+Warning--there's a number but no volume in RVR07
+You've used 43 entries,
+            2481 wiz_defined-function locations,
+            822 strings with 11363 characters,
+and the built_in function-call counts, 14876 in all, are:
+= -- 1415
+> -- 294
+< -- 54
++ -- 172
+- -- 84
+* -- 747
+:= -- 2103
+add.period$ -- 133
+call.type$ -- 43
+change.case$ -- 79
+chr.to.int$ -- 41
+cite$ -- 64
+duplicate$ -- 966
+empty$ -- 1551
+format.name$ -- 126
+if$ -- 3381
+int.to.chr$ -- 3
+int.to.str$ -- 44
+missing$ -- 38
+newline$ -- 227
+num.names$ -- 126
+pop$ -- 452
+preamble$ -- 1
+purify$ -- 43
+quote$ -- 0
+skip$ -- 717
+stack$ -- 0
+substring$ -- 708
+swap$ -- 289
+text.length$ -- 12
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 283
+warning$ -- 20
+while$ -- 115
+width$ -- 0
+write$ -- 545
+(There were 22 error messages)

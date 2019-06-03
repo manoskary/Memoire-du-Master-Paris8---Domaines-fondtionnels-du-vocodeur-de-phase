@@ -1,0 +1,65 @@
+\babel@toc {french}{}
+\contentsline {chapter}{Abstract}{i}{Doc-Start}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}About}{1}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Implementation Tools}{2}{subsection.1.1.1}
+\contentsline {section}{\numberline {1.2}Structure}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}MaxMSP et Jitter}{4}{section.1.3}
+\contentsline {section}{\numberline {1.4}Spectral Analysis}{5}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}History}{5}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}The Phase Vocoder}{6}{subsection.1.4.2}
+\contentsline {section}{\numberline {1.5}Morphing}{7}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Sound Morphing}{7}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Visual Morphing}{8}{subsection.1.5.2}
+\contentsline {chapter}{\numberline {2}Context th\IeC {\'e}oritique}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}Mathematical Decoding}{10}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}The Fourier Transform}{10}{subsection.2.2.1}
+\contentsline {subsubsection}{Fast Fourier Transform}{14}{section*.3}
+\contentsline {subsection}{\numberline {2.2.2}Windowing}{15}{subsection.2.2.2}
+\contentsline {subsubsection}{Gabor Filters}{17}{section*.4}
+\contentsline {subsection}{\numberline {2.2.3}Le vocodeur de phase}{18}{subsection.2.2.3}
+\contentsline {subsubsection}{D\IeC {\'e}finition}{18}{section*.5}
+\contentsline {subsubsection}{Histoire}{18}{section*.6}
+\contentsline {subsection}{\numberline {2.2.4}Applications du vocodeur de phase}{22}{subsection.2.2.4}
+\contentsline {subsubsection}{Time Streching}{22}{section*.7}
+\contentsline {subsubsection}{Transposition de l'hauteur}{23}{section*.8}
+\contentsline {subsubsection}{Freeze}{23}{section*.9}
+\contentsline {subsubsection}{Robotisation}{23}{section*.10}
+\contentsline {subsubsection}{Harmonisation - chuchotement}{24}{section*.11}
+\contentsline {subsubsection}{Morphing}{24}{section*.12}
+\contentsline {subsubsection}{Noise modeling}{25}{section*.13}
+\contentsline {subsubsection}{Stochastic Modeling}{26}{section*.14}
+\contentsline {chapter}{\numberline {3}Design}{27}{chapter.3}
+\contentsline {section}{\numberline {3.1}MaxMSP Objects}{27}{section.3.1}
+\contentsline {subsubsection}{$FFT\thicksim $}{28}{section*.15}
+\contentsline {subsubsection}{$IFFT\thicksim $}{28}{section*.16}
+\contentsline {subsubsection}{$cartopol\thicksim $}{29}{section*.17}
+\contentsline {subsubsection}{$poltocar\thicksim $}{29}{section*.18}
+\contentsline {subsubsection}{$FFTinfo\thicksim $}{29}{section*.19}
+\contentsline {subsubsection}{$framedelta\thicksim $}{29}{section*.20}
+\contentsline {subsubsection}{$gen\thicksim $}{29}{section*.21}
+\contentsline {section}{\numberline {3.2}Pitch tracking}{30}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Multiple Pitch Tracking}{33}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Le vocodeur de phase}{36}{section.3.3}
+\contentsline {subsubsection}{Filtre Gabor}{39}{section*.22}
+\contentsline {subsubsection}{Pitch Shifting}{39}{section*.23}
+\contentsline {subsubsection}{Playback speed}{42}{section*.24}
+\contentsline {section}{\numberline {3.4}Morphing spectrale}{42}{section.3.4}
+\contentsline {chapter}{\numberline {4}Impl\IeC {\'e}mentations artistiques}{46}{chapter.4}
+\contentsline {section}{\numberline {4.1}\textit {Introduction}}{46}{section.4.1}
+\contentsline {section}{\numberline {4.2}Le vocodeur de phase - \textit {Une capacit\IeC {\'e} sans fin}}{47}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Super Phase Vocoder}{47}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Phase interference}{47}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Modulation au bruit}{50}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Filtre aletoire sur la position du buffer$\thicksim $}{50}{subsection.4.2.4}
+\contentsline {section}{\numberline {4.3}Morphing visuel}{50}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Visualization du spectre}{51}{subsection.4.3.1}
+\contentsline {chapter}{\numberline {5}Conclusion}{53}{chapter.5}
+\contentsline {section}{\numberline {5.1}R\IeC {\'e}sum\IeC {\'e} de la recherche}{53}{section.5.1}
+\contentsline {section}{\numberline {5.2}Applications}{54}{section.5.2}
+\contentsline {section}{\numberline {5.3}Discussion}{54}{section.5.3}
+\contentsline {section}{\numberline {5.4}Recherche pour l'avenir}{54}{section.5.4}
+\contentsline {chapter}{\numberline {A}Appendix}{58}{chapter.1}
+\contentsline {section}{\numberline {A.1}FFT Cooley - Tukey algorithm}{58}{section.1.1}
+\contentsline {section}{\numberline {A.2}Espaces $L^p$ et STFT}{61}{section.1.2}

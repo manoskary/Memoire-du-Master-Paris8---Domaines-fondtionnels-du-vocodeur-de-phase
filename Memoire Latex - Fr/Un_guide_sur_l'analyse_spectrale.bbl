@@ -1,0 +1,259 @@
+\begin{thebibliography}{43}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[cycling74.com(2018)]{cycling74}
+cycling74.com.
+\newblock Max8 release date, 2018.
+\newblock URL \url{https://cycling74.com}.
+
+\bibitem[et~R.~M.~{Golden}(1966)]{flanagan}
+J.~L.~{Flanagan} et~R.~M.~{Golden}.
+\newblock Phase vocoder.
+\newblock \emph{The Bell System Technical Journal}, 45\penalty0 (9):\penalty0
+  pp. 1493--1509, Nov 1966.
+
+\bibitem[et~Jae S.~{Lim}(1984)]{GrL84}
+Daniel W.~{Griffin} et~Jae S.~{Lim}.
+\newblock Signal estimation from modified short-time fourier transform.
+\newblock \emph{IEE Transactions on acoustics, speech, and signal processing},
+  ISSE Vol. 32:\penalty0 pp. 236--243, Avril 1984.
+
+\bibitem[Ian~{Goodfellow}(2004)]{GANs}
+Bing {Xu} David {Warde-Farley} Sherjil {Ozair} Aaron {Courville}
+  Yoshua~{Bengio} Ian~{Goodfellow}, Jean~{Pouget-Abadie}.
+\newblock Generative adversarial networks.
+\newblock page pp. 2672–2680, 2004.
+
+\bibitem[Fou(1965)]{Fourier_complex}
+An algorithm for the machine calculation of complex fourier series.
+\newblock \emph{JSTOR}, 1965.
+
+\bibitem[et~Jean~{Laroche}(1999)]{DoLa99}
+Mark~{Dolson} et~Jean~{Laroche}.
+\newblock {Impoved Phase Vocoder Time-Scale Modification of Audio}.
+\newblock \emph{IEEE Transactions on Speech and Audio Processing}, Vol. 7, mai
+  1999.
+
+\bibitem[{Roebel}(1999{\natexlab{a}})]{Rob99}
+Axel {Roebel}.
+\newblock Morphing sound attractors.
+\newblock In \emph{3rd. World Multiconference on Systemics, Cybernetics and
+  Informatics (SCI'99) and the 5th. Int'l Conference on Information Systems
+  Analysis and Synthesis (ISAS'99), 1999, Florida, United States, Proc. of the
+  3rd. World Multiconference on Systemics, Cybernetics and Informatics
+  (SCI'99), 5th. Int'l Conference on Information Systems Analysis and Synthesis
+  (ISAS'99)}, 1999{\natexlab{a}}.
+
+\bibitem[Curtis~{Roads}(1997)]{Roads97}
+Aldo {Piccialli} Giovanni~{De Poli} Curtis~{Roads}, Stephen Travis~{Pope}.
+\newblock \emph{Musical Signal Processing}.
+\newblock Londres et New York, 1997.
+
+\bibitem[{Diatkine}()]{Audiosculpt}
+Coralie {Diatkine}.
+\newblock Audiosculpt 3.0 user manual.
+
+\bibitem[{Gröchenig}(2001)]{Grochenig}
+Karlheinz {Gröchenig}.
+\newblock \emph{Foundations of Time-Frequency Analysis}.
+\newblock Birkhäuser Boston, 2001.
+
+\bibitem[{Fulton}(1983)]{Ful83}
+William {Fulton}.
+\newblock Introduction to intersection theory in algebraic geometry.
+\newblock In \emph{Regional Conference Series in Mathematics}, number~54, 1983.
+
+\bibitem[et~Xavier~{Rodet}()]{roebel:hal-01161334}
+Axel~{Roebel} et~Xavier~{Rodet}.
+\newblock Efficient spectral envelope estimation and its application to pitch
+  shifting and envelope preservation.
+\newblock URL \url{https://hal.archives-ouvertes.fr/hal-01161334}.
+\newblock cote interne IRCAM: Roebel05b, Journal = "International Conference on
+  Digital Audio Effects", ADDRESS = "Madrid", PAGES = "pp. 30 -- 35", YEAR =
+  2005, Month = septembre.
+
+\bibitem[et~Robert~{MacPherson}(1981)]{GMP81}
+Mark~{Goresky} et~Robert~{MacPherson}.
+\newblock On the topology of complex algebraic maps.
+\newblock In \emph{Algebraic Geometry Proceedings, La R\'abida, Lecture Notes
+  in Mathematics}, volume 961, 1981.
+
+\bibitem[{Roebel}(1999{\natexlab{b}})]{robel:hal-01253228}
+Axel {Roebel}.
+\newblock Morphing sound attractors.
+\newblock \emph{3rd. World Multiconference on Systemics, Cybernetics and
+  Informatics (SCI'99) and the 5th. Int'l Conference on Information Systems
+  Analysis and Synthesis (ISAS'99)}, 1999{\natexlab{b}}.
+\newblock URL \url{https://hal.archives-ouvertes.fr/hal-01253228}.
+
+\bibitem[{Helmholtz}(1895)]{Herm1895}
+Hermann L~F. {Helmholtz}.
+\newblock \emph{The Sensations of Tone}.
+\newblock New York, 1895.
+
+\bibitem[{Klingbeil}(2009)]{Kli09}
+Michael~Kateley {Klingbeil}.
+\newblock \emph{Spectral Analysis, Editing and Resynthesis: Methods and
+  Applications}.
+\newblock Université de Columbia, 2009.
+
+\bibitem[{Roads}(1996)]{Roads:1996:CMT:525484}
+Curtis {Roads}.
+\newblock \emph{The Computer Music Tutorial}.
+\newblock MIT Press, Cambridge, MA, USA, 1996.
+\newblock ISBN 0262680823.
+
+\bibitem[{Droljc}(2011)]{Dr11}
+Tadej {Droljc}.
+\newblock \emph{STFT Analysis Driven Sonographic Sound Processing in Real-Time
+  using Max/MSP and Jitter}.
+\newblock 2011.
+
+\bibitem[{Grisey}(2008)]{Gr08}
+Gérald {Grisey}.
+\newblock Écrits : ou l'invention de la musique spectrale.
+\newblock MF Éditions, 2008.
+
+\bibitem[{Movellan}(2008)]{Tut2002}
+Javier~R. {Movellan}.
+\newblock A tutorial on gabor filters, 2008.
+\newblock URL \url{http://mplab.ucsd.edu/tutorials/gabor.pdf}.
+
+\bibitem[{Engel}(2008)]{Eng17}
+Jesse {Engel}.
+\newblock Making a neural synthesizer instrument, 2008.
+\newblock URL \url{https://magenta.tensorflow.org/nsynth-instrument}.
+
+\bibitem[Joachim~{Heinz}()]{HCHMA15}
+Alex {Hofmann} Iain {McCurdy} et Alexandre~{Abrioux} Joachim~{Heinz},
+  Andes~{Cabrerra}.
+\newblock Fourier transformation / spectral processing.
+
+\bibitem[et~Cort~{Lippe}(2006)]{DL06}
+Richard~{Ducas} et~Cort~{Lippe}.
+\newblock The phase vocoder - part i, 2 novembre 2006.
+\newblock URL
+  \url{https://cycling74.com/tutorials/the-phase-vocoder-%E2%80%93-part-i}.
+
+\bibitem[et~Cort~{Lippe}(2007)]{DL07}
+Richard~{Ducas} et~Cort~{Lippe}.
+\newblock The phase vocoder - part ii, 2 juillet 2007.
+\newblock URL \url{https://cycling74.com/tutorials/the-phase-vocoder-part-ii}.
+
+\bibitem[{Karystinaios}(2017)]{Kar17}
+Emmanouil-Nikolaos {Karystinaios}.
+\newblock An investigation into the spectral music idiom and timbral analysis
+  functionality with max smp jitter.
+\newblock Master's thesis, Septembre 2017.
+\newblock preprint.
+
+\bibitem[{Wu}(2006)]{Wu06}
+Cavin {Wu}.
+\newblock How computer technology influences art and design programs in higher
+  education.
+\newblock Master's thesis, La Sierra University, 2006.
+
+\bibitem[{Boley}(2005)]{Bol05}
+Jonathan {Boley}.
+\newblock \emph{Auditory Component analysis using perceptual pattern
+  recognition to identify and extract independent components from an auditory
+  scenee}.
+\newblock PhD thesis, Université de Miami, 2005.
+
+\bibitem[{Grünwald}(2010)]{GR10}
+Johannes {Grünwald}.
+\newblock Theory, implementation and evaluation of the digital phase vocoder in
+  the context of audio effects, 2010.
+
+\bibitem[Freitas~{Caetano}(2010)]{freitascaetano:hal-00604390}
+Xavier {Marcelo} et Xavier~{Rodet} Freitas~{Caetano}.
+\newblock {Automatic timbral Morphing of Musical Instrument Sounds by
+  High-Level Descriptors}.
+\newblock pages pp. 11 -- 21, United States, juin 2010.
+\newblock URL \url{https://hal.archives-ouvertes.fr/hal-00604390}.
+
+\bibitem[{Charles}(2008)]{Ch08}
+Jean-François {Charles}.
+\newblock A tutorial on spectral sound processing using maxmsp and jitter.
+\newblock \emph{Computer Music Journal}, pages pp. 87 -- 102, Printemps 2008.
+
+\bibitem[{Dolson}(1986)]{Dol86}
+Mark {Dolson}.
+\newblock The phase vocoder : a tutorial.
+\newblock \emph{Computer Music Journal}, pages pp. 14 -- 27, Printemps 1986.
+
+\bibitem[et~Ronald W.~{Schafer}(2009)]{Sch09}
+Alan V.~{Oppenheim} et~Ronald W.~{Schafer}.
+\newblock Discrete-time signal processing.
+\newblock \emph{Prentice Hall Press}, pages pp. 822 -- 835, 2009.
+
+\bibitem[{Smith}(1997)]{Sm97}
+Steven~W. {Smith}.
+\newblock The scientist and engineer's guide to digital signal processing.
+\newblock \emph{California Technical Publishing}, 1997.
+
+\bibitem[{Strawn}(1985)]{Str85}
+Jown {Strawn}.
+\newblock Introduction to digital sound synthesis.
+\newblock \emph{Digital Audio Engineering}, pages pp. 141 -- 134, 1985.
+
+\bibitem[Richard~{Kronalnd-Martinet}(2007)]{KVYJ07}
+Solvi {Ystad} et Kristoffer~{Jensen} Richard~{Kronalnd-Martinet},
+  Thierry~{Voinier}.
+\newblock Computer music modeling and retrieval.
+\newblock \emph{4th international Symposium CMMR}, 2007.
+
+\bibitem[{Fineberg}(2000)]{Fin00}
+Joshua {Fineberg}.
+\newblock Guide to the basic concepts and techniques of spectral music.
+\newblock \emph{Contemporary Music Review}, pages pp. 81 -- 113, 2000.
+
+\bibitem[{Gabor}(1944)]{Gab44}
+Dennis {Gabor}.
+\newblock Theory of communication.
+\newblock \emph{ICMC}, 1944.
+
+\bibitem[Olivero~{Ana{\"i}k}(2012)]{olivero:hal-00682959}
+Bruno {Depalle} et Richard~{Kronland-Martinet} Olivero~{Ana{\"i}k},
+  Olivero~{Torr{\'e}sani}.
+\newblock Sound morphing strategies based on alterations of time-frequency
+  representations by gabor multipliers.
+\newblock page pp. 17, Helsinki, mars 2012.
+\newblock URL \url{https://hal.archives-ouvertes.fr/hal-00682959}.
+
+\bibitem[{Roebel}(2003{\natexlab{a}})]{roebel:hal-01161124}
+Axel {Roebel}.
+\newblock A new approach to transient processing in the phase vocoder.
+\newblock pages pp. 344 -- 349, Londrais, septebre 2003{\natexlab{a}}.
+\newblock URL \url{https://hal.archives-ouvertes.fr/hal-01161124}.
+
+\bibitem[{Roebel}(2003{\natexlab{b}})]{roebel:hal-01161125}
+Axel {Roebel}.
+\newblock Transient detection and preservation in the phase vocoder.
+\newblock pages pp. 247 -- 250, Singapore, octobre 2003{\natexlab{b}}.
+\newblock URL \url{https://hal.archives-ouvertes.fr/hal-01161125}.
+
+\bibitem[{Peeters}(2004)]{Pee04}
+Geoffroy {Peeters}.
+\newblock A large set of audio features for sound description in the cuidado
+  project.
+\newblock \emph{A large set of Audio Feautures for Sound Description}, 2004.
+
+\bibitem[{Sédes}(2002)]{Se02}
+Anne {Sédes}.
+\newblock Spectralisme français, du domaine fréquenctiel au domaine temporel,
+  analyse, modélisation, synthèse. . . et prospectives.
+\newblock \emph{The Foundations of Contemporary Composing}, 2002.
+
+\bibitem[Axel~{Roebel}(2007)]{RVR07}
+Fernando {Villavicencio} et Xavier~{Rodet} Axel~{Roebel}.
+\newblock On cesptral and all-pole based spectral envelope modeling witg
+  unknown model order.
+\newblock \emph{Pattern Recognition Letters}, \penalty0 (28):\penalty0 pp. 1343
+  -- 1350, 2007.
+
+\end{thebibliography}

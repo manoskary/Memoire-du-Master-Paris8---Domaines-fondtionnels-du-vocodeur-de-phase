@@ -1,0 +1,82 @@
+\chapter{Conclusion}
+
+\label{ch:conclusions}
+
+\section{Résumé de la recherche}
+
+This dissertation served documentary means in order to inform musicians and composers of non-everyday notions and facts. This work was also fruitful in a personal level, as it helped me furthen my knownledge in the domain. Spectral processing is frequently very hard to understand for musicians. Maybe the work of a musician on the field will help the community to understand better through this series of implementations and artistic uses.
+
+
+ Cette recherche sert à des fins documentaires, le but est d'informer les musiciens et les compositeurs des notions complexes. Ce travail me sera aussi enrichissant au niveau personnel, il me permettra d'approfondir mes connaissances dans ce domaine. Le spectre est une terminologie difficile à comprendre pour les musiciens et un point de vue plus musical va faciliter sa compréhension. En approfondissant sur le terrain du morphing, on découvrira de nouvelles manières pour manipuler cet effet. Cette problématique, constituera le but final de la recherche. 
+
+\section{Applications}
+
+The applications of the Phase Vocoders are pretty much endless as seen in the implementation chapter. A few propositions will follow to display the capacities of spectral analysis and the phase vocoder.
+
+The phase vocoder can be used to analyse voice and transform it to text. The picks and the frequencies can be deducted to certain vowels and consonants allowing to predict the exact letters used and produce the written form of the sound.
+
+The phase vocoder human voice-wised can also transform a certain type of voice, for example a man's voice to a female or any other type of voice by morphing between the characteristics that determine a voice as male, female or any other.
+
+The spectral tools and specially those of analysis-synthesis are used frequently by composers vis DAW programs. A famous library would TRAX by Ircam tools. 
+
+\section{Discussion}
+
+The phase vocoder today is more than just a spectral analysis tool. Methods develloped to stachastically forsee the most suitable wave resynthesis.
+
+These formuli consider propabilistic methods for reconstructing signals, for better frequency prediction techniques. For more information on this subject, the book of Roads and al.\footnote{Curtis Roads, Stephen Travis Pope, Aldo Piccialli, Giovanni De Poli, \textit{Musical Signal Processing}, 1997 \nocite{Roads97}} was pretty enlighting.
+
+\section{Recherche pour l'avenir}
+
+En outre, je propose une suite de ma recherche sur les processus spectraux en utilisant les principes tels que Deep Learning. Spécifiquement un approche sur le Morphing spectrale en temps réel connecte aux networks neurals \footnote{Jesse Engel. Making a neural synthesizer instrument, 2008.}. 
+
+Je suis particulierment interessé par le fait que un vocoder de phase puisse detecter les frequences dominantes d'un son. Ce fait pourrait essentiallement servir à une method intelligente de presiser les differentes notes contenue dans une information sonore. L'extraction des frequence en forme de notes pourrait assister à l'analyse automatique de la musique à partir des fichiers sonores et, par suite, transformer le son à une forme symbolique. Dans une recherche de futur, je souhaiterais m'orienter dans le domaine de l'analyse Topologic de la musique. Une interpretation de la musique symbolique comme des structures topologiques bidimentionelles, c'est-à-dire des graphes orrientés, peut assister à extracter informations du style musical ou de la structure. La théorie de graphes contiente plusieurs methodes spectrales telles que la transformation Fourier des graphes et toute une infra-structure mathématiques basée sur les concepts investigués dans cet recherche.
+
+I am interested in using Variational Autoencoders (VAE) to identify the probability distri-
+bution of an ensemble of musical pieces. VAEs are autoencoders that parameterize the prob-
+ability distribution of the latent variables using a neural network and proceed to maximize
+the likelihood of the data distribution subject to constraints in the latent variable distribution.
+Numerical experiments show it’s capable of identifying that data distribution to the extent
+that sampling from the latent variable distribution generates realistic datapoints. I aspire to
+use this representation to produce new music by combining other musical pieces in the VAE
+embedding.
+
+I believe that through the process of musical analysis on harmony and melody blended
+with unsupervised learning one can advance to enhanced models of musical prediction, vari-
+ation and creativity. To reach this goal, I visualize first algebraic modeling formalization on
+vertical (chords) and linear (melodies) data such as transformational music theory approaches.
+Proceeding to building a style database and applying an algorithm for prediction, I believe that
+through VAE this can be advanced and produce groundbreaking results.
+Hitherto VAE presented limited application to sequential data, and existing recurrent VAE
+models have difficulty modeling sequences with long-term structure. To address this issue, I
+propose the use of a hierarchical decoder, which first outputs embeddings for subsequences
+of the input and then uses these embeddings to generate each subsequence independently. It
+is also possible to model multitrack polyphonic music as vectors in a latent space. Via chord
+conditioning, which allows deeper understanding of melody while keeping harmony fixed,
+and further allows chords to be changed while maintaining musical style. This approach was
+first presented in the project Magenta of Google AI and in my opinion presents great potential
+and could advance on simultaneous chord and melody generation.
+
+Je suis intéressé à utiliser des autoencodeurs variationnels (VAE) pour identifier la distribution de probabilité.
+création d’un ensemble de pièces musicales. Les VAE sont des auto-encodeurs qui paramètrent le pro-
+distribution de capacité des variables latentes en utilisant un réseau de neurones et procéder à maximiser
+la probabilité que la distribution des données soit soumise à des contraintes dans la distribution des variables latentes.
+Des expériences numériques montrent qu'il est capable d'identifier cette distribution de données dans la mesure
+cet échantillonnage de la distribution des variables latentes génère des points de données réalistes. J'aspire à
+utiliser cette représentation pour produire une nouvelle musique en combinant d'autres pièces musicales dans le VAE
+intégration.
+
+Je crois que, grâce au processus d'analyse musicale sur l'harmonie et la mélodie,
+avec l’apprentissage non supervisé, on peut passer à des modèles améliorés de prédiction musicale, de
+ation et créativité. Pour atteindre cet objectif, je visualise la première formalisation de la modélisation algébrique sur
+données verticales (accords) et linéaires (mélodies) telles que les approches de la théorie de la musique transformationnelle.
+Pour construire une base de données de styles et appliquer un algorithme de prédiction, je crois que
+Grâce à VAE, cela peut être avancé et produire des résultats révolutionnaires.
+Jusqu’à présent, VAE présentait une application limitée aux données séquentielles et une VAE récurrente existante.
+les modèles ont du mal à modéliser des séquences avec une structure à long terme. Pour résoudre ce problème, je
+proposer l'utilisation d'un décodeur hiérarchique, qui produit d'abord des imbrications pour les sous-séquences
+de l’entrée et utilise ensuite ces imbrications pour générer chaque sous-séquence indépendamment. Il
+Il est également possible de modéliser de la musique polyphonique multipiste en tant que vecteurs dans un espace latent. Via accord
+conditionnant, qui permet une compréhension plus profonde de la mélodie tout en maintenant l’harmonie,
+et permet en outre de modifier les accords tout en maintenant le style musical. Cette approche était
+présenté pour la première fois dans le projet Magenta de Google AI et présente à mon avis un grand potentiel
+et pourrait avancer sur la génération simultanée d'accords et de mélodies.
