@@ -1,6 +1,5 @@
 \documentclass[a4paper,12pt,twoside]{report}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=3cm]{geometry}
-\usepackage{natbib}
 \include{thesis.preamble}
 
 
@@ -18,8 +17,8 @@
 \begin{titlepage}
     \begin{center}
         UNIVERSITE PARIS 8 VINCENNES À ST-DENIS \\
-        UFR ARTS. PHILOSOPHIE, ESTHÉTIQUE \\
-        Département de Musique
+        UFR ARTS, PHILOSOPHIE, ESTHÉTIQUE \\
+        Département de la Musique
         \vspace*{7cm}
         
         \textbf{\Large{Domaines fonctionnels du vocodeur de phase}}
@@ -52,7 +51,7 @@
 \body
 \chapter{Introduction}
 \input{01_introduction.tex}
-\chapter{Context théoritique}
+\chapter{Contexte théorique}
 \input{02_contexte.tex}
 \chapter{Design}
 \input{03_Design.tex}
@@ -61,13 +60,13 @@
 \chapter{Conclusion}
 \input{05_conclusion.tex}
 \appendix
-\chapter*{Appendix}
+\chapter{Appendix}
 \input{06_appendix}
 \lstlistoflistings 
 
-\bibliographystyle{unsrtnat}
+\bibliographystyle{plainnat}
 \bibliography{biblio}
 
-\nocite{*}
+% \nocite{*}
 
 \end{document}{}

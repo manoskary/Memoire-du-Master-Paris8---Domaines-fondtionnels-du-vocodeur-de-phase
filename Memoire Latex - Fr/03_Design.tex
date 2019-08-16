@@ -1,120 +1,132 @@
 
 \label{ch:Design}
 
-Dans ce chapitre, nous allons implémenter les formules mathématiques présentées dans le chapitre précédent dans la language du logiciel MaxMSP. De plus, nous allons structurer d'autres effets et variations sur le contexte du vocodeur de phase.
+Dans ce chapitre, nous allons implémenter, dans le language du logiciel MaxMSP, les formules mathématiques présentées précédemment. De plus, nous allons introduire d'autres effets spectraux et des variations dans le contexte du vocodeur de phase.
 
-On va présenter, à la suite,  les objets MaxMSP qui encapsulent\footnote{encapsuler : créer un sub-patch qui contient un ensemble d'objets / fonctions } des fonctions mathématiques telles que FFT, IFFT et d’autres transformations. L’objectif de ce partie est de permettre de comprendre la plupart des outils spectraux que MaxMSP offre à l’utilisateur. Parallèlement, on va construire une série d’outils efficaces pour structurer un simple vocodeur de phase.
+Par ailleurs, nous allons presenter les objets MaxMSP qui encapsulent\footnote{Encapsuler : créer un sub-patch qui contient un ensemble d'objets / fonctions } des fonctions mathématiques telles que FFT, IFFT et d’autres transformations. On peut attendre de ce partie qu'il permet de comprendre la plupart des outils spectraux que MaxMSP offre à l’utilisateur. Parallèlement, on va construire une série d’outils efficaces pour structurer un simple vocodeur de phase.
 
-\section{MaxMSP Objects}
+\section{Objets MaxMSP}
 
-Dans cette section, nous allons mentionner quelques-uns des objets spectraux de base de MaxMSP fournis directement par la librairie standarde, et nous analyserons leurs fonctionnalités.
+Dans cette section, nous allons mentionner quelques-uns des objets spectraux de base de MaxMSP fournis directement par la librairie standard, et nous analyserons leurs fonctionnalités.
 
 Dans MaxMSP, il existe 3 catégories d’objets :
- 
 \begin{enumerate}
     \item
     Les objets logiques utilisés pour les expressions et les calculs logiques; 
     \item
-    Les objets signal, pour le traitement du signal, suivis généralement par une indication $ \thicksim $ après leur nom ; 
+    Les objets signaux, pour le traitement du signal, suivis généralement par une indication \guillemotleft$ \thicksim $\guillemotright après leur nom ; 
     \item
     Les objets Jitter qui sont utilisés pour les données multidimensionnelles, tels que images, formes 3D, etc.
 \end{enumerate}
 
+La manière dont un objet spectral fonctionne dans MaxMSP est quelque peu différente de celle des autres objets signaux. Ils sont déployés dans un environnement spécial appelé \textit{PFFT}$\thicksim $. Le PFFT contient, frequement, une FFT et une IFFT. La majorité des objets dans le PFFT traitent des données bidimensionnelles, par consequant, ils sont traités dans un patch différent.
 
-La manière dont un objet spectral fonctionne dans MaxMSP est quelque peu différente de celle des autres objets signal. Ils sont déployés dans un environnement spécial appelé $ PFFT \thicksim $. Dans cet environnement, comme son nom l'indique, une FFT est effectuée et, comme les objets traitent des données bidimensionnelles, ils sont traités dans un patch différent. \footnote{Dans MaxMSP, un fichier de code est appelé un patch entre utilisateurs}.
+\subsubsection{FFT$\thicksim$}
+    L'objet $ \textit{fft}\thicksim $ appartient à la famille de signaux, comme le precise l'indicateur $ \thicksim $. C'est l'objet qui effectue la transformation rapide de Fourier. Il n'existe aucune entrée mais il y a trois sorties, une pour la partie réelle de l'exponentielle complexe, une pour la partie imaginaire et un compteur qui garde l’index des harmoniques de la transformation de Fourier.
 
-\subsubsection{$FFT\thicksim$}
-    Les objets $ FFT \thicksim $ appartiennent à la famille de signaux, comme l'assume l'indicateur $ \thicksim $. C'est l'objet qui effectue la transformation rapide de Fourier. Il n'a pas d'entrées mais il y trois sorties, une pour la partie réelle de l'exponentielle complexe, une pour la partie imaginaire et un compteur qui garde l’index des corbeilles de fréquence.
-
-     Dans la transformation de Fourier fenêtrée habituelle:
-
-
+    Dans la transformation de Fourier fenêtrée habituelle:
     \begin{equation}
         X_k = \sum_{n=0}^{N-1} x_n \; e^{-j \frac{2 \pi k n}{N}}
     \end{equation}
 
-    Où k est l’indice de la corbeille et les coordonnées complexes correspondantes sont $ \sum_{n = 0}^k x_n + cos (2 \pi t) $ pour la partie réelle et $ \sum_{n = 0}^k x_n + j sin (2 \pi t) $ pour l’imaginaire. Bien entendu, la réduction correspondante de la ramification calculée est appliquée par l’algorithme FFT présenté au chapitre précédent.
+    Où k est l’indice de l'harmonique et les coordonnées complexes correspondantes sont $ \sum_{n = 0}^k x_n + cos (2 \pi t) $ pour la partie réelle et $ \sum_{n = 0}^k x_n + j sin (2 \pi t) $ pour l’imaginaire. Bien entendu, la réduction correspondante de la ramification calculée est appliquée par l’algorithme FFT présenté au chapitre précédent.
 
-
-\subsubsection{$IFFT\thicksim$}
+\subsubsection{IFFT$\thicksim$}
     
     De manière similaire, la FFT inverse est traitée par la fonction d'objet appropriée avec les entrées et les sorties inverses.
 
-\subsubsection{$cartopol\thicksim$}
+\subsubsection{cartopol$\thicksim$}
     
-    Il n’est généralement pas utile d’utiliser ces coordonnées cartésiennes, produites par le $ FFT \thicksim $ correspondant aux parties réelle et imaginaire du plan $ \mathbb {C}^2 $. Par conséquent, un objet transformant les coordonnées cartésiennes en une forme polaire appelée $ cartopol \thicksim $ est fréquemment déployé. Cet objet prend bien sûr deux entrées (réelle et imaginaire) et génère une phase et une magnitude pour chaque index.
+    Il n’est généralement pas utile d’utiliser ces coordonnées cartésiennes, produites par le \textit{fft}$\thicksim $ correspondant aux parties réels et imaginaires du plan $ \mathbb {C}^2 $. Par conséquent, un objet transformant les coordonnées cartésiennes en une forme polaire appelée \textit{cartopol}$\thicksim $ est fréquemment déployé. Cet objet a donc deux entrées (réelle et imaginaire) et génère une phase et une magnitude pour chaque index.
 
-\subsubsection{$poltocar\thicksim$}
+\subsubsection{poltocar$\thicksim$}
     
-    Exactement la fonction inverse de $ cartopol \thicksim $. L’objet $ poltocar\thicksim $ transforme des coordonnées polaires (deux entrées) aux coordonnées Cartésiennes (deux sorties).
+    Exactement la fonction inverse de \textit{cartopol}$\thicksim $. L’objet \textit{poltocar}$\thicksim $ transforme des coordonnées polaires (deux entrées) aux coordonnées Cartésiennes (deux sorties).
 
-\subsubsection{$FFTinfo\thicksim$}
+\subsubsection{FFTinfo$\thicksim$}
     
-    $ FFTinfo \thicksim $ est très fréquemment utilisé et fournit des informations sur les paramètres de la FFT, tels que la taille de la fenêtre, etc.
+    \textit{FFTinfo}$\thicksim $ est très fréquemment utilisé et il fournit des informations sur les paramètres de la FFT, tels que la taille de la fenêtre, etc.
 
-\subsubsection{$framedelta\thicksim$}
+\subsubsection{\textit{framedelta}$\thicksim$}
     
-    Un objet très important car il calcule la dérivation de phase entre des images successives de la FFT.
+    \textit{framedelta}$\thicksim$ est un objet très important car il calcule la dérivation de phase entre des images successives de la FFT. Également l'objet \textit{phaseaccum}$\thicksim$ peut etre utilisé à la place de \textit{framedelta}$\thicksim$. \textit{phaseaccum}$\thicksim$ qui calcule directement la phase après la derivation.
 
-\subsubsection{$gen\thicksim$}
+\subsubsection{gen$\thicksim$}
     
-    Un objet qui crée une nouvelle fenêtre d’un patch. Dans l'objet $ gen \thicksim $, l'utilisateur peut utiliser un nouvel ensemble de fonctions spécialisées dans le traitement d'un seul échantillon. Les fonctions sont relativement plus simples que l'environnement de codage habituel, mais on peut effectuer un travail plus précis sur les détails. L’environment $ gen \thicksim $ est fréquemment utilisé pour effectuer un délai à l'échelle d'échantillons en créant un filtre passe-bas ou des effets similaires
+    \textit{gen}$\thicksim$ est un objet qui permet de créer une nouvelle fenêtre speciale d’un patch. Dans cette fenêtre, l'utilisateur peut utiliser un nouvel ensemble de fonctions spécialisées sur le traitement d'un seul échantillon. Les fonctions sont relativement plus simples que l'environnement de codage habituel, mais on peut effectuer un travail plus précis sur les détails. L’environment \textit{gen}$ \thicksim $ est fréquemment utilisé pour effectuer un délai à l'échelle d'échantillons en créant un filtre passe-bas ou des effets similaires.
 
-\section{Pitch tracking}
+\section{Détection du pitch}\footnote{Pitch signifie un terme équivalent à la hauteur ou bien à la fréquence}
 
-En utilisant certains de ces objets spectraux MaxMSP, nous allons commencer par construire un simple patch pour trouver la hauteur de la fréquence dominante:
+En utilisant certains de ces objets spectraux MaxMSP, nous allons commencer par construire un simple patch afin de trouver la hauteur de la fréquence dominante\footnote{Emmanouil-Nikolaos Karystinaios, \textit{An investigation into the spectral music idiom and timbral analysis functionality with Max SMP Jitter}, 2017. \nocite{Kar17}}:
 
      \begin{displayquote}
-         'Les méthodes de détection du pitch dans le domaine fréquentiel dissèquent le signal d'entrée en fréquences constituant le spectre global. Le spectre montre la force des différentes composantes des fréquences contenues dans le signal. Le but est d’isoler la fréquence dominante, ou "pitch", hors du spectre'. \footnote{Curtis Roads, \textit{A tutorial in musical signal processing, 1996, p. 513, op. cit}, \nocite{Routes: 1996: CMT: 525484}}
+         \guillemotleft Les méthodes de détection du pitch dans le domaine fréquentiel dissèquent le signal d'entrée en fréquences constituant le spectre global. Le spectre montre la force des différentes composantes des fréquences contenues dans le signal. Le but est d’isoler la fréquence dominante, ou "pitch", hors du spectre \guillemotright. \footnote{Curtis Roads, \textit{A tutorial in musical signal processing}, 1996. [p. 513], \nocite{Roads1996}}
      \end{displayquote}
 
 De même, nous avons implémenté un patch MaxMSP pour trouver la fréquence dominante de la fenêtre FFT. Le patch peut être trouvé dans la figure \ref{PitchTracking}.
 
-    
     \begin{figure}
         \centering
-        \includegraphics[width = \textwidth ]{Graphs/fftTrack.png}
+        \includegraphics[width = 0.5 \textwidth ]{Graphs/fftTrack.png}
         \caption{Pitch Tracking}
         \label{PitchTracking}
     \end{figure}
-Bien entendu, nous utilisons l'objet $ fftin \thicksim $ pour transformer le son d’entré dans le domaine fréquentiel. Dans la FFT, nous devons déclarer deux choses. Tout d'abord, le nombre d'images faisant l'objet d'une opposition à la FFT et, deuxièmement, la taille de la fenêtre. Nous rappelons que les deux premières sorties donnent respectivement les composantes réelles et imaginaires. La troisième sortie donne le corbeille de la fréquence indexée prenant les valeurs correspondantes de $ 0 $ à $ N $, où $ N $ est la taille de la fenêtre FFT.
 
-Pour continuer le patch du simple suivi de la hauteur, nous normalisons les composants réels et imaginaires pour restreindre le flux de données dans des limites calculables. De manière plus détaillée, $ fft.normalize \thicksim $ est un simple Max externe, créé en code C ++ à l'aide du Max SDK, qui divise le nombre de chaque sortie par la moitié de la taille de la fenêtre.
+Bien entendu, nous utilisons l'objet  \textit{fftin}$\thicksim $ pour transformer le son d’entré dans le domaine fréquentiel. Dans la FFT, nous devons déclarer deux choses. Tout d'abord, le nombre d'images faisant l'objet d'une opposition à la FFT et, deuxièmement, la taille de la fenêtre. Nous rappelons que les deux premières sorties donnent respectivement les composantes réelles et imaginaires. La troisième sortie donne l'harmonique de la fréquence indexée prenant les valeurs correspondantes de $ 0 $ à $ N $, où $ N $ est la taille de la fenêtre FFT.
 
-Ensuite, nous transformons les coordonnées cartésiennes en coordonnées polaires en utilisant $ cartopol \thicksim $. Le processus est expliqué à la section 2 sous les termes phase et magnitude. Nous ne sommes intéressés que par la phase de chaque bin. En utilisant la phase, nous pouvons calculer la fréquence exacte de chaque harmonique. Nous rappelons que les termes harmonique, bin et fréquence de Fourier sont les mêmes dans ce contexte.
-Premièrement, nous retardons la phase de chaque bin d'une fenêtre entière pour calculer le montant de sa modification. Ensuite, nous soustrayons la phase en cours de chaque bin par la phase correspondante de la fenêtre précédente. Dans la suite, nous utilisons l’objet $ phasewrap \thicksim $ pour découper la valeur comprise entre $ - \pi $ et $ \pi $. Il s'agit essentiellement d'une fonction modulo qui permet de conserver les valeurs dans un intégral computable.
+Pour continuer le patch du simple suivi de la hauteur, nous normalisons les composants réels et imaginaires pour restreindre le flux de données entre des limites calculables. De manière plus détaillée, \textit{fft.normalize}$\thicksim $ est un simple Max externe, créé en code $C++$ à l'aide du Max SDK, qui divise le nombre de chaque sortie par la moitié de la taille de la fenêtre.
 
-À ce stade, nous devons conseiller nos paramètres sonores. Un objet dans Max appelé $ dspstate \thicksim $ récupère toutes les données nécessaires que nous pouvons trouver dans $ / Options / Audio_Status $ dans l'application Max. Nous avons seulement besoin de la fréquence d'échantillonnage. Cette valeur est généralement $ 44100 $Hz donc nous avons déjà stocké la valeur et si différente nous la changeons automatiquement. Le signal obtenu à partir de $ phasewrap \thicksim $ est multiplié par la fréquence d'échantillonnage et par conséquent divisé par la taille de la fenêtre. Ces opérations, qui divisent le SR par la taille de la fenêtre, déduisent des partitions pondérées du spectre. La valeur de la soustraction de fréquence classe l’écart de la partition de fréquence. Ensuite, nous normalisons en multipliant par $ 2 \pi $ stocké dans un objet $ gen \thicksim $, pour manipuler la précision sur le nombre $\pi$. Nous trouvons la position de la partition en multipliant la valeur de la division du spectre par l'indice de l’harmonique correspondante et en l'ajoutant à la déviation pour obtenir la fréquence de cette harmonique.
+Ensuite, nous transformons les coordonnées cartésiennes en coordonnées polaires en utilisant \textit{cartopol}$\thicksim $. Le processus est expliqué à la section 2 sous les termes phase et magnitude. Nous ne sommes intéressés que par la phase de chaque bin. En utilisant la phase de chaque bin, nous pouvons calculer la fréquence exacte de chaque harmonique. Nous rappelons que les termes harmonique, bin et fréquence de Fourier sont les mêmes dans ce contexte.
+
+Tout d'abord, nous retardons la phase de chaque bin d'une fenêtre entière pour calculer le montant de sa derivation. Ensuite, nous soustrayons la phase en cours de chaque bin par la phase correspondante de la fenêtre précédente. Dans la suite, nous utilisons l’objet \textit{phasewrap}$ \thicksim $ pour découper la valeur comprise entre $ - \pi $ et $ \pi $. Il s'agit essentiellement d'une fonction modulo qui permet de conserver les valeurs dans un intégral computable.
+
+À ce stade, nous devons consulter nos paramètres sonores. Un objet dans Max appelé \textit{dspstate}$ \thicksim $ récupère toutes les données nécessaires que nous pouvons trouver dans $ / Options / Audio \, Status $ dans l'application Max. Nous avons seulement besoin de la fréquence d'échantillonnage. Cette valeur est généralement $ 44100 $Hz donc on la stocké par avance et si elle différente nous la changerions automatiquement. Le signal obtenu à partir de \textit{phasewrap}$ \thicksim $ est multiplié par la fréquence d'échantillonnage et par la suite divisé par la taille de la fenêtre. Ces opérations, qui divisent le SR par la taille de la fenêtre, déduisent des partitions pondérées du spectre. La valeur de la soustraction de la fréquence classe la deviation des partitions fréquencantiels. Plus precisement, on divise le spectre audible dans des parties isometriques qui sont determinés par la division du SR par la taille de la fenêtre. Ensuite, nous normalisons en multipliant par $ 2 \pi $ stocké dans un objet \textit{gen}$\thicksim $, pour manipuler la précision sur le nombre $\pi$. Nous trouvons la position de la partition en multipliant la valeur de la division du spectre par l'indice de l’harmonique correspondante et en l'ajoutant à la déviation pour obtenir la fréquence de cette harmonique.
 
 La division du spectre ou la partition est donnée par:
-
     \begin{equation*}
         x = \frac{SR}{\text{window size}}
     \end{equation*}
 
 Ensuite, la fréquence est simplement: $ index * x + $ la déviation de phase.
 
-Cette procédure génère toutes les fréquences de toutes les cases de la fenêtre FFT.
+Cette procédure génère toutes les fréquences de toutes les bins de la fenêtre FFT.
 
-L'étape suivante consiste à conserver la fréquence avec la magnitude la plus forte. Nous allons utiliser un objet $ gen \thicksim $. Nous déclarons d'abord les entrées. Nous n'avons besoin que de trois variables. La magnitude de chaque bin, l’index de chaque bin et la taille de la fenêtre FFT. Nous déclarons une seule sortie pour le bin dominant de chaque fenêtre. Le patch est montré dans la figure \ref{GenSingle}.
+L'étape suivante consiste à conserver la fréquence avec la magnitude la plus forte. Nous allons utiliser un objet $ gen \thicksim $. Nous déclarons d'abord les entrées. Nous n'avons besoin que de trois variables. La magnitude de chaque bin, l’index de chaque bin et la taille de la fenêtre FFT. Nous déclarons une seule sortie pour le bin dominant de chaque fenêtre. Le patch est montré dans la figure ci-desous.
+        
+    \begin{wrapfigure}{r}{0.5\textwidth}
+      \vspace{-20pt}
+      \begin{center}
+        \includegraphics[width=0.48\textwidth]{Graphs/GenfftTrack.png}
+      \end{center}
+      \vspace{-20pt}
+      \caption{Codebox$\thicksim$}
+      \vspace{-10pt}
+    \end{wrapfigure}
 
-Pour calculer le bin le plus fort, nous allons utiliser un objet appelé $ codebox $. $ Codebox $ est un objet qui permet à l'utilisateur de saisir du code sous la forme "traditionnelle". Tout comme le code javascript, nous devons déclarer les variables que nous allons utiliser mais d’abord les entrées de l’objet. Les variables dans ce cas sont: magnitude, index, frameSize et last. Où frameSize est la taille de la fenêtre FFT et last est juste une variable qui stocke l'index du bin le plus fort pour la fenêtre précédente.
+    % \begin{figure}
+    %     \centering
+    %     \includegraphics[width = 0.4 \textwidth ]{Graphs/GenfftTrack.png}
+    %     \caption{Codebox$\thicksim$}
+    %     \label{GenSingle}
+    % \end{figure}
 
-Le processus de définition du bin le plus fort est mis en œuvre par deux fonctions $if$ imbriquées. Ce processus sera répété pour chaque fenêtre et il déterminera éventuellement les fréquences des cellules les plus puissantes dans toutes les fenêtres. Dans la boucle $if$ imbriquée, nous déterminons si l'index actuel est plus fort que le précédent et nous retournons le résultat. Cela signifie que si la magnitude de l'index $ n- $ th est supérieure à celle du bin ($ n-1) - $ th, nous stockons sa valeur d'index. La dernière étape consiste à limiter le nombre d'index dans la limite de la taille de la fenêtre afin de terminer la boucle et de réinitialiser les variables.
+Pour calculer le bin le plus fort, nous allons utiliser un objet appelé $ codebox $. $ Codebox $ est un objet qui permet à l'utilisateur de saisir un code sous la forme \guillemotleft traditionnelle \guillemotright. Tout comme le code javascript, nous devons déclarer les variables que nous allons utiliser, qui sont suivant aussi les entrées de cet objet. Les variables dans ce cas sont: magnitude, index, frameSize et last. Où frameSize est la taille de la fenêtre FFT et last est juste une variable qui stocke l'index du bin le plus fort pour la fenêtre précédente.
+
+Le processus de définition du bin le plus fort est mis en œuvre par deux fonctions $if$ imbriquées. Ce processus sera répété pour chaque fenêtre et il déterminera éventuellement les fréquences des cellules les plus puissantes dans toutes les fenêtres. Dans la boucle $if$ imbriquée, nous déterminons si l'index actuel est plus fort que le précédent et nous retournons le résultat. Cela signifie que si la magnitude du $ n-$ième bin est supérieure à celle du ($n-1)-$ième bin, nous stockons sa valeur d'index. La dernière étape consiste à limiter le nombre d'index dans la limite de la taille de la fenêtre afin de terminer la boucle et de réinitialiser les variables.
 
 
     \begin{figure}
         \centering
-        \includegraphics[width = \textwidth ]{Graphs/ffttracker.png}
+        \includegraphics[width = 0.8 \textwidth ]{Graphs/ffttracker.png}
         \caption{Pitch Tracker}
         \label{PitchTracker}
     \end{figure}
 
-Pour localiser l’harmonique le plus fort en précisant la fréquence, quelques fonctions supplémentaires sont nécessaires. La sortie de l'objet $ gen \thicksim $ est filtrée par un objet $ sah \thicksim $. Avant cela, l'index actuel est comparé à la valeur d'index générée par l'objet $ gen \thicksim $. $ Sah \thicksim $ signifie '' échantillonneur bloqueur ''. Cette fonction filtre la première entrée de l'objet par un facteur similaire à l'objet $ gate \thicksim $. Chaque fois que la valeur du facteur change, elle permet à la première entrée d'aller de l'avant et de sortir sa valeur. Nous l'utilisons deux fois, une fois pour la magnitude et une fois pour la phase. De cette façon, seul l’indice de la harmonique avec la plus grande magnitude va de pair avec la magnitude et la phase correspondantes. Nous utilisons le système fourni précédemment pour trouver la fréquence exacte et nous traduisons les coordonnées polaires de l'amplitude en dB. Enfin, nous utilisons un objet $ slide \thicksim $ pour lisser le résultat. Le patch final est montré dans la figure \ref{PitchTracker}. Cette méthode évite de calculer chaque fois la fréquence si le son est périodique et donc la fréquence dominante ne change pas.
+Pour localiser l’harmonique le plus fort en précisant la fréquence, quelques fonctions supplémentaires sont nécessaires. La sortie de l'objet \textit{gen}$\thicksim $ est filtrée par un objet \textit{sah}$ \thicksim $. \textit{Sah}$\thicksim $ signifie  \guillemotleft sample holder \guillemotright (stockage d'un echantillon). Avant cela, l'index actuel est comparé à la valeur d'index générée par l'objet \textit{gen}$\thicksim $.  Cette fonction filtre la première entrée de l'objet par un facteur similaire à l'objet \textit{gate}$\thicksim $. Chaque fois que la valeur du facteur change, elle permet à la première entrée d'aller de l'avant et de sortir sa valeur. Nous l'utilisons deux fois, une fois pour la magnitude et une fois pour la phase. De cette façon, seul l’indice de l'harmonique avec la plus grande magnitude va de paire avec la magnitude et la phase correspondante. Nous utilisons le système fourni précédemment pour trouver la fréquence exacte et nous traduisons les coordonnées polaires de l'amplitude en dB. Enfin, nous utilisons un objet \textit{slide}$\thicksim $ pour lisser le résultat. Le patch final est montré dans la figure \ref{PitchTracker}. Cette méthode évite de calculer chaque fois la fréquence si le son est périodique et donc la fréquence dominante ne change pas.
 
-\subsection{Multiple Pitch Tracking}
+\subsection{Détection des pitchs multiples}
 
-Pour créer un patch de suivi des hauteurs multiples, nous utilisons la méthode de la localisation de la hauteur simple unique avec quelques modifications. La majorité des calculs ont lieu dans l'objet $ gen \thicksim $ car l'implémentation de $ codebox $ est copiée en fonction du nombre de hauteurs que l'on souhaite calculer.
+Pour créer un patch de suivi des hauteurs multiples, nous utilisons la méthode du suivi de la hauteur simple unique avec quelques modifications. La majorité des calculs ont lieu dans l'objet $ gen \thicksim $ car l'implémentation de $ codebox $ est copiée en fonction du nombre de hauteurs que l'on souhaite calculer.
 
     \begin{figure}
         \centering
@@ -125,9 +137,9 @@ Pour créer un patch de suivi des hauteurs multiples, nous utilisons la méthode
 
 La figure \ref{GenMultiple} permet de visualiser comment on peut calculer une série des harmoniques les plus fortes de chaque fenêtre. L'objectif est de fournir une quantité suffisante d'informations sur les composantes spectrales de base du son.
 
-Comme le suggère la figure \ref{GenMultiple}, la sortie de chaque $ codebox $ correspond à l'entrée de la suivante, calculant ainsi le prochain indice le plus fort de la fenêtre. La quantité d’objets $ codebox $ utilisée correspond au nombre de pas que nous allons afficher.
+Comme le suggère la figure \ref{GenMultiple}, la sortie de chaque \textit{codebox} correspond à l'entrée de la suivante, calculant ainsi le prochain indice le plus fort de la fenêtre. La quantité d’objets \textit{codebox} utilisée correspond au nombre des harmoniques que nous allons afficher.
 
-La mise en oeuvre de la méthode de la localisation des plusieurs hauteurs peut être montrée à la figure \ref{Analyse}. Nous reproduisons essentiellement le calcul de fréquence pour chaque indice. Le résultat peut être affiché sous forme de liste ou dans différents points de vente. Ensuite, on peut utiliser l’objet $ mc.cycle \thicksim $ dans la version Max8, de simples oscillateurs ou résonateurs dans les autres cas.
+La mise en oeuvre de la méthode de la localisation des plusieurs hauteurs peut être montrée à la figure \ref{Analysis}. Nous reproduisons essentiellement le calcul de fréquence pour chaque indice. Le résultat peut être affiché sous forme de liste ou dans différents sorties. Ensuite, on peut utiliser l’objet \textit{mc.cycle$\thicksim $} dans la version Max8, de simples oscillateurs ou résonateurs dans les autres cas.
 
     \begin{figure}
         \centering
@@ -136,7 +148,7 @@ La mise en oeuvre de la méthode de la localisation des plusieurs hauteurs peut 
         \label{Analysis}
     \end{figure}
 
-Un avis important pour cette construction de patch, mais aussi pour chaque suivi de hauteur via les méthodes spectrales, est que la taille de la fenêtre affecte le suivi de fréquence. La taille de la fenêtre influence la résolution temporelle ou fréquentielle de la représentation du signal. La résolution en fréquence peut être augmentée en modifiant la taille de la FFT, c'est-à-dire le nombre de segments de la fenêtre d'analyse. En particulier, la taille des bins correspond simplement à la moitié de la fenêtre d’analyse. La plage de fréquences est définie comme la division du SR en taille de fenêtre\footnote{Coralie Diatkine, \textit{AudioSculpt 3.0 User Manual}, 2011 \nocite{Audiosculpt}}.
+Afin de construire au mieux le patch, il est important de noter que la taille de la fenêtre affecte la qualité de la détection de la fréquence. La taille de la fenêtre influence la résolution temporelle ou fréquentielle de la représentation du signal. La résolution de fréquence peut être augmentée en modifiant la taille de la FFT, c'est-à-dire le nombre de segments de la fenêtre d'analyse. En particulier, la taille des bins correspond simplement à la moitié de la fenêtre d’analyse. La dispersion des fréquences est définie comme la division du SR par la taille de la fenêtre\footnote{Coralie Diatkine, \textit{AudioSculpt 3.0 User Manual}, 2011. \nocite{Audiosculpt}}.
 
     \begin{equation*}
         Frequency \; Range = \frac{SR}{Window \; Size}
@@ -144,34 +156,34 @@ Un avis important pour cette construction de patch, mais aussi pour chaque suivi
 
 \section{Le vocodeur de phase}
 
-Le vocodeur de phase était utilisé à l'origine pour la transposition de la hauteur et la modification de la vitesse de lecture. De même, nous allons construire notre vocodeur de phase sur le modèle de base, puis nous proposerons quelques modifications. Le vocodeur de phase est étiqueté sous traitement spectral et va donc être stocké dans un objet $ pfft \thicksim $.
+Le vocodeur de phase est utilisé à l'origine pour la transposition de la hauteur et la modification de la vitesse de lecture. Pareillement, nous allons construire notre vocodeur de phase sur le modèle de base, puis nous proposerons quelques modifications. Le vocodeur de phase est étiqueté sous traitement spectral et va donc être stocké dans un objet \textit{pfft}$\thicksim $. Notre modèle est basé sur le vocodeur de phase par Dudas et Lippe\footnote{Richard Dudas et Cort Lippe, \textit{The Phase Vocoder}, 2006. \nocite{DL07} \nocite{DL06}}.
 
-Pour accéder à un son directement dans l’objet pfft, il faut éviter d'utiliser les préréglages du $ pfft \thicksim $. Par conséquent, nous allons éviter d'utiliser l'objet $ fftin \thicksim $ à la place, nous allons à un objet $ fft \thicksim $ dans un sous-patch. La seule différence est que les paramètres des objets $ fftin \thicksim $ et $ fftout \thicksim $ sont contrôlés directement à partir de l'objet $ pfft \thicksim $ et que les entrées et sorties sont les premier et dernier objets. Pour construire un vocodeur de phase, nous devons traiter le son avant d'appliquer la transformation de Fourier. L’un devrait suivre le patch fourni dans la figure \ref{Phasevocoder} pour comprendre la procédure.
+Pour accéder à un son directement dans l’objet \textit{pfft}$\thicksim$, il faut éviter d'utiliser les préréglages du  \textit{pfft}$\thicksim $. Par conséquent, nous allons éviter d'utiliser l'objet \textit{fftin}$ \thicksim $ à la place, nous allons utiliser un objet \textit{fft}$\thicksim $ dans un sous-patch. La seule différence est que les paramètres des objets \textit{fftin}$\thicksim $ et \textit{fftout}$\thicksim$ sont contrôlés directement à partir de l'objet  \textit{pfft}$\thicksim $ et que les entrées et sorties sont les premier et dernier objets. Pour construire un vocodeur de phase, nous devons traiter le son avant d'appliquer la transformation de Fourier. Pour comprendre la procédure on pourrait suivre le patch fourni dans la figure \ref{Phasevocoder}.
 
-Le raisonnement derrière cette logique se repose sur le coeur du vocodeur de phase pour l'étirement sonore et le changement de l'hauteur. Le vocodeur de phase nécessite une lecture indépendante du son à transformer pour chaque superposition de la FFT. Chaque image sonore de la lecture doit être synchronisée avec son image sonore respective de la FFT. Par conséquent, une seule copie du son ne peut pas être lancée dans un objet $fftin\thicksim$, mais plutôt dans un objet $fft\thicksim$. L'objet $fft\thicksim$ exécute une FFT à spectre complet (c'est-à-dire en miroir), donc $fft\thicksim$ peut fonctionner en synchronisation avec les images consécutives de la FFT traitées dans l'objet $pfft\thicksim$ mais c'est nécessaire de faire quelques modifications sur l'objet $pfft\thicksim$ pour que il se comporte de la même manière.
+Le raisonnement derrière cette logique se repose sur le coeur du vocodeur de phase pour l'étirement sonore et le changement de la hauteur. Le vocodeur de phase nécessite une lecture indépendante du son à transformer pour chaque superposition de la FFT. Chaque image sonore de la lecture doit être synchronisée avec son image sonore respective de la FFT. Par conséquent, une seule copie du son ne peut pas être lancée dans un objet \textit{fftin}$\thicksim$, mais plutôt dans un objet \textit{fft}$\thicksim$. L'objet \textit{fft}$\thicksim$ exécute une FFT à spectre complet (c'est-à-dire en miroir), donc \textit{fft}$\thicksim$ peut fonctionner en synchronisation avec les images consécutives de la FFT traitées dans l'objet \textit{pfft}$\thicksim$ mais il est nécessaire de faire quelques modifications sur l'objet \textit{pfft}$\thicksim$ pour qu'il se comporte de la même manière.
 
-Tout d'abord, l'objet $pfft\thicksim$ doit traiter des images sonore de la FFT à spectre complet, au lieu de l'image spectrale par défaut qui correspond à la moitié de la taille FFT (jusqu'à la moitié de la fréquence de Nyquist). Cela se fait facilement en ajoutant un cinquième argument non nul à l'objet $pfft\thicksim$. Comme l'argument du spectre complet est le cinquième argument, nous devons fournir tous les autres arguments avant lui, y compris le quatrième argument, le début, qui sera défini sur la valeur par défaut de zéro.
+Tout d'abord, l'objet \textit{pfft}$\thicksim$ doit traiter des images sonore de la FFT à spectre complet, au lieu de l'image spectrale par défaut qui correspond à la moitié de la taille de la FFT (jusqu'à la moitié de la fréquence de Nyquist). Cela peut être réalisé en ajoutant un cinquième argument non nul à l'objet \textit{pfft}$\thicksim$. Comme l'argument du spectre complet est le cinquième argument, nous devons fournir tous les autres arguments avant lui, y compris le quatrième argument (la position ou la FFT s'execute) qui sera défini par défaut par zéro.
 
-Ensuite, puisque les objets $fftin\thicksim$ et $fftout\thicksim$ effectuent le calcul de la FFT à la phase zéro par rapport à la FFT (le premier échantillon de la fenêtre envoyée au FFT est le milieu de la fenêtre), et les $fft\thicksim$ et $ifft\thicksim$ objets exécutent la FFT déphasée de 180 degrés, il faut assurer que tous les objets $fftin\thicksim$ et $fftout\thicksim$ du patch ont le même décalage de phase FFT utilisé dans les objets $fft\thicksim$.
+Ensuite, puisque les objets \textit{fftin}$\thicksim$ et \textit{fftout}$\thicksim$ effectuent le calcul de la FFT à la phase zéro par rapport à la FFT (le premier échantillon de la fenêtre envoyée au FFT est le milieu de la fenêtre), et les \textit{fft}$\thicksim$ et \textit{ifft}$\thicksim$ objets exécutent la FFT déphasée de 180 degrés, il faut assurer que tous les objets \textit{fftin}$\thicksim$ et \textit{fftout}$\thicksim$ du patch ont le même décalage de phase FFT utilisé dans les objets \textit{fft}$\thicksim$.
 
-Cela peut être accompli en spécifiant un déphasage par rapport aux objets $fftin\thicksim$ et $fftout\thicksim$. Une valeur de phase de $0.5$ signifie un déphasage de $180$ degrés, donc c'est la valeur préférable dans ce cas. Bien que, le objet $fftin\thicksim$ ne soit pas voulu, l'objet $fftout\thicksim$ peut pratiquement être utilisé comme sortie pour l'objet $pfft\thicksim$. Le fenêtrage automatique dans l'objet $fftout\thicksim$ devrait se comporter comme le fenêtrage manuel avec les objets $fft\thicksim$.
+Cela peut être accomplie en spécifiant un déphasage par rapport aux objets \textit{fftin}$\thicksim$ et \textit{fftout}$\thicksim$. Une valeur de phase de $0.5$ signifie un déphasage de $180$ degrés, donc c'est la valeur préférable dans ce cas. Bien que, l'objet \textit{fftin}$\thicksim$ ne soit pas voulu, l'objet \textit{fftout}$\thicksim$ peut pratiquement être utilisé comme sortie pour l'objet \textit{pfft}$\thicksim$. Le fenêtrage automatique dans l'objet \textit{fftout}$\thicksim$ devrait se comporter comme le fenêtrage manuel avec les objets \textit{fft}$\thicksim$.
 
-Dans cette version du vocodeur de phase on va utiliser un son pré-déterminé. Ca veut dire que on utilisera un enregistrement et on le stora dans un objet $buffer\thicksim$. Le $buffer\thicksim$ doit être accessible à deux endroits. Premierement à l'emplacement de la image sonore de la FFT actuelle et, en deuxième lieu, à l'emplacement de la image FFT précédente du $buffer\thicksim$. C'est possible d'utiliser soit l'objet $index\thicksim$ ou l'objet $play\thicksim$\footnote{L'objet $play\thicksim$ est utilisé comme interface de lecture de l'objet $buffer\thicksim$. $play\thicksim$ joue des samples en accord d'un offset parmi le buffer.} pour accéder au $buffer\thicksim$. Lorce que on precise la position de la transformation Fourier en durée courte manuellement, on doit trouver un système pour préciser le décalage de la fenêtre dans notre \textit{buffer}$\thicksim$.
+Dans cette version du vocodeur de phase, on va utiliser un son pré-déterminé. Cela veut dire qu'on utilisera un enregistrement et on le stockera dans un objet \textit{buffer}$\thicksim$. Le \textit{buffer}$\thicksim$ doit être accessible à deux endroits. Premièrement, à l'emplacement de l'image sonore de la FFT actuelle et, en deuxième lieu, à l'emplacement de l'image FFT précédente du \textit{buffer}$\thicksim$. Il est possible d'utiliser soit l'objet \textit{index}$\thicksim$ ou l'objet \textit{play}$\thicksim$\footnote{L'objet \textit{play}$\thicksim$ est utilisé comme interface de lecture de l'objet \textit{buffer}$\thicksim$. \textit{play}$\thicksim$ joue des samples en accord d'un offset parmi le buffer.} pour accéder au \textit{buffer}$\thicksim$. Lorsqu'on précise la position de la transformation Fourier en durée courte manuellement, on doit trouver un système pour préciser le décalage de la fenêtre dans notre \textit{buffer}$\thicksim$.
 
-La solution dans cette problématique et d'utiliser deux objets $fft\thicksim$ parallels avec un décalage d'un quart, pour un chevauchement de $25 \%$. Un tel système permettra de calculer l'image actuelle de chaque index du fenêtre en comparaison de l'index correspondant de la fenêtre précédent comme était fait dans le patch du pitch tracking. Le décalage est calculé pour un distance d'un quart puisqu'on prend en compte le paramètre du chevauchement . L'objet $frameaccum\thicksim$ dans ce cas remplace la séquence des objets $phasewrap\thicksim$, et normalisation entre $\pi$ et $-\pi$ que on a construit dans le patch du pitch tracking.
+La solution dans cette problématique est d'utiliser deux objets \textit{fft}$\thicksim$ parallèles avec un décalage d'un quart, pour un chevauchement de $25 \%$. Un tel système permettra de calculer l'image actuelle de chaque index de la fenêtre en comparaison de l'index correspondant de la fenêtre précédente, comme cela a pu être fait dans le patch du pitch tracking. Le décalage est calculé pour une distance d'un quart puisqu'on prend en compte le paramètre du chevauchement. L'objet \textit{frameaccum}$\thicksim$ dans ce cas remplace la séquence des objets \textit{phasewrap}$\thicksim$, et normalisation entre $\pi$ et $-\pi$ qu'on a construit dans le patch du pitch tracking.
 
-Pour la synchronisation du buffer on utilise un objet $count\thicksim$ au paramètre $0$, la taille du fenêtrage, $1$ et $1$. On peut ainsi stocker les valeurs de l'échantillon exact au quelle la fenêtre de la FFT commence à la fois, ainsi que la position actuelle en durée totale du son. Chaque fois que le compteur se re-initialize au zéro, un objet $sah\thicksim$ permet au valeur de passer, dont on déduit le premier sample de la FFT. en ajoutant les valeurs du compteur on peut déduire la position actuelle sur le fichier sonore. Le dernier nous permet de jouer le fichier à partir de un objet $play\thicksim$. 
+Pour la synchronisation du buffer on utilise un objet \textit{count}$\thicksim$ au paramètre $0$, la taille du fenêtrage, $1$ et $1$. On peut ainsi stocker la valeurs de l'échantillon exact au quelle la fenêtre de la FFT commence à la fois, ainsi que la position actuelle en durée totale du son. Chaque fois que le compteur se réinitialise à zéro, un objet \textit{sah}$\thicksim$ permet à la valeur de passer, dont on en déduit le premier sample de la FFT. En ajoutant les valeurs du compteur, on peut en déduire la position actuelle sur le fichier sonore. La valeur de la position sur le fichier nous permet de jouer le fichier à partir d'un objet \textit{play}$\thicksim$. 
 
 On rappelle la formule du vocodeur de phase : 
 
     \begin{equation*}
     Phase \; Vocoder \; = \; \sum_{n=0} ^{N-1} h_a(n) \; x(n + uR_a) \; e^{-j \omega \frac{n}{N}} \vspace{0.5cm} 
     \end{equation*}
-Dans la formule ci-dessus on peut voir qu'il y a un fenêtrage correspondant, marqué $h_a(n)$. Pour simplifier on va substituer avec quelques paramètres réels. On remplace $N$ par une taille de la fenêtre à $1024$ échantillons. On établit un décalage de 4 fois par fenêtre, donc $uR_a = (\frac{1}{4} * 1024)_a$ pour l'index $a$ de la fenêtre précédente.  
+Dans la formule ci-dessus, on peut voir qu'il y a un fenêtrage correspondant, marqué $h_a(n)$. Pour simplifier, on va substituer avec quelques paramètres réels. On remplace $N$ par une taille de la fenêtre à $1024$ échantillons. On établit un décalage de 4 fois par fenêtre, donc $uR_a = (\frac{1}{4} * 1024)_a$ pour l'index $a$ de la fenêtre précédente.  
     \begin{equation*}
     Phase \; Vocoder \; = \; \sum_{n=0} ^{1023} h_a(n) \; x(n + 256_a) \; e^{-j \omega \frac{n}{1024}} \vspace{0.5cm} 
     \end{equation*}
-À partir de cette formule on peut identifier les éléments qui la reproduise dans le patch Max. On identifie les éléments de la formule dans notre patch. La fonction, correspondant à la phase de l'analyse, contient la somme des échantillons du signal qui appartiennent à la taille de la fenêtre de la FFT, plus des échantillons qui appartiennent $\Sigma_n (x_n) $ à la fenêtre décalée par la taille \textit{hop}, $uR_a$. Les échantillons sont multipliées, par une fenêtrage $h_a(n)$ et ensuite par la formule d'Euler qui equivaute à la transformation de Fourier.
+À partir de cette formule, on peut identifier les éléments qui la reproduise dans le patch Max. La fonction, correspondant à la phase de l'analyse, contient la somme des échantillons du signal qui appartiennent à la taille de la fenêtre de la FFT, plus des échantillons qui appartiennent $\Sigma_n (x_n) $ à la fenêtre décalée par la taille du \textit{hop}, $uR_a$. Les échantillons sont multipliées, par une fenêtrage $h_a(n)$ et ensuite par la formule d'Euler qui équivaut à la transformation de Fourier.
 
     \begin{figure}
         \centering
@@ -180,30 +192,30 @@ Dans la formule ci-dessus on peut voir qu'il y a un fenêtrage correspondant, ma
         \label{Phasevocoder}
     \end{figure}
     
-Nous pouvons voir qu'une fonctionnalité de fenêtrage inclut à la fois dans la formule et dans le patch présenté. Au lieu d'utiliser une fenêtre par défaut de l'objet $ fft \thicksim $, nous allons utiliser un tampon fixe de taille $ N $ et utiliser l'objet $ count \thicksim $ pour accéder à chaque échantillon avec l'aide de $ index \thicksim $ \footnote {L'objet $ index \thicksim $ est utilisé pour lire un objet $ buffer \thicksim $ dans un exemple d'index piloté par signal sans interpolation sur la sortie.} et le multiplier par le son souhaité et à traiter avant d'effectuer la FFT.
+Nous pouvons voir qu'une fonctionnalité de fenêtrage est inclu à la fois dans la formule et dans le patch présenté. Au lieu d'utiliser une fenêtre par défaut de l'objet \textit{fft}$\thicksim $, nous allons utiliser un buffer fixé de taille $ N $. En utilisant l'objet \textit{count}$\thicksim $ avec l'aide de l'objet \textit{index}$\thicksim$ \footnote{L'objet \textit{index}$\thicksim $ est utilisé pour lire un objet $ buffer \thicksim $ dans un exemple d'index piloté par signal sans interpolation sur la sortie.}, pour accéder à chaque échantillon, on multiplie le son de l'entre par les valeurs du fenêtrage avant d'effectuer de la FFT.
 
 \subsubsection{Filtre Gabor}
 
-Dans la section 2, nous avons présenté le filtrage de Gabor. Dans cette section, nous allons créer un filtre Gabor personnalisé. La formule de Gabor normalisée permet de modifier la courbe de la fonction gaussienne tout en conservant les constantes de valeurs maximales et minimales. Cette fenêtre gaussienne faite sur mesure est présentée en figure \ref{fenetre}.
+Dans la section 2, nous avons présenté le filtrage de Gabor. Dans cette section, nous allons créer un filtre Gabor personnalisé. La formule de Gabor normalisée permet de modifier la courbe de la fonction gaussienne tout en conservant les constantes de valeurs maximales et minimales. Cette fenêtre gaussienne faite sur mesure est présentée en figure \ref{windowing}.
 
-Nous utilisons une $ uzi $ \footnote{envoie le nombre de banques qui ont été définies dans la position de l'argument en même temps. } objet avec argument la taille de la fenêtre FFT, suivie de l'expression effectuant une courbe gaussienne normalisée. Ensuite, nous l'envoyons dans le tampon nommé "windowing" à l'aide de l'objet $ peek \thicksim $ \footnote{L'objet $ peek \thicksim $ est utilisé pour lire et écrire des exemples de valeurs dans un $ buffer \thicksim $.} Bien sûr, dans ce cas, le filtre de Gabor n’est pas directement exécuté pendant la FFT, mais juste avant. En utilisant ce filtrage, nous pouvons librement chevaucher des fenêtres et éviter des artefacts.
+Nous utilisons un objet \textit{uzi}\footnote{Envoyer instantanement le nombre de \guillemotleft bangs \guillemotright qui ont été définies dans la position de l'argument de l'objet.} avec argument la taille de la fenêtre FFT, suivie de l'expression effectuant une courbe gaussienne normalisée. Ensuite, nous l'envoyons dans le buffer nommé \guillemotleft windowing \guillemotright à l'aide de l'objet \textit{peek}$ \thicksim $ \footnote{L'objet \textit{peek}$ \thicksim $ est utilisé pour lire et écrire des de valeurs des echantillons dans un \textit{buffer}$ \thicksim $ }. Bien sûr, dans ce cas, le filtre de Gabor n’est pas directement exécuté pendant la FFT, mais juste avant. En utilisant ce filtrage, nous pouvons librement chevaucher des fenêtres et éviter des artefacts.
     
     \begin{figure}
         \centering
         \includegraphics[width = \textwidth]{Graphs/windowing.png}
-        \caption{Fenetrage gaussien}
+        \caption{Fenêtrage gaussien}
         \label{windowing}
     \end{figure}
 
-\subsubsection{Pitch Shifting}
+\subsubsection{Trasposition de la hauteur}
 
-    To apply pitch shifting with the Phase Vocoder one should change the pitch factor while at the same time change the sample rate. For example, in order to transpose a sound an octave lower we should playback the sound at half the speed while doubling the SR. By using this method it is possible to change the pitch with affecting the playback speed.
+    Pour appliquer la trasposition de la hauteur avec le vocodeur de phase, il convient de modifier le facteur de la hauteur tout en modifiant simultanément la fréquence d'échantillonnage. Par exemple, afin de transposer un son d'une octave plus basse, nous devons reproduire le son à une vitesse deux fois moins rapide, tout en doublant le SR. En utilisant cette méthode, il est possible de changer la hauteur en modifiant la vitesse de lecture.
 
-    To use this method we use standard midi values translated to frequency and adapted to the window overlap. The user then can input the value in a virtual midi piano thus facilitating the manipulation. By default the midi note Do with value 60 is the standard pitch. Then the pitch changes accordingly to the interval accordingly to the default value. Therefore, a Do an octave lower in the virtual midi piano, corresponds to an octave down of transposition from the original pitch of the sound.
+    Pour utiliser cette méthode, nous utilisons des valeurs MIDI standard traduites en fréquence et adaptées au chevauchement des fenêtres. L'utilisateur peut ensuite saisir la valeur dans un piano midi virtuel, facilitant ainsi la manipulation. Par défaut, la note midi Do avec la valeur 60 est la hauteur standard. Ensuite, la hauteur change en fonction de l'intervalle en fonction de la valeur par défaut. Par conséquent, la valeur Do une octave inférieure dans le piano midi virtuel correspond à une octave de transposition inférieure à la hauteur originale du son.
 
-    Inside the phase Vocoder, the pitch shifting is translated as skipping samples or oversampling the $count\thicksim$ object. Of course to increase the SR is not a valid solution thus we choose to take a smaller or larger portion from the $buffer\thicksim$ corresponding to the window size. A transposition up corresponds to taking a larger window from the $buffer\thicksim$ and reading it in a faster speed, while a pitch shift down corresponds to cutting a smaller portion of the $buffer\thicksim$ and reading it slower.
+    À l'intérieur du vocodeur de phase, le décalage de hauteur est traduit par le saut d'échantillons ou le suréchantillonnage de l'objet  \textit{count}$\thicksim $. Bien sûr, augmenter le SR n'est pas une solution valable, nous avons donc choisi de prendre une portion plus petite ou plus grande du \textit{buffer}$\thicksim $ correspondant à la taille de la fenêtre. Une transposition vers le haut correspond au fait de prendre une fenêtre plus grande dans \textit{buffer}$\thicksim $ et de la lire à une vitesse plus rapide, tandis qu'un décalage de hauteur correspond à couper une plus petite partie de la variable \textit{buffer}$\thicksim $ et à la lire plus lentement.
 
-    For this example we use a $sah\thicksim$ object to make sure the transposition value is held constant for all bins during the FFT. Then we multiply with the current value of the counter and we add the output value to the number of samples played so far to get the desired location of the file. In respect of the original frequency $\omega$, the individual shift amounts to : 
+    Pour cet exemple, nous utilisons un objet \textit{sah}$\thicksim $ pour nous assurer que la valeur de transposition est maintenue constante pour tous les bins pendant la FFT. Ensuite, nous multiplions par la valeur actuelle du compteur et nous ajoutons la valeur de sortie au nombre d'échantillons déjà lus pour obtenir l'emplacement souhaité du fichier. En ce qui concerne la fréquence initiale $ \omega $, le décalage individuel s’élève à:
 
     \begin{equation*}
         \Delta \omega(\omega) = \omega (\alpha - 1)
@@ -214,24 +226,19 @@ Nous utilisons une $ uzi $ \footnote{envoie le nombre de banques qui ont été d
     L'implémentation Pitch Shifting peut être vue dans la figure. Quelques objets suffisent pour implémenter un décalage de hauteur sur le corps de base du vocodeur de phase.
 
 
-\subsubsection{Playback speed}
+\subsubsection{Modulation Temporelle}
 
-    Comme il a été étudié à la section 2, modifier la vitesse de lecture tout en maintenant la hauteur tonale stable est l’opération inverse du décalage de hauteur tonale. La lecture peut être contrôlée en prenant en compte le facteur de chevauchement des fenêtres FFT. On peut diviser par le facteur du chevauchement et ajouter le pourcentage de la lecture souhaitée. À l'intérieur du vocodeur, la valeur factorisée est ajoutée à l'accumulateur d'échantillons. Dans ce cas, la valeur de la vitesse de lecture est ajoutée dans l'interprétation de position d'échantillon. Une lecture plus rapide ignore les échantillons où une vitesse de lecture plus lente lit plusieurs fois les échantillons. La soustraction de la position précédente de chaque échantillon (la fenêtre de la FFT), fixe les déviations de fréquence. 
+    Comme il a été étudié à la section 2, modifier la vitesse de lecture tout en gardant la hauteur du pitch stable est l’opération inverse de la transposition de la hauteur. La lecture peut être contrôlée en prenant en compte le facteur de chevauchement des fenêtres FFT. On peut diviser par le facteur du chevauchement et ajouter le pourcentage de la lecture souhaitée. À l'intérieur du vocodeur, la valeur factorisée est ajoutée à l'accumulateur d'échantillons. Dans ce cas, la valeur de la vitesse de lecture est ajoutée sur la position de l'interprétation de chaque échantillon. Une lecture plus rapide peut enjamber des échantillons où une vitesse de lecture plus lente lit plusieurs fois chaque échantillon. La soustraction de la position précédente de chaque échantillon (la fenêtre de la FFT), fixe les déviations de fréquence. 
 
 \section{Morphing spectrale}
 
-La démonstration finale de ce chapitre est une implémentation du morphing spectral ou de la synthèse croisée spectrale. Pour accomplir cette technique, nous utilisons deux vocodeurs en phase parallèle et nous interpolons la phase et l’amplitude de chaque indice du bin. Pour comprendre la complexité de calcul du morphing spectral, rappelons-nous qu'un vocodeur à phase simple utilise deux FFT parallèles décalées du facteur de fenêtre de recouvrement. Donc, si nous utilisons une fenêtre de 1024 échantillons et un facteur de chevauchement de 4, la première FFT commence en position $ 0 $ et la fenêtre parallèle en position d’échantillon 256. Nous utilisons maintenant 4 FFT parallèles pour le morphing spectral. Cela fait beaucoup de calculs, mais reste possible avec les ordinateurs actuels.
+La démonstration finale de ce chapitre est une implémentation du morphing spectral ou de la synthèse croisée spectrale. Pour accomplir cette technique, nous utilisons deux vocodeurs en phase parallèles et nous interpolons la phase et l’amplitude entre toute indice du bin. Pour comprendre la complexité computationelle du morphing spectral, rappelons-nous qu'un vocodeur à phase simple utilise deux FFT parallèles décalées du facteur de fenêtre de recouvrement. Donc, si nous utilisons une fenêtre de 1024 échantillons et un facteur de chevauchement de 4, la première FFT commence en position $ 0 $ et la fenêtre parallèle en position d’échantillon $256$. Nous utilisons maintenant 4 FFT parallèles pour le morphing spectral. Cela fait une prix computationelle rélativement haute, mais il reste possible de le calculer avec les ordinateurs actuels.
 
-Dans ce vocodeur à double phase, les sorties de l'objet $ cartopol \thicksim $, la magnitude et la phase après l'analyse de Fourier, sont multipliées par le facteur d'interpolation de morphing. La phase est préalablement corrigée par une accumulation avec la trame précédente et une petite quantité de bruit est ajoutée pour un résultat plus naturel. Nous séparons les canaux d’interpolation de magnitude et de phase. Ainsi, on peut préférer émettre, par exemple, l’amplitude du son source mais la phase du son cible.
+Dans ce double vocodeur de phase, les sorties de l'objet \textit{cartopol}$ \thicksim $, la magnitude et la phase après l'analyse de Fourier, sont multipliées par le facteur d'interpolation de morphing. La phase est préalablement corrigée par une accumulation avec l'harmonique précédente et une petite quantité de bruit est ajoutée pour la naturalisation du resultat sonore. Nous séparons les canaux d’interpolation de magnitude et de phase. Ainsi, on peut préférer émettre, par exemple, l’amplitude du son source mais la phase du son cible.
 
 La sortie de chaque son après l’interpolation est transformée en forme cartésienne et une FFT inverse est appliquée. Ainsi, nous obtenons un résultat sonore homogène. À ce stade, un certain nombre d'opérations d'édition peuvent être ajoutées, telles que la modélisation du bruit ou une interpolation variable par image, etc. Mais avant de plonger dans des modifications avancées, examinons d'abord les techniques d'interpolation.
 
-L'interpolation est définie par défaut sur linéaire. Un simple code Javascript que nous avons implémenté crée une courbe linéaire. Les valeurs d'interpolation varient entre $ [0, 1] $. La valeur $ 0 $ correspond à une interpolation nulle, et par conséquent la magnitude ou la phase du son source est sortie. Une valeur de $ 1 $ restitue entièrement les caractéristiques du son target et omet le son source. Une courbe linéaire définit une méthode linéaire pour interpoler les sons. Mais nous allons plus loin et implémentons un certain nombre de courbes telles que exponentielle, logarithmique et, bien entendu, linéaire. Par conséquent, il existe différentes manières d'interpoler des sons en fonction de leurs composantes de fréquence ou de la magnitude de leurs composantes de fréquence. Toutes les interpolations varient entre la même intégrale $ [0, 1] $. Le code Javascript peut être consulté dans le bout de code ci-dessous.
-
-
-\noindent\begin{minipage}{\textwidth}
-\lstinputlisting[language=Java]{Expondential.js}
-\end{minipage}
+L'interpolation est définie par défaut sur linéaire. Un simple code Javascript que nous avons implémenté crée une courbe linéaire. Les valeurs d'interpolation varient entre $ [0, 1] $. La valeur $ 0 $ correspond à une interpolation nulle, et par conséquent la magnitude ou la phase du son source est sortie. Une valeur de $ 1 $ restitue entièrement les caractéristiques du son target et omet le son source. Une courbe linéaire définit une méthode linéaire pour interpoler les sons. En allons plus loin, nous implémentons un certain nombre de courbes telles que exponentielle, logarithmique et, bien entendu, linéaire. Par conséquent, il existe différentes manières d'interpoler des sons en fonction de leurs composantes de fréquence ou de la magnitude de leurs composantes de fréquence. Toutes les interpolations varient entre la même intégrale $ [0, 1] $. Le code Javascript peut être consulté dans le bout de code ci-dessous.
 
 La version du vocodeur de phase pour le morphing spectral est montrée dans la figure \ref{Morphing}. Il existe deux buffers, un pour la source et un pour le son target. Le fenêtrage gaussien pour du filtrage Gabor, avec une courbe normalisée à distance, est aussi paramétrable dans la plateforme. Un bouton d’interpolation pour la phase et un bouton pour l’interpolation de la magnitude contrôlent les facteurs d’interpolation pour le morphing et une factorisation du bruit pour la naturalisation de la phase sont mis en oeuvre.
 
@@ -241,3 +248,8 @@ La version du vocodeur de phase pour le morphing spectral est montrée dans la f
         \caption{Morphing en temps réel}
         \label{Morphing}
     \end{figure}
+
+
+\noindent\begin{minipage}{\textwidth}
+\lstinputlisting[language=Java]{Expondential.js}
+\end{minipage}

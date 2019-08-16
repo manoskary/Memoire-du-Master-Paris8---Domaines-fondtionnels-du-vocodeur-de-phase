@@ -1,10 +1,11 @@
 
+
 \label{ch:Appendix}
 
-	\section{FFT Cooley - Tukey algorithm}
+	\section{FFT Cooley - Tukey algorithm}\footnote{Le code est recuperé du lien \href{https://www.algorithm-archive.org/contents/cooley_tukey/cooley_tukey.html}{www.algorithm-archive.org} distribué sous une licence \textit{MIT}}
 	\label{Cooley-Tukey_Code} 
 
-	\begin{lstlisting}[language=C, caption= Cooley-Tukey with Butterfly Diagrams ]
+	\begin{lstlisting}[language=C, caption= Algorithme de Cooley-Tukey avec des diagrammes papillon]
 		using FFTW
 		#simple DFT function
 		function DFT(x)s
@@ -116,31 +117,20 @@
 		    approx(z, w)
 		end
 		main()
-	\end{lstlisting}\footnote{Le code est recuperé sur le lien \href{https://www.algorithm-archive.org/contents/cooley_tukey/cooley_tukey.html}{www.algorithm-archive.org} distribué sous la licence \textit{MIT}}.
+	\end{lstlisting}
 
+\begin{comment}
 
-	\section{Espace $L^p$ et STFT}
+\section{Analyse fonctionelle et analyse de Fourier}
 
-	La STFT est une version locale de la transformée de Fourier. Normalement, pour effectuer la transformation de Fourier, on part d'une fonction $f(x)$ qui appartient à l'espace Lebesque $L^{2} (\mathbb{R}^k)$ soit à $L^{1} (\mathbb{R}^k)$ et on obtient une fonction $\hat{f}(\omega)$ qui appartient respectivement à $L^{2} (\mathbb{R}^k)$ ou à $C_{0}(\mathbb{R}^{k})$\footnote{L'espace des fonctions continues qui tendent vers $0$ à l'infini}.
+	La STFT est une version locale de la transformation de Fourier. Normalement, pour effectuer la transformation de Fourier, on part d'une fonction $f(x)$ qui appartient à l'espace Lebesgue $L^{2} (\mathbb{R}^k)$ soit à $L^{1} (\mathbb{R}^k)$ et on obtient une fonction $\hat{f}(\omega)$ qui appartient respectivement à $L^{2} (\mathbb{R}^k)$ ou à $C_{0}(\mathbb{R}^{k})$\footnote{L'espace des fonctions continues qui tendent vers $0$ à l'infini}. L'espace $L^2$ est l'espace des fonctions de carré intégrable.
 
-	Soit $f:\mathbb{R}^k \rightarrow \mathbb{C}, \; f \| L^1(\mathbb{R}^k)$.
-
-	On définit la transformée de Fourier de $f$ et on la note $\mathcal{F}f$ ou $\mathcal{F}[f]$ ou encore $\hat{f}$ par
-	$$
-	\begin{matrix}
-	\hat{f} & : & \mathbb{R}^k & \rightarrow & \mathbb{C}			 &    & \\
-			&   & \omega & \mapsto     & \hat{f}(\omega) & := & \int_{\mathbb{R}^k}f(x)e^{-2 \pi i x \cdot \omega} dx
-	\end{matrix}
+	Si la transformée de Fourier de {{mvar|f}}, notée <math>\hat f</math>, est elle-même une [[fonction intégrable]], la formule dite de transformation de Fourier inverse, opération notée <math>\mathcal F^{-1}</math>, et appliquée à <math>\hat f</math>, permet (sous conditions appropriées) de retrouver {{mvar|f}} à partir des données fréquentielles :
+	$$ 
+	f(x)= F^{-1} (\hat f)(x)={1 \over 2\pi}\, \int_{-\infty}^{+\infty} \hat f(\xi)\, e^{+{\rm i}\xi x} \; d\xi \iff \hat f(\xi) = \int_{-\infty}^{+\infty} f(x) \mathrm e^{-{\rm i}\xi x}\,\mathrm 
 	$$
 
-	En effet, la transformée de Fourier peut être définie pour des fonctions de $L^2(\mathbb{R}^k)$ et par le théorème de Plancherel :
-
-	Si $f \in L^1(\mathbb{R}^k) \cap L^2(\mathbb{R}^k)$ alors 
-	$$\| {f}_{2} \| = \|\hat{f}\|_{2}$$
-	et donc l'opérateur $\mathcal{F}$ peut être étendu à $L^2(\mathbb{R}^k)$. De plus, on a ce qu'on appelle l'identité de Parseval
-	$$ \langle f, g \rangle = \langle \hat{f}, \hat{g} \rangle \, , \quad \forall f,g \in L^2(\mathbb{R}^k) $$
-
-	En somme, la transformée de Fourier est un isomorphisme isométrique de $L^2(\mathbb{R}^k)$ en $L^2(\mathbb{R}^k)$, ce qui de manière symbolique est traduit par
+	Pour résumer, on a bien un isomorphisme isométrique sur la transformation de Fourier de $L^2(\mathbb{R}^k)$ en $L^2(\mathbb{R}^k)$, ce qui de manière symbolique est traduit par \footnote{Karlheinz Gröchenig, \textit{Foundations of Time-Frequency Analysis}, 2001. \nocite{Grochenig}} :
 	$$
 	\begin{matrix}
 	\mathcal{F} : & L^2(\mathbb{R}^k) & \rightarrow & L^2(\mathbb{R}^k) \\
@@ -150,25 +140,23 @@
 	et
 	$$ \mathcal{F} \circ \mathcal{F}^{-1} = \mathcal{F}^{-1} \circ \mathcal{F} = Id $$
 
-	Pour effectuer la STFT on doit d'abord fixer une fonction qui nous servira de fenêtre. Dans une approche plus practique, on utilisera généralement des fonctions avec une formte décroissance à l'infini (par exemple une fonction gaussienne). De cette manière on pourra appliquer la STFT à des fonctions qui n'ont peut-être pas de transformée de Fourier ordinaire. On laissera les détails de quelles fonctions sont celles qui admettent une STFT (en fonction de la fenêtre fixée) pour plus tard et on se contentera d'abord de voir que si $g\in L^{p}(\mathbb{R}^{k})$ alors toute $f\in L^{p'} (\mathbb{R}^k)$ admet une STFT.
+	Pour réaliser une STFT on doit definir une fonction $g$ qui servira comme fenêtrage. Géneriquement, on utilise des fonctions avec une forme décroissance vers l'infini (Filtres Gabor). On examine, donc, si $g\in L^{p}(\mathbb{R}^{k})$ alors on aura que $f\in L^{p'} (\mathbb{R}^k)$ admet une STFT pour $f$ possible.
 
-	Pour appliquer la STFT à une fonction il faut être sur que le résultat sera bien défini; cela nous rapporte au problème de choisir un domaine de définition pour la STFT.
-	Dans la définition de la STFT on a choisit comme domaines pour $f$ et pour $g$ respectivement $L^{p'} (\mathbb{R}^k) $ et $L^p (\mathbb{R}^k)$. Ce choix a été fait pour la première approche mais le fait est que la STFT peut être étendue à bien d'autres espaces, notament des espaces de distributions.
+	Pour appliquer la STFT à une fonction il faut que le résultat soit bien défini. Cela introduit le problème de choisir un domaine de définition pour la STFT.
+	Dans cette définition de la STFT on choisi comme domaines pour $f$ et pour $g$ respectivement $L^{p'} (\mathbb{R}^k) $ et $L^p (\mathbb{R}^k)$. Bien évidement la STFT peut être étendue à d'autres espaces (ex. notament des espaces de distributions), mais dans ce cas on la regarde sous l'oeil des espaces Lebesgue.
 
-	Dans cette section on va proposer quelques uns (ceux qui sont présentés en \cite{Grochenig}); loin d'être une exposition exhaustive, on ne présentera que les espaces les plus importants dans le cadre de l'analyse de Fourier. L'étude détaillé du cas des espaces de modulation sera laissé pour quand ceux-là seront présentés.
+	Soient $p, p'$ (i.e. $\frac{1}{p} + \frac{1}{p'} = 1$). Alors, $\forall f \in L^{p'}(\mathbb{R}^{k})$, $\forall g\in L^{p}(\mathbb{R}^{k})$, $V_{g}f$ est bien définie, i.e. $\forall(t, \omega)\in \mathbb{R}^{k} \times \mathbb{R}^{k}$, $V_{g}f(t, \omega) \in \mathbb{C}$.
 
-	On rappelle qu'on utilise $\mathscr{D} (\mathbb{R}^k)$ pour noter l'espace des distributions ordinaires et $\mathscr{T} (\mathbb{R}^k)$ pour noter l'espace des distributions tempérées.
+	Soient $f \in L^{p'}(\mathbb{R}^{k})$, $g\in L^{p}(\mathbb{R}^{k})$.
 
-	Soit $E$ indifféremment $C^{\infty}_{c} (\mathbb{R}^{k})$ (l'espaces des fonctions lisses à support compact) ou $\mathscr{T} (\mathbb{R}^k)$ et soit $\langle \cdot , \cdot \rangle$ son crochet de dualité.
+	Pour tout $t \in \mathbb{R}^{k}$, l'opérateur de traslation du vecteur $t$, qu'on note $T_{t}$, est une isométrie de $L^{p}(\mathbb{R}^{k})$ en soi même. On a donc $g\in L^{p}(\mathbb{R}^{k}) \Rightarrow \overline{g}\in L^{p}(\mathbb{R}^{k}) \Rightarrow T_{t}\overline{g} \in L^{p}(\mathbb{R}^{k})$.
 
-	$$
-	\begin{matrix}
-	V_{g}\sigma : & \mathbb{R}^d \times \mathbb{R}^k & \rightarrow & \mathbb{C} \\
-	& (t,\omega) & \mapsto & V_{g}\sigma (t, \omega) &=& \sigma(M_{\omega}T_{t}g) := \langle \sigma, M_{\omega}T_{t}g \rangle 
-	\end{matrix}
-	$$
-	et on obtient une extension de la STFT.
+	On a donc que $f\cdot T_{t}\overline{g} \in L^{1}(\mathbb{R}^{k})$ car, grâce à l'inégalité de Hölder \footnote{L.P. Kuptsov, \textit{Hölder inequality}, 1994, \nocite{Holder}}.
 
-	Cette définition n'a pas besoin de justification; en effet, l'évaluation de la distribution dans un élément de son domaine est bien évidemment définie. On pourrait se demander si les opérateurs $M_{\omega}$ et $T_{t}$ laissent invariant les espaces $C^{\infty}_{c}(\mathbb{R}^{d})$ et $\mathscr{T} (\mathbb{R}^k)$. De plus, la justification de que ce soit une extension est faite par l'interpretation de toute fonction de $E$ comme élément de $E'$ par le crochet de dualité.
+	$$ \|f\cdot T_{t}\overline{g}\|_{1} \leq  \|f\|_{p'} \|T_{t}\overline{g}\|_{p} < \infty$$
 
-	Cela nous dit de plus que si $B$ est un espace de Banach contenu dans $\mathscr{T} (\mathbb{R}^k)$ qui est invariant par des traslations et modulations alors la STFT est bien définie pour $f\in B'$ et $g\in B$.
+	On sait donc que pour tout $t\in\mathbb{R}^{k}$ la transformation de Fourier de $f\cdot T_{t}\overline{g}$ est bien définie grâce au Lemme de Riemann-Lebesgue et donc que $\forall \omega \in \mathbb{R}^{k}$, $V_{g}f(t, \omega) = \mathcal{F}[f\cdot T_{t}\overline{g}](\omega) \in \mathbb{C}$.
+
+	On a prouvé qu'une fonction $f$ est isomorphe à sa transformation de Fourier dans des espaces Lebesgue et, de plus, la STFT est bien défini dans $L^p$.
+
+\end{comment}
