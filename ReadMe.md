@@ -13,3 +13,11 @@ Software Details
 
 This project's code is realized in Max 7 and Java script.
 
+
+
+How to deploy the Code
+=====================
+
+This project's code is divised into two folders. The first folder contains tutorials and introductory builds of spectral analysis and phase vocoders. The second contains artistic uses of the phase vocoder some including jitter.
+
+
