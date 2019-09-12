@@ -11,13 +11,32 @@ This is the work of my Master's Dissertation for Paris 8 University during my st
 Software Details
 =====================
 
-This project's code is realized in Max 7 and Java script.
-
-
+This project's code is realized in Max version 7.0.3 with some Javascript code. The text is writen in Latex code.
 
 How to deploy the Code
 =====================
 
-This project's code is divised into two folders. The first folder contains tutorials and introductory builds of spectral analysis and phase vocoders. The second contains artistic uses of the phase vocoder some including jitter.
+This project's code is divised into three folders : 
+
+- The first folder called "Frequency Tracking" contains tutorials and introductory builds of pitch tracking using spectral analysis
+
+- The second folder called "Phase Vocoders" contains introductory build of phase vocoders. In general a phase vocoder is divised in two paches one for user the operational patch and one for the PFFT object containing the actual phase vocoder.
 
 
+- The last folder called "Visual Effects" included artistic uses of the phase vocoder concept using jitter.
+
+The most important patch is the "First Morphing Try" containing a Super phase vocoder as described in the dissertation.
+
+
+Find your way in the Repository
+=====================
+
+The repository consists of 4 folders containing :
+
+- The dissertation writen in english
+
+- The disseration writeen in french
+
+- Sound samples and the electracoustic piece "Diakrotima"
+
+- The developped code
