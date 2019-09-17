@@ -13,7 +13,7 @@ L'objectif de ce chapitre est de soutenir l'idée que l'analyse spectrale et la 
 
 Dans le but de combiner plusieurs techniques du vocodeur de phase, nous avons implémenté un \guillemotleft \textit{super} vocodeur de phase\guillemotright . Cet outil spectral comprend l'étirement temporel, le freeze temporel, le décalage de hauteur, le morphing et d'autres effets bénéficiant de la fonction élémentaire du vocodeur de phase.
 
-Le graphe \ref{FirstMorphingTry} présente le patch de contrôle de tous les paramètres du vocodeur de phase. Cette version du vocodeur de phase contient tous les effets étudiés dans les sections précédentes. La différence entre le patch du vocodeur de phase de base pour le morphing est minime. Essentiellement c'est le même code avec quelques fonctionalités supplémentaires. Il est naturel de rechercher une fonctionnalité plus large pour le même outil. En suivant cette raisonement, nous avons implémenté tous les effets de base dans un seul patch. Les formules mathématiques correspondantes à ce partie sont omises car nous les avons déjà balayées auparavant. Les détails les plus cruciaux se trouvent dans la séquence de tous les effets visibles dans figure \ref{SuperPhaseVoc}.
+Le graphe \ref{FirstMorphingTry} présente le patch de contrôle de tous les paramètres du vocodeur de phase. Cette version du vocodeur de phase contient tous les effets étudiés dans les sections précédentes. La différence entre le patch du vocodeur de phase de base pour le morphing est minime. Essentiellement c'est le même code avec quelques fonctionnalités supplémentaires. Il est naturel de rechercher une fonctionnalité plus large pour le même outil. En suivant cette raisonnement, nous avons implémenté tous les effets de base dans un seul patch. Les formules mathématiques correspondantes à ce partie sont omises car nous les avons déjà balayées auparavant. Les détails les plus cruciaux se trouvent dans la séquence de tous les effets visibles dans figure \ref{SuperPhaseVoc}.
 
 Dans le patch principal, vous pouvez voir deux pianos virtuels de contrôle permettant de modifier la hauteur de chaque son séparément. Idéalement, ce système devrait être automatique. Il faut estimer la fréquence de chaque son et corriger à mi-chemin la hauteur du son pour qu'il en soit de même. Une correction de hauteur intervient avant tout effet de morphing et n'affecte donc pas le résultat. Dans le patch principal, nous pouvons également trouver des commandes permettant de manipuler le filtre de Gabor, en ajustant les composantes de bruit de la phase qui, dans ce patch, sont identiques pour les deux sons. On peut également trouver des facteurs d’interpolation de magnitude et de phase pour le morphing, ainsi que la factorisation de la courbe, comme indiqué dans la section précédente. La dernière modification présentée dans ce patch est l'effet de \textit{freeze} qui contient les valeurs spectrales d'une seule fenêtre. Pour cet effet, deux types de filtrage sont également ajoutés pour modifier le timbre des spectres gelés.
 
@@ -37,8 +37,8 @@ Dans le patch principal, vous pouvez voir deux pianos virtuels de contrôle perm
 \label{PhaseVocoder}
 \end{figure}
 
-\subsection{Phase interference}
-    Dans ce patch MaxMSP, nous étudions une modification des coordonnées polaires après l’étape de l’analyse. Nous ajoutons simplement un oscillateur de phaseur après la FFT et l’appliquons à chaque amplitude et phase corrigée de la fenêtre. De cette façon, l'identité du signal n'est pas modifiée, mais une fréquence oscillante interfère avec chaque index de la fenêtre FFT. La formule de cette modification est présentée ci-dessous par l'équation de synthèse.
+\subsection{l'interférence de phase}
+    Dans ce patch Max, nous étudions une modification des coordonnées polaires après l’étape de l’analyse. Nous ajoutons simplement un oscillateur \textit{phaser}$\thicksim$ après la FFT et l’appliquons à chaque amplitude et phase corrigée de la fenêtre. De cette façon, l'identité du signal n'est pas modifiée, mais une fréquence oscillante interfère avec chaque index de la fenêtre FFT. La formule de cette modification est présentée ci-dessous par l'équation de synthèse.
 
 \begin{figure}
   \centering
@@ -51,7 +51,7 @@ Dans le patch principal, vous pouvez voir deux pianos virtuels de contrôle perm
       y(n, k) = \sum_{k=1}^K (A[n]+phi(n)) \; e^{j (\theta_k(n) +\phi(n)}
     \end{equation}
     
-    Où $y (n, k)$ est le signal fenêtré après l'analyse. K est le nombre de sinisoides, $ A [n] $ est la magnitude instantanée, $ \theta $ est la phase instantanée et $ \phi (n) $ est le phaseur instantané donné par la formule:
+    Où $y (n, k)$ est le signal fenêtré après l'analyse. K est le nombre de sinusoïdes, $ A [n] $ est la magnitude instantanée, $ \theta $ est la phase instantanée et $ \phi (n) $ est le phaseur instantané donné par la formule:
 
     \begin{equation*}
         \phi(n) = n - floor(n)
@@ -134,7 +134,7 @@ Fondamentalement, le morphing visuel est relativement facile à réaliser avec l
 
 Bien entendu, nous pourrions également implémenter le script expondential.js pour une courbe de morphing différente sur le visuel.
 
-Dans le patch suivant, nous avons voulu aller plus loin, en séparant tout composant d'un modèle tri-dimensionel dans jitter. Nous distinguons les valeurs des matrices, des normals et de la texture. Nous avons ajoutés egalement une interpolation du couleur. Le patch est en disposition en figure \ref{VisualMorph2}.
+Dans le patch suivant, nous avons voulu aller plus loin, en séparant tout composant d'un modèle tri-dimensionnel dans jitter. Nous distinguons les valeurs des matrices, des normals et de la texture. Nous avons ajoutés également une interpolation du couleur. Le patch est en disposition en figure \ref{VisualMorph2}.
 
     \begin{figure}
         \centering
@@ -205,9 +205,9 @@ Dans le patch suivant, nous avons voulu aller plus loin, en séparant tout compo
 
 Dans le cadre artistique, on a créé une composition de courte durée afin de mettre en valeur l'importance artistique du vocodeur de phase via une source d'exemples fructueux. Le but de cette petite pièce de composition est d'utiliser le minimum d'information sonore (3-4 enregistrements de $.<10$ secondes), afin de créer un univers sonore engendré par paramétrisation sur le vocodeur de phase présenté tout au long de ce mémoire.
 
-Chaque son est produit dans MaxMSP en utilisant un des codes développés et présentés dans ce mémoire. Chaque son est un produit direct d'un ou deux sources sonores. Les sources sont des enregistrements de piano ou de la guitare effectués et joués par l'auteur. L'orchestration numérique de la pièce était réalisée sur le logiciel du mixage \textit{Reaper}. 
+Chaque son est produit dans Max en utilisant un des codes développés et présentés dans ce mémoire. Chaque son est un produit direct d'un ou deux sources sonores. Les sources sont des enregistrements de piano ou de la guitare effectués et joués par l'auteur. L'orchestration numérique de la pièce était réalisée sur le logiciel du mixage \textit{Reaper}. 
 
-Les enregistrements des sons d'origine étaient faits avec un échantillonnage de $48kHz$ mais les enregistrements dans Max sont reconfigurés à $44,1kHz$. L'enregistrement sur MaxMSP est effectué par un \textit{buffer$\thicksim$} et un simple objet \textit{record$\thicksim$}. 
+Les enregistrements des sons d'origine étaient faits avec un échantillonnage de $48kHz$ mais les enregistrements dans Max sont reconfigurés à $44,1kHz$. L'enregistrement sur Max est effectué par un \textit{buffer$\thicksim$} et un simple objet \textit{record$\thicksim$}. 
 
 La pièce composée agit d'une pièce acousmatique. L'idée de composition origine de la simulation de l'addition de deux sinusoïdes avec une fréquence différente, mais proche. Ce battement sonore est reflété par des crescendos qui vont et viennent pendant la durée totale de la pièce. Par conséquent, le nom de la pièce est \textit{Diakrotima}, qui signifie battement sonore en grec.
 
@@ -220,9 +220,9 @@ D'une manière quasi régulière les sons se précèdent presque consécutivemen
         \label{Reaper_capture}
     \end{figure} 
 
-Pendant le processus de mixage les seuls effets complémentaires utilisés sont un de-noiser\footnote{\href{https://www.izotope.com/en/products/repair-and-edit/rx.html}{de-noiser de Izotope serie RX7 }} pour enlever le bruit électomagnétique des enregistrements et un outil de spatialisation \footnote{\href{http://forumnet.ircam.fr/product/spat-en/}{SPAT de Ircam Tools}}. Aucun effet de modification sonore a été ajouté afin d'avoir des sons strictement produits par un vocodeur de phase.
+Pendant le processus de mixage les seuls effets complémentaires utilisés sont un de-noiser\footnote{\href{https://www.izotope.com/en/products/repair-and-edit/rx.html}{de-noiser de Izotope serie RX7 }} pour enlever le bruit électromagnétique des enregistrements et un outil de spatialisation \footnote{\href{http://forumnet.ircam.fr/product/spat-en/}{SPAT de Ircam Tools}}. Aucun effet de modification sonore a été ajouté afin d'avoir des sons strictement produits par un vocodeur de phase.
 
-Le format finale de la pièce est un fichier \textit{wav} normalisé en stéreo. La pièce, les enregistrements d'origine aussi bien que les enregistrements de MaxMSP sont disponibles sur le repositoire \href{https://github.com/melkisedeath/Memoire-du-Master-Paris8---Domaines-fondtionnels-du-vocodeur-de-phase}{github} de ce projet de recherche. 
+Le format finale de la pièce est un fichier \textit{wav} normalisé en stéréo. La pièce, les enregistrements d'origine aussi bien que les enregistrements de Max sont disponibles sur le repository \href{https://github.com/melkisedeath/Memoire-du-Master-Paris8---Domaines-fondtionnels-du-vocodeur-de-phase}{github} de ce projet de recherche. 
 
 \subsubsection{Analyse structurelle}
 
@@ -234,7 +234,7 @@ La paramétrisation d'un son percutant agit sur une courbe gaussienne du fenêtr
 
 Tout autre son présenté dans la pièce est une variation du paramétrage. Parfois, on choisit de mélanger des modifications percutantes de sons avec une transposition de la hauteur. Les autres produits sonores sont de la variation des valeurs de phase et d'amplitude parmis le \textit{Super Phase Vocoder}. 
 
-\subsection{Évaluation Artistique}
+\subsection{L'évaluation artistique}
 
 Dans le cadre de recherche, il s'agit d'une suite logique d'application de la critique de l'œuvre. Ici, donc, on se focalise sur un point de vue épistémologique, de l'évaluation de la mise en œuvre, des applications du vocodeur de phase dans ce contexte artistique. 
 
@@ -242,4 +242,4 @@ Dans la pièce \textit{Diakrotima} se trouve une palette des sons produits exclu
 
 Quand on applique un changement de la hauteur plus d'une octave vers le bas, on retrouve une perte de qualité considérable. Également, si un son n'est pas très harmonique, au sens qu'il contient des caractéristiques très percutants et qu'il n'a pas de fréquence persistante, on se rend compte que toute opération de changement de la hauteur ou du rythme de lecture n'est pas optimale. Au-delà des problèmes techniques liés à la construction de l'algorithme, on peut constater que les sons produits avec le vocodeur de phase ont tous un caractéristique rond. C'est-à-dire que l'effet de reproduire de sons à partir des sinusoïdes donne l'impression que tout son est similaire et par extension pas naturel. 
 
-L'effet d'avoir des sons arrondis ou artifaits est parfois bien désirable. Pour autant, le résultat reste toujours robuste et de haute qualité. Or, le vocodeur de phase ne semblerait pas être le premier choix des outils informatiques pour des compositeurs qui souhaiteraient créer des pièces acousmatiques avec des sons d'une haute qualité réaliste.
+L'effet d'avoir des sons arrondis ou artefacts est parfois bien désirable. Pour autant, le résultat reste toujours robuste et de haute qualité. Or, le vocodeur de phase ne semblerait pas être le premier choix des outils informatiques pour des compositeurs qui souhaiteraient créer des pièces acousmatiques avec des sons d'une haute qualité réaliste.

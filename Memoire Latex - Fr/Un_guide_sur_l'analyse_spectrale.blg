@@ -1,7 +1,7 @@
 This is BibTeX, Version 0.99d (TeX Live 2018/W32TeX)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Un_guide_sur_l'analyse_spectrale.aux
-White space in argument---line 34 of file Un_guide_sur_l'analyse_spectrale.aux
+White space in argument---line 36 of file Un_guide_sur_l'analyse_spectrale.aux
  : \citation{Routes:
  :                   1996: CMT: 525484}
 I'm skipping whatever remains of this command
@@ -17,18 +17,22 @@ I was expecting a `,' or a `}'---line 93 of file biblio.bib
  :     isbn = "9781134379705",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 174 of file biblio.bib
+I was expecting a `,' or a `}'---line 178 of file biblio.bib
  :     
  :     Year = 2015,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--entry type for "GR10" isn't style-file defined
---line 208 of file biblio.bib
-I was expecting a `,' or a `}'---line 244 of file biblio.bib
+--line 225 of file biblio.bib
+I was expecting a `,' or a `}'---line 261 of file biblio.bib
  :   
  :   year = 2017
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Too many commas in name 1 of "Curtis {Roads}, Stephen Travis {Pope}, Aldo {Piccialli}, Giovanni {De Poli}" for entry Roads97
+while executing---line 1347 of file plainnat.bst
+Too many commas in name 1 of "Curtis {Roads}, Stephen Travis {Pope}, Aldo {Piccialli}, Giovanni {De Poli}" for entry Roads97
+while executing---line 1347 of file plainnat.bst
 Too many commas in name 1 of "Ian {Goodfellow}, Jean {Pouget-Abadie}, Bing {Xu}, David {Warde-Farley}, Sherjil {Ozair}, Aaron {Courville}, Yoshua {Bengio}" for entry GANs
 while executing---line 1347 of file plainnat.bst
 Too many commas in name 1 of "Ian {Goodfellow}, Jean {Pouget-Abadie}, Bing {Xu}, David {Warde-Farley}, Sherjil {Ozair}, Aaron {Courville}, Yoshua {Bengio}" for entry GANs
@@ -48,10 +52,6 @@ while executing---line 1347 of file plainnat.bst
 Too many commas in name 1 of "P. G. Reshma, P. Gopi Varun, Babu V. Suresh, Wahid Khabou" for entry FFTmirror
 while executing---line 1347 of file plainnat.bst
 Too many commas in name 1 of "P. G. Reshma, P. Gopi Varun, Babu V. Suresh, Wahid Khabou" for entry FFTmirror
-while executing---line 1347 of file plainnat.bst
-Too many commas in name 1 of "Curtis {Roads}, Stephen Travis {Pope}, Aldo {Piccialli}, Giovanni {De Poli}" for entry Roads97
-while executing---line 1347 of file plainnat.bst
-Too many commas in name 1 of "Curtis {Roads}, Stephen Travis {Pope}, Aldo {Piccialli}, Giovanni {De Poli}" for entry Roads97
 while executing---line 1347 of file plainnat.bst
 Too many commas in name 1 of "Curtis {Roads}, Stephen Travis {Pope}, Aldo {Piccialli}, Giovanni {De Poli}" for entry Roads97
 while executing---line 1429 of file plainnat.bst
@@ -78,7 +78,6 @@ while executing---line 1429 of file plainnat.bst
 Too many commas in name 1 of "Ian {Goodfellow}, Jean {Pouget-Abadie}, Bing {Xu}, David {Warde-Farley}, Sherjil {Ozair}, Aaron {Courville}, Yoshua {Bengio}" for entry GANs
 while executing---line 1429 of file plainnat.bst
 Warning--empty booktitle in GANs
-Warning--empty school in Kar17
 Too many commas in name 1 of "P. G. Reshma, P. Gopi Varun, Babu V. Suresh, Wahid Khabou" for entry FFTmirror
 while executing---line 1429 of file plainnat.bst
 Too many commas in name 1 of "P. G. Reshma, P. Gopi Varun, Babu V. Suresh, Wahid Khabou" for entry FFTmirror
@@ -86,45 +85,46 @@ while executing---line 1429 of file plainnat.bst
 Warning--empty year in FFTmirror
 Warning--empty booktitle in roebel:hal-01161124
 Warning--empty booktitle in roebel2010shape
-You've used 29 entries,
+Warning--empty journal in serra1989system
+You've used 42 entries,
             2773 wiz_defined-function locations,
-            784 strings with 9139 characters,
-and the built_in function-call counts, 11501 in all, are:
-= -- 1107
-> -- 290
-< -- 37
-+ -- 116
-- -- 87
-* -- 625
-:= -- 1631
-add.period$ -- 90
-call.type$ -- 29
-change.case$ -- 112
-chr.to.int$ -- 29
-cite$ -- 67
-duplicate$ -- 696
-empty$ -- 1128
-format.name$ -- 116
-if$ -- 2563
+            859 strings with 11034 characters,
+and the built_in function-call counts, 16472 in all, are:
+= -- 1559
+> -- 469
+< -- 50
++ -- 183
+- -- 141
+* -- 957
+:= -- 2387
+add.period$ -- 130
+call.type$ -- 42
+change.case$ -- 165
+chr.to.int$ -- 42
+cite$ -- 93
+duplicate$ -- 972
+empty$ -- 1619
+format.name$ -- 183
+if$ -- 3625
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 26
-newline$ -- 155
-num.names$ -- 116
-pop$ -- 302
+missing$ -- 41
+newline$ -- 219
+num.names$ -- 168
+pop$ -- 437
 preamble$ -- 1
-purify$ -- 87
+purify$ -- 131
 quote$ -- 0
-skip$ -- 569
+skip$ -- 757
 stack$ -- 0
-substring$ -- 538
-swap$ -- 181
-text.length$ -- 8
+substring$ -- 740
+swap$ -- 210
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 299
+type$ -- 427
 warning$ -- 9
-while$ -- 114
+while$ -- 169
 width$ -- 0
-write$ -- 371
+write$ -- 534
 (There were 29 error messages)

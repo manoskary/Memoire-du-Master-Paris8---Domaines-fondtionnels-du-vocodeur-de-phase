@@ -1,4 +1,4 @@
-\begin{thebibliography}{29}
+\begin{thebibliography}{42}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -36,6 +36,12 @@ Coralie {Diatkine}.
 Mark {Dolson}.
 \newblock The phase vocoder : a tutorial.
 \newblock \emph{Computer Music Journal}, pages pp. 14 -- 27, Printemps 1986.
+
+\bibitem[Dolson(1983)]{dolson1983}
+Mark~Barry Dolson.
+\newblock \emph{A tracking phase vocoder and its use in the analysis of
+  ensemble sounds}.
+\newblock PhD thesis, California Institute of Technology, 1983.
 
 \bibitem[{Droljc}(2011)]{Dr11}
 Tadej {Droljc}.
@@ -102,6 +108,12 @@ Johannes {Grünwald}.
 \newblock Theory, implementation and evaluation of the digital phase vocoder in
   the context of audio effects, 2010.
 
+\bibitem[Havelock et~al.(2008)Havelock, Kuwano, and
+  Vorl{\"a}nder]{havelock2008handbook}
+David Havelock, Sonoko Kuwano, and Michael Vorl{\"a}nder.
+\newblock \emph{Handbook of signal processing in acoustics}.
+\newblock Springer Science \& Business Media, 2008.
+
 \bibitem[{Helmholtz}(1895)]{Herm1895}
 Hermann L~F. {Helmholtz}.
 \newblock \emph{The Sensations of Tone}.
@@ -113,34 +125,85 @@ Catherine~Costello Hirata.
   morton feldman.
 \newblock \emph{Perspectives of New Music}, pages 6--27, 1996.
 
+\bibitem[Holmes(2012)]{holmes2012electronic}
+Thom Holmes.
+\newblock \emph{Electronic and experimental music: technology, music, and
+  culture}.
+\newblock Routledge, 2012.
+
 \bibitem[Ian~{Goodfellow}(2004)]{GANs}
 Bing {Xu} David {Warde-Farley} Sherjil {Ozair} Aaron {Courville}
   Yoshua~{Bengio} Ian~{Goodfellow}, Jean~{Pouget-Abadie}.
 \newblock Generative adversarial networks.
 \newblock page pp. 2672–2680, 2004.
 
-\bibitem[{Karystinaios}(2017)]{Kar17}
-Emmanouil-Nikolaos {Karystinaios}.
-\newblock An investigation into the spectral music idiom and timbral analysis
-  functionality with max smp jitter.
-\newblock Master's thesis, Septembre 2017.
-\newblock preprint.
+\bibitem[Mills(2012)]{mills2012media}
+Mara Mills.
+\newblock Media and prosthesis: the vocoder, the artificial larynx, and the
+  history of signal processing.
+\newblock \emph{Qui Parle: Critical Humanities and Social Sciences},
+  21\penalty0 (1):\penalty0 107--149, 2012.
+
+\bibitem[Moorer(1976)]{moorer1976synthesis}
+James~A Moorer.
+\newblock The synthesis of complex audio spectra by means of discrete summation
+  formulas.
+\newblock \emph{Journal of the Audio Engineering Society}, 24\penalty0
+  (9):\penalty0 717--727, 1976.
 
 \bibitem[{Movellan}(2008)]{Tut2002}
 Javier~R. {Movellan}.
 \newblock A tutorial on gabor filters, 2008.
 \newblock URL \url{http://mplab.ucsd.edu/tutorials/gabor.pdf}.
 
+\bibitem[Ottosen et~al.(2017)Ottosen, Dorfler, Ottosen, and
+  Dorfler]{ottosen2017phase}
+Emil~Solsb{\ae}k Ottosen, Monika Dorfler, Emil~Solsbaek Ottosen, and Monika
+  Dorfler.
+\newblock A phase vocoder based on nonstationary gabor frames.
+\newblock \emph{IEEE/ACM Transactions on Audio, Speech and Language Processing
+  (TASLP)}, 25\penalty0 (11):\penalty0 2199--2208, 2017.
+
 \bibitem[P.~G.~Reshma()]{FFTmirror}
 Babu V. Suresh Wahid~Khabou P.~G.~Reshma, P. Gopi~Varun.
 \newblock Analog implementation of fft using cascade current mirror.
 \newblock \emph{Microelectronics Journal}, 60, fevrier .
+
+\bibitem[Portnoff(1976)]{portnoff1976implementation}
+M~Portnoff.
+\newblock Implementation of the digital phase vocoder using the fast fourier
+  transform.
+\newblock \emph{IEEE Transactions on Acoustics, Speech, and Signal Processing},
+  24\penalty0 (3):\penalty0 243--248, 1976.
+
+\bibitem[Puckette(1995)]{puckette1995phase}
+Miller Puckette.
+\newblock Phase-locked vocoder.
+\newblock In \emph{Proceedings of 1995 Workshop on Applications of Signal
+  Processing to Audio and Accoustics}, pages 222--225. IEEE, 1995.
+
+\bibitem[Risset(1966)]{risset1966computer}
+JC~Risset.
+\newblock Computer study of trumpet tones (with sound examples).
+\newblock \emph{Bell Laboratories Report}, 1966.
+
+\bibitem[Risset(1991)]{risset1991timbre}
+Jean-Claude Risset.
+\newblock Timbre analysis by synthesis: representations, imitations, and
+  variants for musical composition.
+\newblock In \emph{Representations of musical signals}, pages 7--43. MIT Press,
+  1991.
 
 \bibitem[{Roads}(1996)]{Roads1996}
 Curtis {Roads}.
 \newblock \emph{The Computer Music Tutorial}.
 \newblock MIT Press, Cambridge, MA, USA, 1996.
 \newblock ISBN 0262680823.
+
+\bibitem[Roads(2004)]{roads2004microsound}
+Curtis Roads.
+\newblock \emph{Microsound}.
+\newblock MIT press, 2004.
 
 \bibitem[{Roebel}(1999)]{Rob99}
 Axel {Roebel}.
@@ -163,9 +226,26 @@ Axel Roebel.
 \newblock Shape-invariant speech transformation with the phase vocoder.
 \newblock 2010.
 
+\bibitem[Serra(1989)]{serra1989system}
+Xavier Serra.
+\newblock A system for sound analysis/transformation/synthesis based on a
+  deterministic plus stochastic decomposition.
+\newblock 1989.
+
 \bibitem[{Strawn}(1985)]{Str85}
 Jown {Strawn}.
 \newblock Introduction to digital sound synthesis.
 \newblock \emph{Digital Audio Engineering}, pages pp. 141 -- 134, 1985.
+
+\bibitem[Tiffon(2012)]{RissetParcours}
+Vincent Tiffon.
+\newblock Jean-claude risset, 6 janvier 2012.
+\newblock URL \url{http://brahms.ircam.fr/jean-claude-risset}.
+
+\bibitem[Trevor(1988)]{wishart1988composition}
+Wishart Trevor.
+\newblock The composition of vox-5.
+\newblock \emph{Computer Music Journal}, 12\penalty0 (4):\penalty0 21--27,
+  1988.
 
 \end{thebibliography}

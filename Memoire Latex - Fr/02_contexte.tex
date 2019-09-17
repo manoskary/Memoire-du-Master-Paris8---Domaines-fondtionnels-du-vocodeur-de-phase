@@ -11,7 +11,7 @@ Lorsqu'un son presque périodique est analysé, son énergie spectrale est conce
 
 \section{Décodage mathématique}
 
-    \subsection{The Fourier Transform}
+    \subsection{La transformation de Fourier}
 
 L’analyse spectrale consiste essentiellement à passer du domaine temporel au domaine fréquentiel pendant une période temporelle donnée. De ce point de vue, l’analyse spectrale est une transformation de Fourier associée à un processus mathématique permettant de visualiser les fréquences qui composent une onde sonore complexe pendant une période temporelle fixée.
 
@@ -28,13 +28,13 @@ Le processus de la DFT est expliqué graphiquement dans la figure \ref{ComplexDF
     \label{ComplexDFT}
 \end{figure}
 
-En 1822, Jean Joseph Fourier montra que certaines fonctions semi-périodiques peuvent également être formulées comme une somme d'harmoniques:
+En 1822, Jean Joseph Fourier montra que certaines fonctions semi-périodiques peuvent également être formulées comme une somme d'harmoniques. Une fonction semi-périodique est une fonction qui est approximent similaire d'une fonction périodique. Un example d'un fonction périodique est le $\alpha cos(x) + \beta$, etc. En théorie, un signal est représentable par une somme des sinusoïdes :
  
 \begin{equation}\footnote{Curtis Roads, \textit{The Computer Music Tutorial}, 1996. [p. 1085] \nocite{Roads1996} }
     x(t) = c_0 + \sum_{n=1} ^ \infty c_n cos( \omega t + \theta_n) 
 \end{equation}
 
-Où $ t $ est la période, $ x $ est le signal, $ c_0 $ est l'harmonique fondamentale, $ f $ la fréquence, $ \omega = 2 \pi f $ et $ \theta $ est la phase de chaque harmonique . Dans cette formulation de la transformation de Fourier, il est clair qu’un son $ x $ lié au facteur de temps $ t $ peut être décrit comme une somme de sinusoïdes.
+Où $ t $ est la période, $ x $ est le signal, $ c_0 $ est l'harmonique fondamentale, $ k $ la fréquence, $ \omega = 2 \pi k $ et $ \theta $ est la phase de chaque harmonique . Dans cette formulation de la transformation de Fourier, il est clair qu’un son $ x $ lié au facteur de temps $ t $ peut être décrit comme une somme de sinusoïdes.
 
 Pour cette raison, la transformation de Fourier pour toute fonction intégrable $ f: \mathbb{R} \to \mathbb{C} $ est la suivante :
  
@@ -42,7 +42,7 @@ Pour cette raison, la transformation de Fourier pour toute fonction intégrable 
      F[x(t)](\omega) = \int_{-\infty}^{+\infty} e ^ {-j \omega t} x(t) \hspace{1mm} dt \hspace{5mm} 
 \end{equation}
     
-Où $ F[x(t)] (\omega) $ est la transformation de Fourier du signal $ x $ bornée par sa  fréquence $ \omega $ correspondante. Dans le domaine sonore numérique, cette fréquence varie entre 0 et la fréquence d'échantillonnage (SR). Le SR est généralement 44100 ou 48000Hz. Le domaine de cette fonction pouvant être intégrée aux signaux sonores numériques varie dans l'intégrale $ [- 1, 1] $. Comme on le voit clairement dans cette formule, le facteur temporel est infini, mais un tel calcul est évidemment impossible. D'autres variations de la transformation de Fourier en temps discret sont en réalité utilisées en informatique.
+Où $ F[x(t)] (\omega) $ ou simplement $X(\omega)$ est la transformation de Fourier du signal $ x $ bornée par sa  fréquence $ \omega $ correspondante. Dans le domaine sonore numérique, cette fréquence varie entre 0 et la fréquence d'échantillonnage (SR). Le SR est généralement 44100 ou 48000Hz. Le domaine de cette fonction pouvant être intégrée aux signaux sonores numériques varie dans l'intégrale $ [- 1, 1] $. Comme on le voit clairement dans cette formule, le facteur temporel est infini, mais un tel calcul est évidemment impossible. D'autres variations de la transformation de Fourier en temps discret sont en réalité utilisées en informatique.
 
          \begin{figure}
             \centering
@@ -51,10 +51,11 @@ Où $ F[x(t)] (\omega) $ est la transformation de Fourier du signal $ x $ borné
             \label{CircleFourier}
         \end{figure}
 
-La transformation de Fourier est basée principalement sur la formule d'Euler où $ e ^ {2 j \pi t} = cos (2 \pi t) + j sin (2 \pi t) $. On peut imaginer cette opération comme dessiner un cercle dans le plan complexe $ \mathbb{C} $. Au cours de la transformation de Fourier, un signal $ x(t) $ est rendu autour d'un cercle avec ($ e ^ {- j \omega t} $), avec une fréquence $ f $. Rappelons que $ \omega = 2 \pi f $. La rotation est donnée par le signe de $ j $ (nombre imaginaire). Une rotation dans le sens des aiguilles d'une montre est donc considérée comme $ -j $. Ce processus nous donne effectivement deux parties, la vraie, $ cos (2 \pi) $, et l’imaginaire, $ j \; sin (2 \pi t) $,  partie de l'équation.
+La transformation de Fourier est basée principalement sur la formule d'Euler où $ e ^ {2 j \pi t} = cos (2 \pi t) + j sin (2 \pi t) $. On peut imaginer cette opération comme dessiner un cercle dans le plan complexe $ \mathbb{C} $. Au cours de la transformation de Fourier, un signal $ x(t) $ est rendu autour d'un cercle avec ($ e ^ {- j \omega t} $), avec une fréquence $ k $. Rappelons que $ \omega = 2 \pi k $. La rotation est donnée par le signe de $ j $ (nombre imaginaire). Une rotation dans le sens des aiguilles d'une montre est donc considérée comme $ -j $. Ce processus nous donne effectivement deux parties, la vraie, $ cos (2 \pi) $, et l’imaginaire, $ j \; sin (2 \pi t) $,  partie de l'équation.
 
-On transforme souvent les données cartésiennes induites par l'exponentielle complexe en une forme polaire plus manipulable. Après la transformation de Fourier, il existe deux facteurs à manipuler, la phase et la magnitude. La phase est déduite par l'angle des deux coordonnées cartésiennes dans le plan complexe, tandis que la magnitude est déduite par le vecteur produit des deux valeurs. De la phase, on peut extraire des informations sur la fréquence du signal sur l'échantillon précise et, comme son nom l’indique, des informations de magnitude sur l’amplitude de l’échantillon exacte. Lorsque le temps est fixé pour l'exécution de l'analyse de Fourier, le signal sonore est divisé en intervalles de fréquence factorisés par la fréquence de l'analyse ($ \omega $). La phase et la magnitude sont calculées pour chaque fraction de temps sur laquelle l'analyse de Fourier est effectuée. La magnitude est égale à: $ m (x) = \sqrt{i (x) ^ 2 + r (x) ^ 2} $ et la phase est $ \theta (x) = tan ^ {- 1} (\frac{i (x)}{r (x)}) $. \ref{MagnitudePhase}
-
+On transforme souvent les données cartésiennes induites par l'exponentielle complexe en une forme polaire plus manipulable. Après la transformation de Fourier, il existe deux facteurs à manipuler, la phase et la magnitude. La phase est déduite par l'angle des deux coordonnées cartésiennes dans le plan complexe, tandis que la magnitude est déduite par le vecteur produit des deux valeurs. De la phase, on peut extraire des informations sur la fréquence du signal sur l'échantillon précise et, comme son nom l’indique, des informations de magnitude sur l’amplitude de l’échantillon exacte. Lorsque le temps est fixé pour l'exécution de l'analyse de Fourier, le signal sonore est divisé en intervalles de fréquence factorisés par la fréquence de l'analyse ($ \omega $). La phase et la magnitude sont calculées pour chaque fraction de temps sur laquelle l'analyse de Fourier est effectuée. La magnitude est égale à: $ m (x) = \sqrt{i (x) ^ 2 + r (x) ^ 2} $ et la phase est $ \theta (x) = tan ^ {- 1} (\frac{i (x)}{r (x)}) $ \ref{MagnitudePhase}. La transformation de Fourier d'un signal $x(t)$ peut etre également exprimé en termes de magnitude et phase pour chaque $k$:
+$$\footnote{M.H. Serra, \textit{Musical Signal Processing}, 1996, pp. 35-37. \nocite{Roads97}} \; F[x(t)](k) = m(k) e^{j \theta(k)}.$$
+ou $k$ est une fréquence typicament variée entre $(- \infty,+ \infty)$
          \begin{figure}
             \centering
             \includegraphics[width = 0.5 \textwidth ]{Graphs/Fourier_Circle_2.jpg}
@@ -66,30 +67,36 @@ On transforme souvent les données cartésiennes induites par l'exponentielle co
 
 \begin{equation}
 \footnote{Tadej Droljc, \textit{STFT Analysis Driven Sonographic Sound Processing in Real-Time using Max/MSP and Jitter}, 2011. \nocite{Dr11} }
-    X(\omega, \tau) = \sum_t ^ \infty x(t) \omega(t-\tau)e ^ {-j \omega t} \hspace{5mm} 
+    X(k, \tau) = \sum_t ^ \infty x(t) (t-\tau)e ^ {-j \omega t} \hspace{5mm} 
 \end{equation}
 
-Où $x$ est le signal, $X$ sa transformation Fourier (une abréviation de la forme $F[x(t)]$), $\omega = 2 \pi f$ , $t$ le temps continue, $\tau$ l’instant temporel, $c_n$ les harmoniques, $\omega(t)$ le fenêtrage, et $j$ un nombre complexe.
+Où $x$ est le signal, $X$ sa transformation Fourier (une abréviation de la forme $F[x(t)]$), $\omega = 2 \pi k$ , $t$ le temps continue, $\tau$ l’instant temporel, $c_n$ les harmoniques, $\omega(t-\tau)$ le fenêtrage, et $j$ un nombre complexe.
 
-Dans cette recherche, on va utiliser la forme continue TFD et puis FFT, vu que cette formule est premièrement utilisée dans MaxMSP et en plus requiert une puissance calculatrice plus efficiente que d’autres méthodes :
+Dans cette recherche, on va utiliser la forme continue TFD et puis FFT, vu que cette formule est premièrement utilisée dans Max et en plus requiert une puissance calculatrice plus efficace que d’autres méthodes :
 
 \begin{equation}
-\footnote{Jean-François Charles, \textit{ A tutorial on spectral sound processing using maxmsp and jitter}, 2008. [pp. 87–102.] \nocite{Ch08}}
-    X(\omega) = \frac{1}{N} \sum_{n = 0} ^ {N-1} x(n+1) e ^ {-j \frac{\omega n}{N}} \hspace{5mm}
+\footnote{Jean-François Charles, \textit{ A tutorial on spectral sound processing using max and jitter}, 2008. [pp. 87–102.] \nocite{Ch08}}
+    X(k) = \frac{1}{N} \sum_{n = 0} ^ {N-1} x(n+1) e ^ {-j \frac{2 \pi k n}{N}} \hspace{5mm}
 \end{equation}
 
-Où $ N $ est la taille de la fenêtre, qui correspond au nombre total d'images qu'il contient. $ X $ est le signal, $ n $ énumère chaque image dans $ N $ et $ \omega = 2 \pi f $ comme d'habitude mais dans cette version, f varie entre 0 et N. Nous le présenterons plutôt comme $ \omega = 2 \pi k $ où k représentera la $ k-$ième harmonique.
+Où $ N $ est la taille de la fenêtre, qui correspond au nombre total d'images qu'il contient. $ X $ est le signal, $ n $ énumère chaque image dans $ N $ et $k$ varie entre $0$ et $N$. Ce formule indique que le spectre est divisé en $N$ parties. Cette division entraîne la fréquence $f_k$ qui corresponde à :
 
-Pour chaque transition vers le domaine fréquentiel, une fonction inverse du domaine temporel est nécessaire. La fonction inverse se caractérise par la transformation de Fourier rapide inverse (IFFT) pour des valeurs de temps discrets.
+$$f_k = k \, \frac{SR}{2 N} $$
+
+ou $SR$ est la fréquence d'échantillonnage du signal $x$. Ses points $f_k$ du spectre s’appellent bins de fréquence\footnote{M.H. Serra, \textit{Musical Signal Processing}, 1996, pp. 37-45. \nocite{Roads97}}. Le nombre des bins spectrales est toujours égal à $\frac{1}{2}$ de la taille de la DFT. Ainsi, une DFT à 1024 points produit 512 bins de fréquence. Il faut pour autant signaler la différence entre la taille de la DFT et $N$. $N$ égale toujours la moitié de la taille de une DFT. La taille de une DFT existe pour préciser la taille en échantillons du fenêtrage qui sera discuté amplement dans la section prochaine.
+
+Pour chaque transition vers le domaine fréquentiel, une fonction inverse du domaine fréquentiel vers le domaine temporel est nécessaire. La fonction inverse se caractérise par la transformation de Fourier rapide inverse (IFFT) pour des valeurs de temps discrets.
 
 \begin{equation}
 \footnote{Alan V. Oppenheim et Ronald W. Schafer, \textit{Discrete-time signal processing}, 2009. [pp. 822 - 835] \nocite{Sch09} }
-    x(n) = \frac{1}{N} \sum_{ f = 0} ^ {N-1} X(f) e ^ {j \frac{2 \pi f n}{N}} \hspace{5mm} 
+    x(n) = \frac{1}{N} \sum_{ k = 0} ^ {N-1} X(k) e ^ {j \frac{2 \pi k n}{N}} \hspace{5mm} 
 \end{equation}
+
+
 
     \subsubsection{Transformation Fourier rapide (FFT)}
 
-Or, la formule de Fourier génerale n'est pas répresentative dans le monde informatique. Pour autant, un point de vue théorique reste essentiel mais l'objectif est de se consentrer sur les formules computationnelles. Par computation, nous entendons une formule qui est facile à exécuter par un ordinateur en temps raisonnable et à produire une sortie. Une solution à cette affirmation est la transformation de Fourier rapide. Ainsi, FFT est un algorithme calculable pour DFT qui utilise un moyen intelligent pour réduire le temps de calcul et la complexité des calculs.
+Or, la formule de Fourier générale n'est pas représentative dans le monde informatique. Pour autant, un point de vue théorique reste essentiel mais l'objectif est de se concentrer sur les formules computationnelles. Par computation, nous entendons une formule qui est facile à exécuter par un ordinateur en temps raisonnable et à produire une sortie. Une solution à cette affirmation est la transformation de Fourier rapide. Ainsi, FFT est un algorithme calculable pour DFT qui utilise un moyen intelligent pour réduire le temps de calcul et la complexité des calculs.
 
 Nous rappelons la DFT standard interprétée dans un code informatique.
 
@@ -106,11 +113,11 @@ Nous rappelons la DFT standard interprétée dans un code informatique.
     \end{lstlisting}
 \end{minipage}
 
-La transformation de Fourier est en réalité une matrice de calcul. Cependant, en effectuant autant de calculs, on peut imaginer que le processus est assez cher computationnellement. Les conditions requises pour la DFT sont le traitement en temps réel et des fenêtres d’une taille minimale de 512 échantillons pour les données sonores. L'amélioration de l'algorithme a été donnée par James Cooley et John Tukey \footnote{James Cooley et John Tukey, \textit{An algorithm for the machine calculation of complex Fourier series}, 1965. \nocite{Fourier_complex}}
+La transformation de Fourier est en réalité une matrice de calcul. Cependant, en effectuant autant de calculs, on peut imaginer que le processus est assez cher computationnellement. Les conditions requises pour la DFT sont le traitement en temps réel et des fenêtres d’une taille au puissance de 2 échantillons pour les données sonores. L'amélioration de l'algorithme a été donnée par James Cooley et John Tukey \footnote{James Cooley et John Tukey, \textit{An algorithm for the machine calculation of complex Fourier series}, 1965. \nocite{Fourier_complex}} La FFT par Cooley et Tukey est limitée aux tailles de bloc qui sont des puissances de deux.
  
 L'algorithme de Cooley-Tukey utilise la récursivité pour réduire la complexité de calcul. En particulier, la matrice produite par la réduction dans le domaine fréquentiel est réduite en deux parties avant d'effectuer les calculs DFT. Nous séparons les indices impairs des casiers du même, puis la procédure est répétée. Ce processus réduit la complexité à $ \mathcal{O} (n \; log \; n) $ à partir d’une taille polynomiale. Bien sûr, pour effectuer cette action en raison de la division continue par deux, nous demandons que la fenêtre d’analyse soit une puissance de deux.
 
-Le diagrammes au forme de “Papillon” est l'idée principale de la réduction du calcul FFT. En particulier, Cooley et Tukey ont remarqué que les exponentielles complexes sont entièrement répétées dans la seconde moitié de la fenêtre avec un signe opposé. Par conséquent, en divisant constamment la fenetre, les calculs de l’exponentielle complexe sont considérablement réduits. Nous pouvons visualiser le processus dans la figure \ref{Butterfly} \footnote{Image récupérée de l'article: \href{https://www.researchgate.net/figure/Radix-2-butterfly-diagram-for-8- point-FFT_fig1_312460770}{P. G. Reshma, P. Gopi Varun, Babu V. Suresh, Wahid Khabou, \textit{Analog implementation of FFT using cascade current mirror}, 2017.} \nocite{FFTmirror}}.
+Le diagrammes au forme de “Papillon” est l'idée principale de la réduction du calcul FFT. En particulier, Cooley et Tukey ont remarqué que les exponentielles complexes sont entièrement répétées dans la seconde moitié de la fenêtre avec un signe opposé. Par conséquent, en divisant constamment la fenêtre, les calculs de l’exponentielle complexe sont considérablement réduits. Nous pouvons visualiser le processus dans la figure \ref{Butterfly} \footnote{Image récupérée de l'article: \href{https://www.researchgate.net/figure/Radix-2-butterfly-diagram-for-8- point-FFT_fig1_312460770}{P. G. Reshma, P. Gopi Varun, Babu V. Suresh, Wahid Khabou, \textit{Analog implementation of FFT using cascade current mirror}, 2017.} \nocite{FFTmirror}}.
 
     \begin{figure}
         \centering
@@ -119,13 +126,13 @@ Le diagrammes au forme de “Papillon” est l'idée principale de la réduction
         \label{Butterfly}
     \end{figure}
 
-Une mise en oeuvre du code correspondant est en disposition dans l'appendix \ref{Cooley-Tukey_Code}.
+Une mise en œuvre du code correspondant est en disposition dans l'appendix \ref{Cooley-Tukey_Code}.
 
 \subsection{Fenêtrage}
 
-Pour calculer la STFT, il faut définir la taille de la fenêtre à traiter. La transformation de Fourier dans une fenêtre temporelle discrète peut produire des artéfacts contredisant le continuum du signal. Pour éviter cet effet, il est habituel de multiplier la fenêtre du son d'origine par une fenêtre, qui ne contient pas des informations sonores, de la même taille sur laquelle une fonction factorise l'amplitude du son. La transformation de Fourier est reproduite un nombre dénombrable de fois en fonction de la taille du son analysé. La fenêtre est généralement beaucoup plus petite que le son d'origine, ce qui entraine la répetition à plusieurs reprises de la fenêtre pendant la durée totale du son. Il est important que la fenêtre soit déplacée dans le temps, mais d'etre également chevaucher sur lui meme par un facteur de decalage. Le processus peut être décrit visuellement dans la figure \ref{overlapping}.
+Pour calculer la STFT, il faut définir la taille de la fenêtre à traiter. La transformation de Fourier dans une fenêtre temporelle discrète peut produire des artefacts contredisant le continuum du signal. Pour éviter cet effet, il est habituel de multiplier la fenêtre du son d'origine par une fenêtre, qui ne contient pas des informations sonores, de la même taille sur laquelle une fonction factorise l'amplitude du son. La transformation de Fourier est reproduite un nombre dénombrable de fois en fonction de la taille du son analysé. La fenêtre est généralement beaucoup plus petite que le son d'origine, ce qui entraîne la répétition à plusieurs reprises de la fenêtre pendant la durée totale du son. Il est important que la fenêtre soit déplacée dans le temps, mais d’être également chevaucher sur lui même par un facteur de décalage. Le processus peut être décrit visuellement dans la figure \ref{overlapping}.
 
-Cette technique, appelée chevauchement où superposition, donne un résultat sonore plus arrondi. En raison du chevauchement et de la multiplication de l'enveloppe, l'auditeur ne peut percevoir aucun des artéfacts possibles induits par l'analyse mais on entend un résultat unifié \footnote {Daniel W. Griffin et Jae S. Lim, \textit{Signal estimation from modified short-time fourier transform}, 1984. \nocite{GrL84}}. 
+Cette technique, appelée chevauchement où superposition, donne un résultat sonore plus arrondi. En raison du chevauchement et de la multiplication de l'enveloppe, l'auditeur ne peut percevoir aucun des artefacts possibles induits par l'analyse mais on entend un résultat unifié \footnote {Daniel W. Griffin et Jae S. Lim, \textit{Signal estimation from modified short-time fourier transform}, 1984. \nocite{GrL84}}. De plus, le fenêtrage est une méthode pour couper un signal en plusieurs morceaux et appliquer de la transformation de Fourier au chacun de ces morceaux . Cette méthode est particulièrement efficace quand le signal n'est pas périodique. Si un signal n'a pas constamment les mêmes partiels, il est possible de regarder son développement tout au long du temps en le coupant en petites morceaux.
  
          \begin{figure}
             \centering
@@ -139,49 +146,41 @@ Cette technique, appelée chevauchement où superposition, donne un résultat so
 Nous examinerons, ici, la possibilité d’utiliser des filtres de Gabor pour appliquer une enveloppe au signale sonore. Les filtres de Gabor sont définis comme la multiplication continue d'une fonction gaussienne par un signal complexe bornée par un facteur temporel. Le filtre gaussien est décrit dans la formule suivante \footnote{Dennis Gabor, \textit{Theory of Communication}, 1994 \nocite{Gab44}}:
 
 \begin{equation}
-    G_x(t,f) = \int_{-\infty}^{+\infty} e ^ {-\pi(\tau-t)^2} e ^ {-j\omega \tau} x(\tau)\hspace{1mm} d\tau  
+    G_x(t,k) = k \int_{-\infty}^{+\infty} e ^ {-\pi(\tau-t)^2} e ^ {-j \omega \tau} x(\tau)\hspace{1mm} d\tau  
 \end{equation}
 
-Il est possible de considérer un filtre de Gabor comme deux filtres déphasés qui sont un produit direct de la décomposition de l'exponentiel complexe. L'un correspond à la partie imaginaire et l'autre à la partie réelle. Où la partie réelle a le filtre $ g_{real} (t) = w (t) sin (2 \pi f_k t + \theta) $ et la partie imaginaire $ g_{imag} (t) = w (t) cos (2 \pi f_0 t + \theta) $.
+Il est possible de considérer un filtre de Gabor comme deux filtres déphasés qui sont un produit direct de la décomposition de l'exponentiel complexe. L'un correspond à la partie imaginaire et l'autre à la partie réelle. Où la partie réelle a le filtre $ g_{real} (t) = \alpha w (t) sin (2 \pi \beta t + \theta) $ et la partie imaginaire $ g_{imag} (t) = w (t) cos (2 \pi f_0 t + \theta) $, oû $w(t) = e^{- \pi t}$ et $\alpha, \; \beta, \; \theta$ sont des paramètres du filtre.
 
 Les deux filtres peuvent être déphasés mais la phase est prise en compte. Par conséquent, leur effet sur une sinusoïde est toujours une sinusoïde.
 
 Pour manipuler la courbe d'un filtre de Gabor, il suffit de changer les paramètres. La formule normalisée se transforme en \footnote{Javier R. Movellan, \textit{A tutorial on gabor filters}, 2008. \nocite{Tut2002}}:
 
 \begin{equation}
-    G_x(t,f) = \int_{-\infty}^{+\infty} \frac{1}{\sigma \sqrt{2 \pi}} e ^ {-\frac{1}{2}(\frac{\tau-t}{\sigma})^2} e ^ {-j\omega \tau} x(\tau)\hspace{1mm} d\tau  
+    G_x(t,k) = \int_{-\infty}^{+\infty} \frac{1}{\sigma \sqrt{2 \pi}} e ^ {-\frac{1}{2}(\frac{\tau-t}{\sigma})^2} e ^ {-j\omega \tau} x(\tau)\hspace{1mm} d\tau  
 \end{equation}
 
-Où $ \sigma $ est le paramètre de la courbe gaussienne. Un filtre de Gabor permettra de créer un résultat sonore plus lisse après l'analyse. La même logique est valable pour tous les types d’envelop de fenêtre tels que le hanning, le hamming, etc.
+Où $ \sigma $ est le paramètre de la courbe gaussienne. Un filtre de Gabor permettra de créer un résultat sonore plus lisse après l'analyse. La même logique est valable pour tous les types enveloppe de fenêtre tels que le hanning, le hamming, etc.
 
     \subsection{Le vocodeur de phase}    
     
         \subsubsection{Définition}   
 
-Le vocodeur de phase est un outil d'analyse-synthèse qui utilise la DFT. L'analyse est effectuée de sorte que le signal de sortie ne subisse aucune perte de données de la transformation, que ce soit théoriquement ou concrètement. Le signal de sortie est identique à l'entrée avant l'analyse si aucun traitement n'est appliqué. Les utilisations les plus courantes du vocodeur de phase sont le décalage de hauteur de ton et l’alternance de la vitesse de lecture. Le vocodeur de phase n’a pas de restriction évidente et peut également garder une trace des inharmonicités et du vibrato des sons \footnote{Johannes Grünwald, \textit{Theory, implementation and evaluation of the digital phase vocoder in the context of audio effects}, 2010. \nocite{GR10} }.
+Le vocodeur de phase est un outil d'analyse-synthèse qui utilise la DFT. L'analyse est effectuée de sorte que le signal de sortie théoriquement ne subisse aucune perte de données de la transformation, que ce soit théoriquement ou concrètement. Le signal de sortie est identique à l'entrée avant l'analyse si aucun traitement n'est appliqué. Les utilisations les plus courantes du vocodeur de phase sont le décalage de hauteur de ton et l’alternance de la vitesse de lecture. Le vocodeur de phase n’a pas de restriction évidente et peut également garder une trace des inharmonicités et du vibrato des sons \footnote{Johannes Grünwald, \textit{Theory, implementation and evaluation of the digital phase vocoder in the context of audio effects}, 2010. \nocite{GR10} }.       
 
-        \subsubsection{Histoire} 
-
-Le vocodeur de phase a été introduit, en 1966, par Flanagan comme algorithme préservant la cohérence horizontale entre les phases des segments représentant les composants sinusoïdaux. Le vocodeur de phase n'a pas pris en compte la cohérence verticale produite par les intervalles de fréquences adjacentes et, par conséquent, l'étirement temporel du système a produit des signaux sonores avec une perte de qualité. La reconstruction optimale du signal de la STFT après traitement a été proposée par Griffin et Lim \footnote{Daniel W. Griffin et Jae S. Lim, \textit{Signal estimation from modified short-time fourier transform}, 1998. [pp. 236–243] \nocite{GrL84}} en 1984. Cet algorithme n'avait pas comme objectif de produire une STFT cohérente, mais plutôt de rechercher le signal optimal afin que la STFT soit aussi proche que possible de la STFT modifiée, même si la STFT modifiée n'est pas cohérente (ne représente aucun signal).
-
-Jusqu'en 1999, la question de la cohérence verticale était un problème majeur pour la qualité opérationnelle à l'échelle temporelle. A cette époque, Laroche et Dolson \footnote{Mark Dolson, \textit{The phase vocoder : a tutorial}, 1986. [pp. 14-27] \nocite{Dol86} } ont proposé un moyen de préserver la cohérence de la phase des composantes spectrales. Le développement de Laroche et de Dolson a marqué un tournant dans l’histoire du vocodeur de phase. Il a été prouvé que, grâce à la cohérence de phase, une transformation temporelle de haute qualité peut être obtenue.
-
-Néanmoins, l'algorithme découvert par Laroche et Dolson n'a pas pu conserver la phase verticale à l’attaque d’un son. En 1999, Roebel a proposé une solution à ce problème \footnote{Axel Roebel, \textit{ Morphing sound attractors}, 1999. \nocite{Rob99} }. Un exemple, de mis en oeuvre du vocodeur de phase utilisant la dernière version de Roebel, est constitué par les outils SuperVP de l’Ircam.
-
-Une manière pour decrire le vocodeur de phase consiste à représenter le signal par une séquence d'images successives d’une transformation de Fourier Discrète(TFD) d’une fenêtre de longueur $ N$. Ces images sont d'abord multipliées par une fenêtrage appropriée (telle que Hamming, Hanning, Kaiser, Blackman, etc.) puis transformés dans le domaine fréquentiel. A ce stade, toute modification prudente du spectre peut être faite, avant la transformation inverse au domaine temporel avec la transformation de Fourier discrète inverse (TDFI). Les parties d'overlap et éventuellement un fenêtrage sont additionnées, ce qui donne le résultat final.
+Une manière pour décrire le vocodeur de phase consiste à représenter le signal par une séquence d'images successives d’une transformation de Fourier Discrète(TFD) d’une fenêtre de longueur $ N$. Ces images sont d'abord multipliées par une fenêtrage appropriée (telle que Hamming, Hanning, Kaiser, Blackman, etc.) puis transformés dans le domaine fréquentiel. A ce stade, toute modification prudente du spectre peut être faite, avant la transformation inverse au domaine temporel avec la transformation de Fourier discrète inverse (TDFI). Les parties d'overlap et éventuellement un fenêtrage sont additionnées, ce qui donne le résultat final.
 
 \vspace{0.4cm}
 
 La STFT (une transformation caractérisée des successions des TFD) d'un signal fenêtré est défini comme suit:
 
 \begin{equation}
-    x(n) = \frac{1}{N}\sum_{ k = 0 }^{ N-1 } X_f (n)W_N \hspace{0.05cm}^{ nf}, \hspace{1cm} \forall n \in SR 
+    X(k, \tau) = \frac{1}{N}\sum_{ n = 0 }^{ N-1 } h(n) x(n - \tau) W_N \hspace{0.05cm}^{ n k}, \hspace{1cm} \forall n \in SR 
 \end{equation}
 
 ou \hspace{0.1cm} $ W_N = e ^ {\frac{2\pi j}{N}} $ \hspace{0.1cm} et $ h(n) $ est une fenêtre approximativement choisie.
 
 \begin{equation}
-    h_f(n) = \frac{1}{N} h(n) W_N \hspace{0.05cm} ^{nf},\hspace{1cm}  k = 0, 1, \dots, N - 1 
+    h_k(n) = \frac{1}{N} h(n) W_N \hspace{0.05cm} ^{k \, n},\hspace{1cm}  k = 0, 1, \dots, N - 1 
 \end{equation}
 
 Pendant le processus de l'analyse, la succession des images d'une STFT font parties du signal d'entrée $x(n)$, sur la position $n_a^u = uR_a$, ou $R_a$ est nommé \textit{input hop size} et $u$ doit etre un entier. La fenêtre(ou la durée) de la DFT est définie par la taille $N$, ou le \textit{hop size} est forcément une sous-multiplication de $N$. Cet effet permettra de réaliser un \textit{overlap} de 50\%, 75\%, etc.
@@ -189,12 +188,12 @@ Pendant le processus de l'analyse, la succession des images d'une STFT font part
 Le terme $\tilde{x}_u(n)$ propose l'estimation des fenêtres symétriques calculées. Donc si nous supposons un chevauchement du fenêtrage par 50 \%, ou bien $N/2$, on propose une manière d'éviter les asymétries de phase ci-dessus:  
 
 \begin{equation}
-    X[n_a^u, \omega] = \sum_{n=0} ^{N-1} \tilde{x}_u(n) e^{-j \omega \frac{n}{N}} \vspace{0.5cm} 
+    X[n_a^u, k] = \sum_{n=0} ^{N-1} \tilde{x}_u(n) W_N^{kn} \vspace{0.5cm} 
 \end{equation}
 
 \hspace{5cm} ou \hspace{1cm} ${x}_u(n) = h_a(n) x(n-n_a^u)$ 
 
-Le terme $\tilde{x}_u(n)$ propose l'estimation des fenêtres symmetriques calculées. Donc si nous supposons un overlap de fenêtrage par 50 \%, ou bien $N/2$, puis une maniere d'eviter les assymetrages de phase est composée ci-dessus:  
+Le terme $\tilde{x}_u(n)$ propose l'estimation des fenêtres symétriques calculées. Donc si nous supposons un overlap de fenêtrage par 50 \%, ou bien $N/2$, puis une manière d’éviter les assymétrages de phase est composée ci-dessus:  
 
 \begin{equation}
     \tilde{x}(n) = x[((n-N/2))_N] 
@@ -203,36 +202,36 @@ Le terme $\tilde{x}_u(n)$ propose l'estimation des fenêtres symmetriques calcul
 ou $((.))_N$ présente l'opération du modulo, et $N$ est la durée de la fenêtre et il devait être un pair.
 
 
-Par conséquent, la transformation de Fourier du signal liée au fenêtrage devient :
+Par conséquent, la transformation de Fourier du signal liée au fenêtrage devient :f
 
 \begin{equation}
-    X(rl,f) = \sum_{N=0}^{N-1} x(n) h(rl-n) e^{-j \frac{2 \pi}{N} fn}
+    X(k, rl) = \sum_{n=0}^{N-1} x(n) h(rl-n)  W_N^{\; k n}
 \end{equation}
 
-C'est une fonction de deux variables discrètes, le temps $ rl $ et la fréquence $ k $. L'indice $ ir $ est la position de la fenêtre, $r$ étant le numéro de l’échantillon et $l$ la taille du pas de chevauchement de la fenêtre d'analyse. $ S (rl, k) $ peut être vu comme le spectre de la multiplication $ s (m) w (rl-m) $, qui est la séquence en entrée s (m) multipliée par la fenêtre décalée à la position $ rl $. Ce n'est pas le spectre exact, mais sa convolution avec la transformation de Fourier des fenêtres correspondantes.
+% C'est une fonction de deux variables discrètes, le temps $ t $ et la fréquence $ k $. L'indice $ ir $ est la position de la fenêtre, $r$ étant le numéro de l’échantillon et $l$ la taille du pas de chevauchement de la fenêtre d'analyse. $ S (rl, k) $ peut être vu comme le spectre de la multiplication $ s (m) w (rl-m) $, qui est la séquence en entrée $s (m)$ multipliée par la fenêtre décalée à la position $ rl $. Ce n'est pas le spectre exact, mais sa convolution avec la transformation de Fourier des fenêtres correspondantes.
 
-C’est, donc, une fonction de deux variables discrètes, le temps rl et la fréquence f. L’index rl
-est la position de la fenêtre, r étant le numéro d’image (frame) et l la taille du décalage de la
-fenêtre d’analyse.
+C’est, donc, une fonction de deux variables discrètes, le temps instantané $\tau$ et la fréquence $k$. L’index $rl$ est la position de la fenêtre, $r$ étant le numéro d’image (frame) et $l$ la taille du décalage de la fenêtre d’analyse.
 
-$ X (rl, f) $ peut être vu comme le spectre de la multiplication $ x (n) h (rl-n) $, qui est le signal d'entrée $ x (n) $ multiplié par la fenêtre décalée à la position $ rl $. Ce n'est pas le spectre exact, mais sa convolution avec la transformation de Fourier de la fenêtre.
+$ X (k, rl) $ peut être vu comme le spectre de la multiplication $ x (n) h (rl-n) $, qui est le signal d'entrée $ x (n) $ multiplié par la fenêtre décalée à la position $ rl $. Ce n'est pas le spectre exact, mais sa convolution avec la transformation de Fourier de la fenêtre.
 
 La procédure standard de chevauchement (\textit{overlap}) consiste à additionner les buffers et à les diviser par la somme des fenêtres décalés. Le signal de sortie y(n) est exprimé comme:
 
 \begin{equation}
-    y(n) = \frac{\sum_r \bar{x}(rl,n)}{\sum_r {h}(rl - n)})
+    y(n) = \frac{\sum_r \bar{x}(n, rl)}{\sum_r {h}(rl - n)})
 \end{equation}
 
 Pour construire une reproduction du signal d'origine ou du signal transmuté après traitement, un iFFT est nécessaire. Dans le vocodeur de phase, cette procédure accède aux informations de phase et d'amplitude et se forme comme suit:
 
 \begin{equation}
-    \bar{s}(rl,k) = \frac{1}{N}\sum_{k=0}^{N-1} |\bar{S}(rl,k| e^{j (\frac{2 \pi}{N} km + \theta(r \bar{l},k))}
+    \bar{y}(n, rl) = \frac{1}{N}\sum_{k=0}^{N-1} |\bar{X}(k, rl)| e^{j (\frac{2 \pi}{N} k n  + \theta(k, rl))}
 \end{equation}
+
+Ou $|X(k, rl)|$ signifie la magnitude de chaque index de fréquence $k$ et $\theta(k, rl)$ la phase de chaque index de fréquence $k$ accordinement du fenêtrage bornée par $rl$.
 
 Enfin pour calculer la fréquence de chaque image instantanée il suffit de suivre la formule :
 
 \begin{equation}
-    \bar{f}_{k,r} = \frac{\theta(rl,k) - \theta((r - l )l,k)}{l}
+    \bar{f}_{k,n} = \frac{\theta(k, rl) - \theta((r - l )l, k)}{l}
 \end{equation}
 
 \subsection{Applications du vocodeur de phase} 
@@ -248,14 +247,14 @@ Le modèle qui correspond à l'étirement temporelle est donnée par la formule 
          \theta_k(n) &= \theta_k(0) + \int_{0}^{n} f_k (\tau) \; d\tau
     \end{align}
 
-Ou un signal est interprété par une somme des sinusoïdes $K(n)$ avec leur magnitude $A_k(n)$ et phase $\theta_k$ appropriées. Par la suite, la phase instantanée du $k-$ième sinusoide, $\theta_k(n)$, est calculée par l'addition de la phase de la première échantillon $\theta_k(0)$ avec l'intégrale des fréquences $f_k (n)$. Le dernière est équivalent à $\Sigma_{n=0}^N f_k(n)$ pour une transformation discrète.
+Ou un signal est interprété par une somme des sinusoïdes $K(n)$ avec leur magnitude $A_k(n)$ et phase $\theta_k$ appropriées. Par la suite, la phase instantanée du $k-$ième sinusoïde, $\theta_k(n)$, est calculée par l'addition de la phase de la première échantillon $\theta_k(0)$ avec l'intégrale des fréquences $f_k (n)$. Le dernière est équivalent à $\Sigma_{n=0}^N f_k(n)$ pour une transformation discrète.
 
 La modification temporelle est déterminée par deux paramètres parallèles, c’est à dire la modification de phase instantanée pour chaque échantillon et la modification du fenêtre du décalage (hop window). Plus précisément, le \textit{hop window} du stade de l'analyse est différent du \textit{hop window} de la synthèse.
 
 Pour une modification temporelle par un facteur constant $\alpha$ tel que $n_k^u = \alpha n_\alpha^u$ la phase d'un étirement temporel devient \footnote{Jean Laroche et Mark Dolson, \textit{Improved Phase Vocoder}, 1999. [p. 324] \nocite{DoLa99}}:
     
     \begin{equation}
-        \theta_k^(n_k^u) = \theta_k(0) + \alpha \int_0^{n_k^u}  f_k (\tau) \; d\tau
+        \theta_k^u(n_k^u) = \theta_k(0) + \alpha \int_0^{n_k^u}  f_k (\tau) \; d\tau
     \end{equation}
 
     \subsubsection{Transposition de la hauteur}
@@ -268,7 +267,7 @@ Comme le vocodeur de phase peut être utilisé pour réaliser un étirement temp
 
     \subsubsection{Robotisation}
 
-Pour faire une robotisation d'un signal, il faut mettre la phase de chaque echantillon à zéro. Cet effet résulte d'un son robotisé et métalique.
+Pour faire une robotisation d'un signal, il faut mettre la phase de chaque échantillon à zéro. Cet effet résulte d'un son robotisé et métallique.
 
     \subsubsection{Harmonisation - chuchotement}
 
@@ -329,7 +328,7 @@ La différence fondamentale entre le morphing d’une image, est le rapport à l
 
 \subsubsection{Noise modeling}
 
-Le Vocodeur de Phase tel qu'il est présenté jusqu'à présent est un modèle fin mais il ne s'agit toutefois pas du modèle complet. Le modèle présenté ici est celui de Xavier Serra \footnote{Curtis Roads et autres, \textit{Traitement du signal musical}, 1997. [p. 91 - 122] \nocite{Roads97}}. Dans ce modèle, les composantes sonores sont idéalisées comme déterministes. Cela suggère que chaque composant sonore est une sinusoïde ou une sinusoïde à variation lente. La partie non déterministe implique que le son est modélisé avec une composante de bruit supplémentaire, comme le montre la formule ci-dessous.
+Le vocodeur de phase tel qu'il est présenté jusqu'à présent est un modèle fin mais il ne s'agit toutefois pas du modèle complet. Le modèle présenté ici est celui de Xavier Serra \footnote{Curtis Roads et autres, \textit{Traitement du signal musical}, 1997. [p. 91 - 122] \nocite{Roads97}}. Dans ce modèle, les composantes sonores sont idéalisées comme déterministes. Cela suggère que chaque composant sonore est une sinusoïde ou une sinusoïde à variation lente. La partie non déterministe implique que le son est modélisé avec une composante de bruit supplémentaire, comme le montre la formule ci-dessous.
 
 \begin{equation}\footnote{Curtis Roads, \textit{Musical Signal Processing}, 1997, p. 94}
     s(t) = \sum_{n=0}^N A_n(t) cos(\theta_n(t)) + \epsilon(t) 
@@ -345,13 +344,13 @@ Où $ u (\tau) $ est un bruit blanc et $ h (t, \tau) $ nous la réponse d'un fil
 
     \subsubsection{Stochastic Modeling}
 
-Certaines autres approches suggèrent une approche stochastique simultanée au vocodeur de phase traditionnel. Ce principe repose également sur l'hypothèse que le son est composé de composants semi-sinusoïdaux. De manière à ce qu’une périodicité soit préservée. Sur la base de la première analyse, nous supposons une périodicité de signaux et lors de chaque nouvelle analyse, la fréquence de sa corbeille est calculée en fonction d'un facteur d'erreur.
+Une autre méthode suggère une approche stochastique simultanée au vocodeur de phase traditionnel. Afin de appliquer une prédiction sur un signal, il est nécessaire de établir une hypothèse. L'hypothèse pour la construction stochastique du vocodeur de phase est fait sur la périodicité de signaux. Les signaux dans cette approche ont toujours une nature semi-périodique. On peut calculer d'après l'hypothèse un facteur d'erreur entre le résultat obtenu et le résultat prédit:
 
 \begin{equation*}
     Err_{p \to q} = \sum_{n=1}^N E_\omega(\Delta f_n, f_n a_n, A_{max})
 \end{equation*}
 
-Où $ \Delta f_n $ est la différence entre un pic mesuré et le plus proche mesuré. $ f_n $ est la fréquence de la corbeille et $ a_n $ est la magnitude des pics prédits. $ A_ {max} $ est la magnitude maximale enregistrée.
+Où $ \Delta f_n $ est la différence entre un pic mesuré et le plus proche mesuré. $ f_n $ est la fréquence du $n-$ième bin et $ a_n $ est la magnitude des pics prédits. $ A_ {max} $ est la magnitude maximale enregistrée.
 
 \begin{equation*}
     Err_{q \to p} = \sum_{k=1}^K E_\omega(\Delta f_k, f_k a_k, A_{max})
